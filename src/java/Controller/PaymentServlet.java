@@ -4,6 +4,7 @@
  */
 package Controller;
 
+import Model.DatabaseManager;
 import Model.PdfReportGenerator;
 import Model.Security;
 import java.io.IOException;
@@ -21,7 +22,7 @@ public class PaymentServlet extends HttpServlet {
 
     private PdfReportGenerator pdfGenerate;
     private Security encryptDecrypt;
-    private DatabaseManagerServlet managesDB;
+    private DatabaseManager  managesDB;
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
@@ -38,7 +39,7 @@ public class PaymentServlet extends HttpServlet {
         String key = config.getInitParameter("key");
         this.pdfGenerate = new PdfReportGenerator();
         this.encryptDecrypt = new Security();
-        this.managesDB = new DatabaseManagerServlet();
+        this.managesDB = new DatabaseManager("placeholder","placeholder","placeholder","placeholder");
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
