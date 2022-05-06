@@ -8,6 +8,6 @@ package Controller;
  *
  * @author FV
  */
-class DatabaseManager {
+class DatabaseManagerServlet {
     
 }

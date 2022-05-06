@@ -21,7 +21,7 @@ public class PaymentServlet extends HttpServlet {
 
     private PdfReportGenerator pdfGenerate;
     private Security encryptDecrypt;
-    private DatabaseManager managesDB;
+    private DatabaseManagerServlet managesDB;
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
@@ -38,7 +38,7 @@ public class PaymentServlet extends HttpServlet {
         String key = config.getInitParameter("key");
         this.pdfGenerate = new PdfReportGenerator();
         this.encryptDecrypt = new Security();
-        this.managesDB = new DatabaseManager();
+        this.managesDB = new DatabaseManagerServlet();
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)

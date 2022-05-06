@@ -21,8 +21,11 @@ public class DatabaseManager {
             this.conn = DriverManager.getConnection(userName, pass, url);
             Class.forName(dbDriver);
         }
-        catch (SQLException | ClassNotFoundException e) {
+        catch (SQLException e) {
             e.printStackTrace();
+        }
+        catch (ClassNotFoundException a) {
+            a.printStackTrace();
         }
     }
 }
