@@ -1,0 +1,16 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 7, 2022, 9:34:55 PM
+    Author     : Joseph
+*/
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b8/UAAP_Season_82_Ateneo_v._UST_Basketball_Finals_Game_2.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: fantasy;
+}
