@@ -14,6 +14,7 @@ import org.apache.commons.codec.binary.*;
  */
 public class Security {
 
+//Default Key if not is given
     private static byte[] key = {'a', '1', '3', '^', 'e', 'R', 'z', 'x', '/', '*', '+', ']', '>', '#', 'L', 'l'};
     public Security() {
     }
