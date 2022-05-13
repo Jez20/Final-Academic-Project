@@ -21,14 +21,17 @@
     </head>
     <body>
         <div class="loginbox">
-            <h1>The Store</h1>
+            <h1>The Store - Login</h1>
             <p>Enter Email</p>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="abc@email.com" required>
             <p>Enter Password</p>
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-<!--            <input type="submit" name="" value="Login">-->
+            <p>Prove that you are not a robot</p>
+            <!--enter captcha code here -->
+            <input type="text" class="form-control" placeholder="Enter phrase" required>
             <center><button type="button" >Log in</button></center><br><br>
-            <u><a href="#">Don't have an account? Sign up for free!</a></u>
+            <u><a href="#">Don't have an account? Sign up for free!</a></u><br>
+            <u><a href="#">Go back to Homepage</a></u>
         </div>
     </body>
 
@@ -46,7 +49,7 @@
 }
 .loginbox{
     width: 320px;
-    height: 420px;
+    height: 470px;
     background: black;
     color: #fff;
     top: 50%;
@@ -72,7 +75,7 @@ h1{
     width: 100%;
     margin-bottom: 20px;
 }
-.loginbox input[type="email"], input[type="password"]{
+.loginbox input[type="email"], input[type="password"], input[type="text"]{
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -101,5 +104,8 @@ h1{
     font-size: 14px;
     line-height: 20px;
     color: white;
+}
+.loginbox a:hover{
+    color: yellowgreen;
 }
 </style>
