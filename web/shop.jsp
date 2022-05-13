@@ -266,7 +266,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/561/3.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU1.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -293,7 +293,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/510/15.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU2.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -320,7 +320,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/617/3.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU3.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -347,7 +347,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/621/5.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU4.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -374,7 +374,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/618/1.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU5.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -401,7 +401,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/626/10.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU6.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -428,7 +428,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/679/4.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU7.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -455,7 +455,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/726/47.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU8.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -482,7 +482,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/599/4.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU9.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -509,7 +509,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/601/5.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU10.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -536,7 +536,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/659/NEW%20POLO%20SHIRT%201.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU11.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -563,7 +563,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/528/7.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU12.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -590,7 +590,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/530/1.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU13.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -617,7 +617,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/658/JACKET%201.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU14.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -644,7 +644,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.adamson.edu.ph/ustore/uploads/519/1.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/ADU15.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->

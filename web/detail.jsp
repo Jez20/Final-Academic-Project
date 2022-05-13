@@ -37,17 +37,242 @@
                 <div id="product-carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner bg-light">
                         <div class="carousel-item active">
-                            <img class="w-100 h-100" src="img/product-1.jpg" alt="Image">
+                            <img class="w-100 h-100" src="img/ADU1.jpeg" alt="Image">
                         </div>
                         <div class="carousel-item">
-                            <img class="w-100 h-100" src="img/product-2.jpg" alt="Image">
+                            <img class="w-100 h-100" src="img/ADU2.jpeg" alt="Image">
                         </div>
                         <div class="carousel-item">
-                            <img class="w-100 h-100" src="img/product-3.jpg" alt="Image">
+                            <img class="w-100 h-100" src="img/ADU3.jpeg" alt="Image">
                         </div>
                         <div class="carousel-item">
-                            <img class="w-100 h-100" src="img/product-4.jpg" alt="Image">
+                            <img class="w-100 h-100" src="img/ADU4.jpeg" alt="Image">
                         </div>
+                        <div class="carousel-item ">
+                            <img class="w-100 h-100" src="img/ADU5.jpeg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="img/ADU6.jpeg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="img/ADU7.jpeg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="img/ADU8.jpeg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="img/ADU9.jpeg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="img/ADU10.jpeg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="img/ADU11.jpeg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="img/ADU12.jpeg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="img/ADU13.jpeg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="img/ADU14.jpeg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="img/ADU15.jpeg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/Ateneo_ABE-Stripes_Royal-Blue.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/Ateno_ALE-Heart-Strong-600x600.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/Ateneo_batch-shirt_Royal-Blue.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_Ateneo_SBC-A-123-RB-Ateneo-Curve-Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_-Ateneo_SBC-A-116-RB-Ateneo-Eagle-Embro-Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/Ateneo_Eagle-Rubber-patch_royal-blue-600x600.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/1-thumbnail-SBC-A-102-NB-Ateneo-Fades-Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/Ateneo_FLY-Ateneo_royal-blue-600x600.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/1-thumbnail-SBC-A-106-RB-Jacket-with-Hood-Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/1-thumbnail-SBC-A-107-RB-Jacket-without-Hood-Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/1-thumbnail-SBC-A-109-RB-Letterman-Jacket-Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/1-thumbnail-SBC-A-112-W-Ateneo-Raincoat-Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/1-thumbnail-SBC-A-110-W-Polo-A-Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/1-thumbnail-SBC-A-110-W-Polo-A-Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_Ateneo_SBC-A-114-W-Ateneo-Sweathirt-Hoodie-Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_SBC-A-117-W-Ateneo-Pocket-Head-Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-113-GN_Front-600x600.jpg" alt="Image">
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-115-GN_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-114-W_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-111-GN_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-101-GN_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-108-GN_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-112-GN_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-109-GN_Back-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/2-1-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/FEU_Future_moss-green-600x600.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/FEU-Half-face.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/FEU-Main_Tam-Rubber-Patch_moss-green-600x600.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/FEU_Square_moss-green-600x600.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_FEU_SBC-C-103-Y-FEU-Vinyl-front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/FEU_Hide-Tams_pocket-tee_moss-green-600x600.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/FEU_embro-tamaraw_sweatshirt.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_NU_SBC-E-106-MB_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_NU_SBC-E-104-MB_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_NU_SBC-E-105-W_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/NU_GB-600x600.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/NU-New-bulldogs_Navy-blue.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/NU-Script_Navy-blue.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/NU-Vinyl_Navy-blue.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/NU-Script_Navy-blue.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://i.ibb.co/3mvqtLN/resized-image-Promo.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://i.ibb.co/1fT7Q7w/resized-image-Promo-1.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://i.ibb.co/Pr0GZV9/resized-image-Promo-2.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://i.ibb.co/mzv9YGV/resized-image-Promo-3.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://i.ibb.co/Jcn1wYf/resized-image-Promo-4.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://i.ibb.co/LnrFP9W/resized-image-Promo-5.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://i.ibb.co/sCh2tQB/resized-image-Promo-6.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/03/UP-Oblation-front800x800-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/04/UP_Utak-at-Puso-1-600x600.png" alt="Image">
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://i.ibb.co/MsrCSG3/resized-image-Promo-1.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://i.ibb.co/8cWMHGm/resized-image-Promo-6.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://i.ibb.co/ySYtPtp/resized-image-Promo-3.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://i.ibb.co/Mf61MVP/resized-image-Promo-4.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-113-Y_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-104-Y_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/UST_Batch-2019_yg.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/UST_Embro-Tiger_yg.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/UST-Fades-600x600.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-114-BK_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-108-BK_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-125-BK_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-103-Y_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-111-BK_Front-600x600.jpg" alt="Image">
+                        </div>
+                        
                     </div>
                     <a class="carousel-control-prev" href="#product-carousel" data-slide="prev">
                         <i class="fa fa-2x fa-angle-left text-dark"></i>
@@ -61,7 +286,7 @@
             <div class="col-lg-7 h-auto mb-30">
                 <div class="h-100 bg-light p-30">
                     <h3>Product Name Goes Here</h3>
-                    <div class="d-flex mb-3">
+<!--                    <div class="d-flex mb-3">
                         <div class="text-primary mr-2">
                             <small class="fas fa-star"></small>
                             <small class="fas fa-star"></small>
@@ -70,7 +295,7 @@
                             <small class="far fa-star"></small>
                         </div>
                         <small class="pt-1">(99 Reviews)</small>
-                    </div>
+                    </div>-->
                     <h3 class="font-weight-semi-bold mb-4">$150.00</h3>
                     <p class="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit
                         clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea
@@ -100,7 +325,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="d-flex mb-4">
+<!--                    <div class="d-flex mb-4">
                         <strong class="text-dark mr-3">Colors:</strong>
                         <form>
                             <div class="custom-control custom-radio custom-control-inline">
@@ -124,7 +349,7 @@
                                 <label class="custom-control-label" for="color-5">Green</label>
                             </div>
                         </form>
-                    </div>
+                    </div>-->
                     <div class="d-flex align-items-center mb-4 pt-2">
                         <div class="input-group quantity mr-3" style="width: 130px;">
                             <div class="input-group-btn">
@@ -145,18 +370,18 @@
                     <div class="d-flex pt-2">
                         <strong class="text-dark mr-2">Share on:</strong>
                         <div class="d-inline-flex">
-                            <a class="text-dark px-2" href="">
+                            <a class="text-dark px-2" href="https://www.facebook.com" target="_blank">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a class="text-dark px-2" href="">
+                            <a class="text-dark px-2" href="https://twitter.com" target="_blank">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a class="text-dark px-2" href="">
-                                <i class="fab fa-linkedin-in"></i>
+                            <a class="text-dark px-2" href="https://www.instagram.com" target="_blank">
+                                <i class="fab fa-instagram"></i>
                             </a>
-                            <a class="text-dark px-2" href="">
+<!--                            <a class="text-dark px-2" href="">
                                 <i class="fab fa-pinterest"></i>
-                            </a>
+                            </a>-->
                         </div>
                     </div>
                 </div>
@@ -167,8 +392,8 @@
                 <div class="bg-light p-30">
                     <div class="nav nav-tabs mb-4">
                         <a class="nav-item nav-link text-dark active" data-toggle="tab" href="#tab-pane-1">Description</a>
-                        <a class="nav-item nav-link text-dark" data-toggle="tab" href="#tab-pane-2">Information</a>
-                        <a class="nav-item nav-link text-dark" data-toggle="tab" href="#tab-pane-3">Reviews (0)</a>
+<!--                        <a class="nav-item nav-link text-dark" data-toggle="tab" href="#tab-pane-2">Information</a>
+                        <a class="nav-item nav-link text-dark" data-toggle="tab" href="#tab-pane-3">Reviews (0)</a>-->
                     </div>
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="tab-pane-1">
@@ -176,7 +401,7 @@
                             <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
                             <p>Dolore magna est eirmod sanctus dolor, amet diam et eirmod et ipsum. Amet dolore tempor consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum. Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</p>
                         </div>
-                        <div class="tab-pane fade" id="tab-pane-2">
+<!--                        <div class="tab-pane fade" id="tab-pane-2">
                             <h4 class="mb-3">Additional Information</h4>
                             <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
                             <div class="row">
@@ -213,8 +438,8 @@
                                       </ul> 
                                 </div>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-pane-3">
+                        </div>-->
+<!--                        <div class="tab-pane fade" id="tab-pane-3">
                             <div class="row">
                                 <div class="col-md-6">
                                     <h4 class="mb-4">1 review for "Product Name"</h4>
@@ -265,7 +490,7 @@
                                     </form>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
@@ -282,11 +507,11 @@
                 <div class="owl-carousel related-carousel">
                     <div class="product-item bg-light">
                         <div class="product-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/product-1.jpg" alt="">
+                            <img class="img-fluid w-100" src="https://i.ibb.co/h259qCg/resized-image-Promo-3.jpg" alt="">
                             <div class="product-action">
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+<!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
                             </div>
                         </div>
@@ -295,23 +520,23 @@
                             <div class="d-flex align-items-center justify-content-center mt-2">
                                 <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
                             </div>
-                            <div class="d-flex align-items-center justify-content-center mb-1">
+<!--                            <div class="d-flex align-items-center justify-content-center mb-1">
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small>(99)</small>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div class="product-item bg-light">
                         <div class="product-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
+                            <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_Ateneo_SBC-A-123-RB-Ateneo-Curve-Front-600x600.jpg" alt="">
                             <div class="product-action">
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+<!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
                             </div>
                         </div>
@@ -320,23 +545,23 @@
                             <div class="d-flex align-items-center justify-content-center mt-2">
                                 <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
                             </div>
-                            <div class="d-flex align-items-center justify-content-center mb-1">
+<!--                            <div class="d-flex align-items-center justify-content-center mb-1">
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small>(99)</small>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div class="product-item bg-light">
                         <div class="product-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
+                            <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-101-GN_Front-600x600.jpg" alt="">
                             <div class="product-action">
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+<!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
                             </div>
                         </div>
@@ -345,23 +570,23 @@
                             <div class="d-flex align-items-center justify-content-center mt-2">
                                 <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
                             </div>
-                            <div class="d-flex align-items-center justify-content-center mb-1">
+<!--                            <div class="d-flex align-items-center justify-content-center mb-1">
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small>(99)</small>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div class="product-item bg-light">
                         <div class="product-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
+                            <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_FEU_SBC-C-103-Y-FEU-Vinyl-front-600x600.jpg" alt="">
                             <div class="product-action">
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+<!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
                             </div>
                         </div>
@@ -370,23 +595,23 @@
                             <div class="d-flex align-items-center justify-content-center mt-2">
                                 <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
                             </div>
-                            <div class="d-flex align-items-center justify-content-center mb-1">
+<!--                            <div class="d-flex align-items-center justify-content-center mb-1">
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small>(99)</small>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div class="product-item bg-light">
                         <div class="product-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
+                            <img class="img-fluid w-100" src="https://i.ibb.co/3mvqtLN/resized-image-Promo.jpg" alt="">
                             <div class="product-action">
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+<!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
                             </div>
                         </div>
@@ -395,14 +620,64 @@
                             <div class="d-flex align-items-center justify-content-center mt-2">
                                 <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
                             </div>
-                            <div class="d-flex align-items-center justify-content-center mb-1">
+<!--                            <div class="d-flex align-items-center justify-content-center mb-1">
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small class="fa fa-star text-primary mr-1"></small>
                                 <small>(99)</small>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="product-item bg-light">
+                        <div class="product-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/03/UP-Oblation-front800x800-600x600.jpg" alt="">
+                            <div class="product-action">
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+<!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
                             </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                            <div class="d-flex align-items-center justify-content-center mt-2">
+                                <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                            </div>
+<!--                            <div class="d-flex align-items-center justify-content-center mb-1">
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small>(99)</small>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="product-item bg-light">
+                        <div class="product-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-113-Y_Front-600x600.jpg" alt="">
+                            <div class="product-action">
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+<!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                            <div class="d-flex align-items-center justify-content-center mt-2">
+                                <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                            </div>
+<!--                            <div class="d-flex align-items-center justify-content-center mb-1">
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small>(99)</small>
+                            </div>-->
                         </div>
                     </div>
                 </div>

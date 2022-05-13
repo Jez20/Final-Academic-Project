@@ -91,7 +91,7 @@
 <!--                    <span class="h1 text-uppercase text-primary bg-dark px-2">The</span>
                     <span class="h1 text-uppercase text-dark bg-primary px-2 ml-n1">Store</span>-->
   <!--<a class="navbar-brand"><img src ="img/logo.jpeg" class="img-responsive logo" alt="Logo" style="width: 347.33px; height: 45.14px"></a>-->
-    <a class="navbar-brand"><img src ="img/2.png" class="img-responsive logo" alt="Logo" ></a>
+    <a class="navbar-brand"><img src ="img/logo.png" class="img-responsive logo" alt="Logo" ></a>
 
                 </a>
             </div>
