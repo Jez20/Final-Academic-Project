@@ -22,24 +22,24 @@ public class PaymentServlet extends HttpServlet {
 
     private PdfReportGenerator pdfGenerate;
     private Security encryptDecrypt;
-    private DatabaseManager  managesDB;
+    private DatabaseManager managesDB;
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        String dbDriver = config.getInitParameter("jdbcClassName");
-        StringBuffer url = new StringBuffer(config.getInitParameter("jdbcDriverUrl"))
+        String dbDriver = getServletContext().getInitParameter("jdbcClassName");
+        StringBuffer url = new StringBuffer(getServletContext().getInitParameter("jdbcDriverUrl"))
                 .append("://")
-                .append(config.getInitParameter("dbHostName"))
+                .append(getServletContext().getInitParameter("dbHostName"))
                 .append(":")
-                .append(config.getInitParameter("dbPort"))
+                .append(getServletContext().getInitParameter("dbPort"))
                 .append("/")
-                .append(config.getInitParameter("databaseName"));
-        String dbPassword = config.getInitParameter("dbPassword");
-        String dbUsername = config.getInitParameter("dbUserName");
+                .append(getServletContext().getInitParameter("databaseName"));
+        String dbPassword = getServletContext().getInitParameter("dbPassword");
+        String dbUsername = getServletContext().getInitParameter("dbUserName");
         String key = config.getInitParameter("key");
         this.pdfGenerate = new PdfReportGenerator();
         this.encryptDecrypt = new Security();
-        this.managesDB = new DatabaseManager("placeholder","placeholder","placeholder","placeholder");
+        this.managesDB = new DatabaseManager(url.toString(),dbPassword,dbDriver,dbDriver,key);
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
