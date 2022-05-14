@@ -42,32 +42,32 @@
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" checked id="price-all">
                             <label class="custom-control-label" for="price-all">All Price</label>
-                            <span class="badge border font-weight-normal">1000</span>
+<!--                            <span class="badge border font-weight-normal">1000</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="price-1">
                             <label class="custom-control-label" for="price-1">$0 - $100</label>
-                            <span class="badge border font-weight-normal">150</span>
+<!--                            <span class="badge border font-weight-normal">150</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="price-2">
                             <label class="custom-control-label" for="price-2">$100 - $200</label>
-                            <span class="badge border font-weight-normal">295</span>
+<!--                            <span class="badge border font-weight-normal">295</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="price-3">
                             <label class="custom-control-label" for="price-3">$200 - $300</label>
-                            <span class="badge border font-weight-normal">246</span>
+<!--                            <span class="badge border font-weight-normal">246</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="price-4">
                             <label class="custom-control-label" for="price-4">$300 - $400</label>
-                            <span class="badge border font-weight-normal">145</span>
+<!--                            <span class="badge border font-weight-normal">145</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
                             <input type="checkbox" class="custom-control-input" id="price-5">
                             <label class="custom-control-label" for="price-5">$400 - $500</label>
-                            <span class="badge border font-weight-normal">168</span>
+<!--                            <span class="badge border font-weight-normal">168</span>-->
                         </div>
                     </form>
                 </div>
@@ -118,32 +118,32 @@
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" checked id="size-all">
                             <label class="custom-control-label" for="size-all">All Size</label>
-                            <span class="badge border font-weight-normal">1000</span>
+<!--                            <span class="badge border font-weight-normal">1000</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-1">
                             <label class="custom-control-label" for="size-1">XS</label>
-                            <span class="badge border font-weight-normal">150</span>
+<!--                            <span class="badge border font-weight-normal">150</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-2">
                             <label class="custom-control-label" for="size-2">S</label>
-                            <span class="badge border font-weight-normal">295</span>
+<!--                            <span class="badge border font-weight-normal">295</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-3">
                             <label class="custom-control-label" for="size-3">M</label>
-                            <span class="badge border font-weight-normal">246</span>
+<!--                            <span class="badge border font-weight-normal">246</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-4">
                             <label class="custom-control-label" for="size-4">L</label>
-                            <span class="badge border font-weight-normal">145</span>
+<!--                            <span class="badge border font-weight-normal">145</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
                             <input type="checkbox" class="custom-control-input" id="size-5">
                             <label class="custom-control-label" for="size-5">XL</label>
-                            <span class="badge border font-weight-normal">168</span>
+<!--                            <span class="badge border font-weight-normal">168</span>-->
                         </div>
                     </form>
                 </div>
@@ -156,22 +156,22 @@
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" checked id="size-all">
                             <label class="custom-control-label" for="size-all">All Gender</label>
-                            <span class="badge border font-weight-normal">1000</span>
+<!--                            <span class="badge border font-weight-normal">1000</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-1">
                             <label class="custom-control-label" for="size-1">Male</label>
-                            <span class="badge border font-weight-normal">150</span>
+<!--                            <span class="badge border font-weight-normal">150</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-2">
                             <label class="custom-control-label" for="size-2">Female</label>
-                            <span class="badge border font-weight-normal">295</span>
+<!--                            <span class="badge border font-weight-normal">295</span>-->
                         </div>
                                                 <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-2">
                             <label class="custom-control-label" for="size-2">Unisex</label>
-                            <span class="badge border font-weight-normal">55</span>
+<!--                            <span class="badge border font-weight-normal">55</span>-->
                         </div>
                     </form>
                 </div>
@@ -184,47 +184,47 @@
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" checked id="size-all">
                             <label class="custom-control-label" for="size-all">All Universities</label>
-                            <span class="badge border font-weight-normal">1000</span>
+<!--                            <span class="badge border font-weight-normal">1000</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-1">
                             <label class="custom-control-label" for="size-1">Adamson Soaring Falcons</label>
-                            <span class="badge border font-weight-normal">150</span>
+<!--                            <span class="badge border font-weight-normal">150</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-2">
                             <label class="custom-control-label" for="size-2">Ateneo Blue Eagles</label>
-                            <span class="badge border font-weight-normal">295</span>
+<!--                            <span class="badge border font-weight-normal">295</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-2">
                             <label class="custom-control-label" for="size-2">De Lasalle Green Archers</label>
-                            <span class="badge border font-weight-normal">55</span>
+<!--                            <span class="badge border font-weight-normal">55</span>-->
                         </div>
                                                 <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-1">
                             <label class="custom-control-label" for="size-1">FEU Tamaraws</label>
-                            <span class="badge border font-weight-normal">150</span>
+<!--                            <span class="badge border font-weight-normal">150</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-2">
                             <label class="custom-control-label" for="size-2">NU Bulldogs</label>
-                            <span class="badge border font-weight-normal">295</span>
+<!--                            <span class="badge border font-weight-normal">295</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-2">
                             <label class="custom-control-label" for="size-2">UE Red Warriors</label>
-                            <span class="badge border font-weight-normal">55</span>
+<!--                            <span class="badge border font-weight-normal">55</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-2">
                             <label class="custom-control-label" for="size-2">UP Fighting Maroons</label>
-                            <span class="badge border font-weight-normal">295</span>
+<!--                            <span class="badge border font-weight-normal">295</span>-->
                         </div>
                         <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                             <input type="checkbox" class="custom-control-input" id="size-2">
                             <label class="custom-control-label" for="size-2">UST Growling Tigers</label>
-                            <span class="badge border font-weight-normal">55</span>
+<!--                            <span class="badge border font-weight-normal">55</span>-->
                         </div>
                     </form>
                 </div>
@@ -1346,6 +1346,33 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-110-GN_Front-600x600.jpg" alt="">
+                                <div class="product-action">
+                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+<!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
+                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                                <div class="d-flex align-items-center justify-content-center mt-2">
+                                    <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                                </div>
+<!--                                <div class="d-flex align-items-center justify-content-center mb-1">
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="far fa-star text-primary mr-1"></small>
+                                    <small class="far fa-star text-primary mr-1"></small>
+                                    <small>(99)</small>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+                        <div class="product-item bg-light mb-4">
+                            <div class="product-img position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/2-1-600x600.jpg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
@@ -1616,7 +1643,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_NU_SBC-E-105-W_Front-600x600.jpg" alt="">
+                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/SBC-E-105-MB-National-U-Vinyl-Front.jpg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
@@ -1751,7 +1778,7 @@
                                         <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/NU-Script_Navy-blue.png" alt="">
+                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/NU_Vinyl_navy-blue-600x600.png" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
@@ -2234,7 +2261,7 @@
                             </div>
                         </div>
                     </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+                    <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/UST-Fades-600x600.png" alt="">
@@ -2261,7 +2288,61 @@
                             </div>
                         </div>
                     </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+                    <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+                        <div class="product-item bg-light mb-4">
+                            <div class="product-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-109-Y_Front-600x600.jpg" alt="">
+                                <div class="product-action">
+                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+<!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
+                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                                <div class="d-flex align-items-center justify-content-center mt-2">
+                                    <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                                </div>
+<!--                                <div class="d-flex align-items-center justify-content-center mb-1">
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="far fa-star text-primary mr-1"></small>
+                                    <small class="far fa-star text-primary mr-1"></small>
+                                    <small>(99)</small>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+                        <div class="product-item bg-light mb-4">
+                            <div class="product-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-106-Y_Front-600x600.jpg" alt="">
+                                <div class="product-action">
+                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+<!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
+                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                                <div class="d-flex align-items-center justify-content-center mt-2">
+                                    <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                                </div>
+<!--                                <div class="d-flex align-items-center justify-content-center mb-1">
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="fa fa-star text-primary mr-1"></small>
+                                    <small class="far fa-star text-primary mr-1"></small>
+                                    <small class="far fa-star text-primary mr-1"></small>
+                                    <small>(99)</small>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-114-BK_Front-600x600.jpg" alt="">

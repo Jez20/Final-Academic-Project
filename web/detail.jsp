@@ -155,6 +155,9 @@
                             <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-109-GN_Back-600x600.jpg" alt="Image">
                         </div>
                         <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-110-GN_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
                             <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/2-1-600x600.jpg" alt="Image">
                         </div>
                         <div class="carousel-item">
@@ -185,7 +188,7 @@
                             <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_NU_SBC-E-104-MB_Front-600x600.jpg" alt="Image">
                         </div>
                         <div class="carousel-item">
-                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_NU_SBC-E-105-W_Front-600x600.jpg" alt="Image">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/SBC-E-105-MB-National-U-Vinyl-Front.jpg" alt="Image">
                         </div>
                         <div class="carousel-item">
                             <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/NU_GB-600x600.png" alt="Image">
@@ -256,6 +259,12 @@
                         </div>
                         <div class="carousel-item">
                             <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/UST-Fades-600x600.png" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-109-Y_Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-106-Y_Front-600x600.jpg" alt="Image">
                         </div>
                         <div class="carousel-item">
                             <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-114-BK_Front-600x600.jpg" alt="Image">
@@ -607,6 +616,31 @@
                     </div>
                     <div class="product-item bg-light">
                         <div class="product-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/SBC-E-105-MB-National-U-Vinyl-Front.jpg" alt="">
+                            <div class="product-action">
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+<!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
+                                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                            <div class="d-flex align-items-center justify-content-center mt-2">
+                                <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                            </div>
+<!--                            <div class="d-flex align-items-center justify-content-center mb-1">
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small class="fa fa-star text-primary mr-1"></small>
+                                <small>(99)</small>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="product-item bg-light">
+                        <div class="product-img position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="https://i.ibb.co/3mvqtLN/resized-image-Promo.jpg" alt="">
                             <div class="product-action">
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
@@ -657,7 +691,7 @@
                     </div>
                     <div class="product-item bg-light">
                         <div class="product-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-113-Y_Front-600x600.jpg" alt="">
+                            <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-106-Y_Front-600x600.jpg" alt="">
                             <div class="product-action">
                                 <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>

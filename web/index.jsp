@@ -128,7 +128,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>Adamson Soaring Falcons</h6>
-                            <small class="text-body">100 Products</small>
+<!--                            <small class="text-body">100 Products</small>-->
                         </div>
                     </div>
                 </a>
@@ -141,7 +141,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>Ateneo Blue Eagles</h6>
-                            <small class="text-body">100 Products</small>
+<!--                            <small class="text-body">100 Products</small>-->
                         </div>
                     </div>
                 </a>
@@ -154,7 +154,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>De Lasalle Green Archers</h6>
-                            <small class="text-body">100 Products</small>
+<!--                            <small class="text-body">100 Products</small>-->
                         </div>
                     </div>
                 </a>
@@ -167,7 +167,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>FEU Tamaraws</h6>
-                            <small class="text-body">100 Products</small>
+<!--                            <small class="text-body">100 Products</small>-->
                         </div>
                     </div>
                 </a>
@@ -180,7 +180,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>NU Bulldogs</h6>
-                            <small class="text-body">100 Products</small>
+<!--                            <small class="text-body">100 Products</small>-->
                         </div>
                     </div>
                 </a>
@@ -193,7 +193,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>UE Red Warriors</h6>
-                            <small class="text-body">100 Products</small>
+<!--                            <small class="text-body">100 Products</small>-->
                         </div>
                     </div>
                 </a>
@@ -206,7 +206,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>UP Fighting Maroons</h6>
-                            <small class="text-body">100 Products</small>
+<!--                            <small class="text-body">100 Products</small>-->
                         </div>
                     </div>
                 </a>
@@ -219,7 +219,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>UST Growling Tigers</h6>
-                            <small class="text-body">100 Products</small>
+<!--                            <small class="text-body">100 Products</small>-->
                         </div>
                     </div>
                 </a>
