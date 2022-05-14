@@ -23,6 +23,7 @@
                 <h1>The Store - Sign Up</h1>
                 <p>Enter Email</p>
                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@email.com" required>
+                <small id="emailHelp" class="form-text text-muted">Your email will serve as your username when you login.</small><br><br>
                 <p>Enter Password</p>
                 <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
                 <p>Confirm Password</p>
@@ -33,7 +34,7 @@
                     <option value="administrator">Administrator </option>
                 </select><br><br>
                 <p>Prove that you are not a robot</p>
-                <!--            enter captcha here -->
+                <!--Enter captcha code here -->
                 <input type="text" class="form-control" placeholder="Enter phrase" required>
                 <center><button type="button" >Sign Up</button></center><br><br>
                 <form>
