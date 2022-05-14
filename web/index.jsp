@@ -65,16 +65,16 @@
                 <div class="product-offer mb-30" style="height: 400px;">
                     <img class="img-fluid" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-109-GN-Never-Shall-Front_Model4.jpg" alt="">
                     <div class="offer-text">
-                        <h6 class="text-white text-uppercase">Save 20%</h6>
-                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <h6 class="text-white ">Green, white, go, fight!</h6>
+                        <h3 class="text-white mb-3">Rektikano, keena keena!</h3>
                         <a href="shop.jsp" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>
                 <div class="product-offer mb-30" style="height: 400px;">
                     <img class="img-fluid" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/4-3.jpg" alt="">
                     <div class="offer-text">
-                        <h6 class="text-white text-uppercase">Save 20%</h6>
-                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <h6 class="text-white ">Black Gold, Black White</h6>
+                        <h3 class="text-white mb-3">Go USTe! Go USTe! Go USTe!</h3>
                         <a href="shop.jsp" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Categories</span></h2>
         <div class="row px-xl-5 pb-3">
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
+                <a class="text-decoration-none" href="shop.jsp#ADU">
                     <div class="cat-item d-flex align-items-center mb-4">
                         <div class="overflow-hidden" style="width: 100px; height: 100px;">
                             <img class="img-fluid" src="https://i.ibb.co/jZy0HZS/Adu.jpg" alt="">
@@ -134,7 +134,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
+                <a class="text-decoration-none" href="shop.jsp#ADMU">
                     <div class="cat-item img-zoom d-flex align-items-center mb-4">
                         <div class="overflow-hidden" style="width: 100px; height: 100px;">
                             <img class="img-fluid" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/2-quick-view-IMG_1299-1.jpg" alt="">
@@ -147,7 +147,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
+                <a class="text-decoration-none" href="shop.jsp#DLSU">
                     <div class="cat-item img-zoom d-flex align-items-center mb-4">
                         <div class="overflow-hidden" style="width: 100px; height: 100px;">
                             <img class="img-fluid" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-109-GN-Never-Shall-Front_Model4.jpg" alt="">
@@ -160,7 +160,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
+                <a class="text-decoration-none" href="shop.jsp#FEU">
                     <div class="cat-item img-zoom d-flex align-items-center mb-4">
                         <div class="overflow-hidden" style="width: 100px; height: 100px;">
                             <img class="img-fluid" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-cothing_FEU_SBC-C-108-Y-FEU-Future-Front_Model1.jpg" alt="">
@@ -173,7 +173,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
+                <a class="text-decoration-none" href="shop.jsp#NU">
                     <div class="cat-item img-zoom d-flex align-items-center mb-4">
                         <div class="overflow-hidden" style="width: 100px; height: 100px;">
                             <img class="img-fluid" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_NU_SBC-E-101_Model_2.jpg" alt="">
@@ -186,7 +186,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
+                <a class="text-decoration-none" href="shop.jsp#UE">
                     <div class="cat-item img-zoom d-flex align-items-center mb-4">
                         <div class="overflow-hidden" style="width: 100px; height: 100px;">
                             <img class="img-fluid" src="https://i.ibb.co/Cn9vmG8/UE.jpg" alt="">
@@ -199,7 +199,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
+                <a class="text-decoration-none" href="shop.jsp#UP">
                     <div class="cat-item img-zoom d-flex align-items-center mb-4">
                         <div class="overflow-hidden" style="width: 100px; height: 100px;">
                             <img class="img-fluid" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/03/UP-Oblation800x800.jpg" alt="">
@@ -212,7 +212,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
+                <a class="text-decoration-none" href="shop.jsp#UST">
                     <div class="cat-item img-zoom d-flex align-items-center mb-4">
                         <div class="overflow-hidden" style="width: 100px; height: 100px;">
                             <img class="img-fluid" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/4-3.jpg" alt="">
@@ -513,8 +513,8 @@
                 <div class="product-offer mb-30" style="height: 800px;">
                     <img class="img-fluid" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/2-quick-view-IMG_1299-1.jpg" alt="">
                     <div class="offer-text">
-                        <h6 class="text-white text-uppercase">Save 20%</h6>
-                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <h6 class="text-white ">One Big One Fight</h6>
+                        <h3 class="text-white mb-3">Go Ateneo!</h3>
                         <a href="shop.jsp" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>
@@ -523,8 +523,8 @@
                 <div class="product-offer mb-30" style="height: 800px;">
                     <img class="img-fluid" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-cothing_FEU_SBC-C-108-Y-FEU-Future-Front_Model1.jpg" alt="">
                     <div class="offer-text">
-                        <h6 class="text-white text-uppercase">Save 20%</h6>
-                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <h6 class="text-white ">Go Fight Green and Gold!</h6>
+                        <h3 class="text-white mb-3">Let's Go Tamaraws!</h3>
                         <a href="shop.jsp" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>

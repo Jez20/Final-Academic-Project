@@ -106,6 +106,9 @@
                             <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/Ateneo_FLY-Ateneo_royal-blue-600x600.png" alt="Image">
                         </div>
                         <div class="carousel-item">
+                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/1-thumbnail-SBC-A-103-RB-Ateneo-Vinyl-Front-600x600.jpg" alt="Image">
+                        </div>
+                        <div class="carousel-item">
                             <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/1-thumbnail-SBC-A-106-RB-Jacket-with-Hood-Front-600x600.jpg" alt="Image">
                         </div>
                         <div class="carousel-item">
@@ -116,9 +119,6 @@
                         </div>
                         <div class="carousel-item">
                             <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/1-thumbnail-SBC-A-112-W-Ateneo-Raincoat-Front-600x600.jpg" alt="Image">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/1-thumbnail-SBC-A-110-W-Polo-A-Front-600x600.jpg" alt="Image">
                         </div>
                         <div class="carousel-item">
                             <img class="w-100 h-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/1-thumbnail-SBC-A-110-W-Polo-A-Front-600x600.jpg" alt="Image">
