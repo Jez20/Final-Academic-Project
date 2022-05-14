@@ -39,36 +39,36 @@
                 <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Filter by price</span></h5>
                 <div class="bg-light p-4 mb-30">
                     <form>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" checked id="price-all">
-                            <label class="custom-control-label" for="price-all">All Price</label>
-<!--                            <span class="badge border font-weight-normal">1000</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="price-1">
-                            <label class="custom-control-label" for="price-1">$0 - $100</label>
-<!--                            <span class="badge border font-weight-normal">150</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="price-2">
-                            <label class="custom-control-label" for="price-2">$100 - $200</label>
-<!--                            <span class="badge border font-weight-normal">295</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="price-3">
-                            <label class="custom-control-label" for="price-3">$200 - $300</label>
-<!--                            <span class="badge border font-weight-normal">246</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="price-4">
-                            <label class="custom-control-label" for="price-4">$300 - $400</label>
-<!--                            <span class="badge border font-weight-normal">145</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
-                            <input type="checkbox" class="custom-control-input" id="price-5">
-                            <label class="custom-control-label" for="price-5">$400 - $500</label>
-<!--                            <span class="badge border font-weight-normal">168</span>-->
-                        </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="price-1" name="price" checked>
+                                <label class="custom-control-label" for="price-1">All Price</label>
+                                <span class="badge border font-weight-normal">500</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="price-2" name="price">
+                                <label class="custom-control-label" for="price-2">₱100-300</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="price-3" name="price">
+                                <label class="custom-control-label" for="price-3">₱300-600</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="price-4" name="price">
+                                <label class="custom-control-label" for="price-4">₱600-900</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="price-5" name="price">
+                                <label class="custom-control-label" for="price-5">₱900-1200</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="price-6" name="price">
+                                <label class="custom-control-label" for="price-6">₱1200-1500+</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
                     </form>
                 </div>
                 <!-- Price End -->
@@ -77,33 +77,33 @@
 <!--                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Filter by color</span></h5>
                 <div class="bg-light p-4 mb-30">
                     <form>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" checked id="color-all">
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" class="custom-control-input" checked id="color-all">
                             <label class="custom-control-label" for="price-all">All Color</label>
                             <span class="badge border font-weight-normal">1000</span>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="color-1">
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" class="custom-control-input" id="color-1">
                             <label class="custom-control-label" for="color-1">Black</label>
                             <span class="badge border font-weight-normal">150</span>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="color-2">
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" class="custom-control-input" id="color-2">
                             <label class="custom-control-label" for="color-2">White</label>
                             <span class="badge border font-weight-normal">295</span>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="color-3">
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" class="custom-control-input" id="color-3">
                             <label class="custom-control-label" for="color-3">Red</label>
                             <span class="badge border font-weight-normal">246</span>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="color-4">
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" class="custom-control-input" id="color-4">
                             <label class="custom-control-label" for="color-4">Blue</label>
                             <span class="badge border font-weight-normal">145</span>
                         </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
-                            <input type="checkbox" class="custom-control-input" id="color-5">
+                        <div class="custom-control custom-radio d-flex align-items-center justify-content-between">
+                            <input type="radio" class="custom-control-input" id="color-5">
                             <label class="custom-control-label" for="color-5">Green</label>
                             <span class="badge border font-weight-normal">168</span>
                         </div>
@@ -115,36 +115,36 @@
                 <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Filter by size</span></h5>
                 <div class="bg-light p-4 mb-30">
                     <form>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" checked id="size-all">
-                            <label class="custom-control-label" for="size-all">All Size</label>
-<!--                            <span class="badge border font-weight-normal">1000</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-1">
-                            <label class="custom-control-label" for="size-1">XS</label>
-<!--                            <span class="badge border font-weight-normal">150</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-2">
-                            <label class="custom-control-label" for="size-2">S</label>
-<!--                            <span class="badge border font-weight-normal">295</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-3">
-                            <label class="custom-control-label" for="size-3">M</label>
-<!--                            <span class="badge border font-weight-normal">246</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-4">
-                            <label class="custom-control-label" for="size-4">L</label>
-<!--                            <span class="badge border font-weight-normal">145</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
-                            <input type="checkbox" class="custom-control-input" id="size-5">
-                            <label class="custom-control-label" for="size-5">XL</label>
-<!--                            <span class="badge border font-weight-normal">168</span>-->
-                        </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="size-1" name="size" checked>
+                                <label class="custom-control-label" for="size-1">All Size</label>
+                                <span class="badge border font-weight-normal">500</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="size-2" name="size">
+                                <label class="custom-control-label" for="size-2">XS</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="size-3" name="size">
+                                <label class="custom-control-label" for="size-3">S</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="size-4" name="size">
+                                <label class="custom-control-label" for="size-4">M</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="size-5" name="size">
+                                <label class="custom-control-label" for="size-5">L</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="size-6" name="size">
+                                <label class="custom-control-label" for="size-6">XL</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
                     </form>
                 </div>
                 <!-- Size End -->
@@ -153,26 +153,26 @@
                 <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Filter by Gender</span></h5>
                 <div class="bg-light p-4 mb-30">
                     <form>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" checked id="size-all">
-                            <label class="custom-control-label" for="size-all">All Gender</label>
-<!--                            <span class="badge border font-weight-normal">1000</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-1">
-                            <label class="custom-control-label" for="size-1">Male</label>
-<!--                            <span class="badge border font-weight-normal">150</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-2">
-                            <label class="custom-control-label" for="size-2">Female</label>
-<!--                            <span class="badge border font-weight-normal">295</span>-->
-                        </div>
-                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-2">
-                            <label class="custom-control-label" for="size-2">Unisex</label>
-<!--                            <span class="badge border font-weight-normal">55</span>-->
-                        </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="gender-1" name="gender" checked>
+                                <label class="custom-control-label" for="gender-1">All Gender</label>
+                                <span class="badge border font-weight-normal">300</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="gender-2" name="gender">
+                                <label class="custom-control-label" for="gender-2">Male</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="gender-3" name="gender">
+                                <label class="custom-control-label" for="gender-3">Female</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="gender-4" name="gender">
+                                <label class="custom-control-label" for="gender-4">Unisex</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
                     </form>
                 </div>
                 <!-- Gender End -->
@@ -181,51 +181,51 @@
                 <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Filter by University</span></h5>
                 <div class="bg-light p-4 mb-30">
                     <form>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" checked id="size-all">
-                            <label class="custom-control-label" for="size-all">All Universities</label>
-<!--                            <span class="badge border font-weight-normal">1000</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-1">
-                            <label class="custom-control-label" for="size-1">Adamson Soaring Falcons</label>
-<!--                            <span class="badge border font-weight-normal">150</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-2">
-                            <label class="custom-control-label" for="size-2">Ateneo Blue Eagles</label>
-<!--                            <span class="badge border font-weight-normal">295</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-2">
-                            <label class="custom-control-label" for="size-2">De Lasalle Green Archers</label>
-<!--                            <span class="badge border font-weight-normal">55</span>-->
-                        </div>
-                                                <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-1">
-                            <label class="custom-control-label" for="size-1">FEU Tamaraws</label>
-<!--                            <span class="badge border font-weight-normal">150</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-2">
-                            <label class="custom-control-label" for="size-2">NU Bulldogs</label>
-<!--                            <span class="badge border font-weight-normal">295</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-2">
-                            <label class="custom-control-label" for="size-2">UE Red Warriors</label>
-<!--                            <span class="badge border font-weight-normal">55</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-2">
-                            <label class="custom-control-label" for="size-2">UP Fighting Maroons</label>
-<!--                            <span class="badge border font-weight-normal">295</span>-->
-                        </div>
-                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
-                            <input type="checkbox" class="custom-control-input" id="size-2">
-                            <label class="custom-control-label" for="size-2">UST Growling Tigers</label>
-<!--                            <span class="badge border font-weight-normal">55</span>-->
-                        </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                            <input type="radio" class="custom-control-input" id="university-1" name="university" checked>
+                                <label class="custom-control-label" for="university-1">All Universities</label>
+                                <span class="badge border font-weight-normal">800</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="university-2" name="university">
+                                <label class="custom-control-label" for="university-2">Adamson Soaring Falcons</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="university-3" name="university">
+                                <label class="custom-control-label" for="university-3">Ateneo Blue Eagles</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="university-4" name="university">
+                                <label class="custom-control-label" for="university-4">De Lasalle Green Archers</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="university-5" name="university">
+                                <label class="custom-control-label" for="university-5">FEU Tamaraws</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="university-6" name="university">
+                                <label class="custom-control-label" for="university-6">NU Bulldogs</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="university-7" name="university">
+                                <label class="custom-control-label" for="university-7">UE Red Warriors</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="university-8" name="university">
+                                <label class="custom-control-label" for="university-8">UP Fighting Maroons</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
+                            <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
+                                <input type="radio" class="custom-control-input" id="university-9" name="university">
+                                <label class="custom-control-label" for="university-9">UST Growling Tigers</label>
+                                <span class="badge border font-weight-normal">100</span>
+                            </div>
                     </form>
                 </div>
                 <!-- University End -->
