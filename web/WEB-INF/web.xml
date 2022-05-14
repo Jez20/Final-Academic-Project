@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <context-param>
+        <param-name>jdbcClassName</param-name>
+        <param-value>org.apache.derby.jdbc.ClientDriver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbUserName</param-name>
+        <param-value>app</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbPassword</param-name>
+        <param-value>app</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbcDriverurl</param-name>
+        <param-value>jdbc:derby</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbHostName</param-name>
+        <param-value>localhost</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbPort</param-name>
+        <param-value>1527</param-value>
+    </context-param>
+    <context-param>
+        <param-name>databaseName</param-name>
+        <param-value>UAAP_APPAREL</param-value>
+    </context-param>
     <servlet>
-        <servlet-name>MainViewServlet</servlet-name>
-        <servlet-class>Controller.MainViewServlet</servlet-class>
+        <servlet-name>LogInSignInServlet</servlet-name>
+        <servlet-class>Controller.LogInSignInServlet</servlet-class>
+        <init-param>
+            <param-name>key</param-name>
+            <param-value>abcdefghijklofm</param-value>
+        </init-param>
     </servlet>
     <servlet>
         <servlet-name>PaymentServlet</servlet-name>
         <servlet-class>Controller.PaymentServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>MainViewServlet</servlet-name>
-        <url-pattern>/MainViewServlet</url-pattern>
+        <servlet-name>LogInSignInServlet</servlet-name>
+        <url-pattern>/LogInSignInServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>PaymentServlet</servlet-name>
