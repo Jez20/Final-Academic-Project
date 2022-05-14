@@ -37,14 +37,22 @@
         <div class="row bg-primary py-1 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
                 <div class="d-inline-flex align-items-center h-100">
-                    <a class="text-body mr-3" href="https://www.adamson.edu.ph/ustore/?page=categories&cat=apparel" target="_blank">ADU</a>
+<!--                    <a class="text-body mr-3" href="https://www.adamson.edu.ph/ustore/?page=categories&cat=apparel" target="_blank">ADU</a>
                     <a class="text-body mr-3" href="https://www.prepsportswear.com/college/us/florida/sarasota/ateneo-de-manila-university-blue-eagles?schoolid=1783077" target="_blank">ADMU</a>
                     <a class="text-body mr-3" href="https://animonation.com/collections/all" target="_blank">DLSU</a>
                     <a class="text-body mr-3" href="https://feualumnistore.com/collections/all#MainContent" target="_blank">FEU</a>
                     <a class="text-body mr-3" href="https://www.prepsportswear.com/college/us/california/san-diego/national-university-university?schoolid=2064476&ca_pid=12026390&gclid=Cj0KCQjw06OTBhC_ARIsAAU1yOXE1xvHguoII3_oTazWm1aOQvdXtAX7W6672EPr2YmJaQC5Z4Usk1IaArEyEALw_wcB" target="_blank">NU</a>
                     <a class="text-body mr-3" href="https://shopee.ph/upbeat.ph/" target="_blank">UP</a>
                     <a class="text-body mr-3" href="https://www.ue.edu.ph/mla/souvenir-shop/" target="_blank">UE</a>
-                    <a class="text-body mr-3" href="https://campusthreadph.com/product-tag/ust/" target="_blank">UST</a>
+                    <a class="text-body mr-3" href="https://campusthreadph.com/product-tag/ust/" target="_blank">UST</a>-->
+                    <a class="text-body mr-3" href="shop.jsp#ADU">ADU</a>
+                    <a class="text-body mr-3" href="shop.jsp#ADMU">ADMU</a>
+                    <a class="text-body mr-3" href="shop.jsp#DLSU">DLSU</a>
+                    <a class="text-body mr-3" href="shop.jsp#FEU">FEU</a>
+                    <a class="text-body mr-3" href="shop.jsp#NU">NU</a>
+                    <a class="text-body mr-3" href="shop.jsp#UP">UP</a>
+                    <a class="text-body mr-3" href="shop.jsp#UE">UE</a>
+                    <a class="text-body mr-3" href="shop.jsp#UST">UST</a>
                 </div>
             </div>
             <div class="col-lg-6 text-center text-lg-right">

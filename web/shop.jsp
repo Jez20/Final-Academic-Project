@@ -266,7 +266,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="img/ADU1.jpeg" alt="">
+                                <img class="img-fluid w-100" id="ADU" src="img/ADU1.jpeg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -698,7 +698,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/Ateneo_ABE-Stripes_Royal-Blue.png" alt="">
+                                <img class="img-fluid w-100" id="ADMU" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/Ateneo_ABE-Stripes_Royal-Blue.png" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>-->
@@ -1130,7 +1130,7 @@
                                         <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-113-GN_Front-600x600.jpg" alt="">
+                                <img class="img-fluid w-100" id="DLSU" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-113-GN_Front-600x600.jpg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
@@ -1400,7 +1400,7 @@
                                         <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/FEU_Future_moss-green-600x600.png" alt="">
+                                <img class="img-fluid w-100" id="FEU" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/06/FEU_Future_moss-green-600x600.png" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
@@ -1589,7 +1589,7 @@
                                         <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_NU_SBC-E-106-MB_Front-600x600.jpg" alt="">
+                                <img class="img-fluid w-100" id="NU" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_NU_SBC-E-106-MB_Front-600x600.jpg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
@@ -1805,7 +1805,7 @@
                                         <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://i.ibb.co/3mvqtLN/resized-image-Promo.jpg" alt="">
+                                <img class="img-fluid w-100" id="UE" src="https://i.ibb.co/3mvqtLN/resized-image-Promo.jpg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
@@ -1994,7 +1994,7 @@
                                         <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/03/UP-Oblation-front800x800-600x600.jpg" alt="">
+                                <img class="img-fluid w-100" id="UP" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/03/UP-Oblation-front800x800-600x600.jpg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
@@ -2156,7 +2156,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
                         <div class="product-item bg-light mb-4">
                             <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-113-Y_Front-600x600.jpg" alt="">
+                                <img class="img-fluid w-100" id="UST" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-113-Y_Front-600x600.jpg" alt="">
                                 <div class="product-action">
                                     <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
 <!--                                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
