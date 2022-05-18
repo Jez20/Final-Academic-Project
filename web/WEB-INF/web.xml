@@ -54,6 +54,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>signup.jsp</welcome-file>
+        <welcome-file>AdminProductList.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

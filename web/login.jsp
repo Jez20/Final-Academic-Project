@@ -36,8 +36,8 @@
                     <u><a href="#">Go back to Homepage</a></u>
                     </div>
                     </body>
-
                     </html>
+                    
                     <style>
                         body{
                             margin: 0;
