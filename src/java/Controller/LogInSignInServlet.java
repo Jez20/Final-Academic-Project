@@ -27,7 +27,7 @@ public class LogInSignInServlet extends HttpServlet {
         String driver = getServletContext().getInitParameter("jdbcClassName");
         String username = getServletContext().getInitParameter("dbUserName");
         String password = getServletContext().getInitParameter("dbPassword");
-        StringBuffer url = new StringBuffer(getServletContext().getInitParameter("jdbcDriverUrl"))
+        StringBuffer url = new StringBuffer(getServletContext().getInitParameter("jdbcDriverurl"))
                 .append("://")
                 .append(getServletContext().getInitParameter("dbHostName"))
                 .append(":")
