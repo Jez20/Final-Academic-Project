@@ -36,7 +36,11 @@
                         <td>DLSU</td>
                         <td>Shirts</td>
                         <td>ewan</td><!-- comment -->
-                        <td>some buttons</td>
+                        <td>
+<!--                            <from action="some in here" method="GET">-->
+                        <button type="button" name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>
+                        <button type="button" name="Action" value="Delete" type="Submit" class="btn btn-danger">Delete</button>
+                        </td>
                 <!--some code here-->
                 </tbody>
                 </table>
@@ -53,7 +57,7 @@
         min-width: 400px;
         margin-left: auto;
         margin-right: auto;
-        width: 100%;
+        width: 95%;
     }
     th, td {
         padding: 15px;
