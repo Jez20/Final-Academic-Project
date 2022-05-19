@@ -205,7 +205,7 @@
                                 <label class="custom-control-label" for="cod">COD</label>
                             </div>
                         </div>
-                        <button class="btn btn-block btn-primary font-weight-bold py-3">Place Order</button>
+                        <button class="btn btn-block btn-primary font-weight-bold py-3">Confirm Order</button>
                     </div>
                 </div>
             </div>

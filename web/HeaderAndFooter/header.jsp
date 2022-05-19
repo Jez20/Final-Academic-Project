@@ -60,8 +60,12 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My Account</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <button class="dropdown-item" type="button">Sign in</button>
-                            <button class="dropdown-item" type="button">Sign up</button>
+                           <a href="login.jsp">
+                            <button class="dropdown-item" type="button">Log In</button>
+                            </a>
+                            <a href="signup.jsp">
+                            <button class="dropdown-item" type="button">Sign Up</button>
+                            </a>
                         </div>
                     </div>
 <!--                    <div class="btn-group mx-2">
@@ -258,15 +262,28 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="index.jsp" class="nav-item nav-link active">Home</a>
-                            <a href="shop.jsp" class="nav-item nav-link">Shop</a>
-                            <a href="detail.jsp" class="nav-item nav-link">Shop Detail</a>
                             <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop <i class="fa fa-angle-down mt-1"></i></a>
+                                <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
+                                <a href="shop.jsp" class="dropdown-item">Store</a>
+                                <a href="detail.jsp" class="dropdown-item">Item Details</a>
+                                <a href="cart.jsp" class="dropdown-item">Cart</a>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Orders <i class="fa fa-angle-down mt-1"></i></a>
+                                <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
+                                <a href="checkout.jsp" class="dropdown-item">Checkout</a>
+                                <a href="confirmation.jsp" class="dropdown-item">Confirmation</a>
+                                </div>
+                            </div>
+<!--                            <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down mt-1"></i></a>
                                 <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
                                     <a href="cart.jsp" class="dropdown-item">Shopping Cart</a>
                                     <a href="checkout.jsp" class="dropdown-item">Checkout</a>
                                 </div>
-                            </div>
+                            </div>-->
                             <a href="contact.jsp" class="nav-item nav-link">Contact</a>
                         </div>
 <!--                        <div class="col-lg-4 col-6 text-left">-->
