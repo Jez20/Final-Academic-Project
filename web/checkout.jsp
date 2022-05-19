@@ -20,8 +20,8 @@
         <div class="row px-xl-5">
             <div class="col-12">
                 <nav class="breadcrumb bg-light mb-30">
-                    <a class="breadcrumb-item text-dark" href="#">Home</a>
-                    <a class="breadcrumb-item text-dark" href="#">Shop</a>
+                    <a class="breadcrumb-item text-dark" href="index.jsp">Home</a>
+                    <span class="breadcrumb-item active">Orders</span>
                     <span class="breadcrumb-item active">Checkout</span>
                 </nav>
             </div>
@@ -51,7 +51,7 @@
                         </div>
                         <div class="col-md-6 form-group">
                             <label>Mobile No</label>
-                            <input class="form-control" type="text" placeholder="+123 456 789">
+                            <input class="form-control" type="text" placeholder="+63">
                         </div>
                         <div class="col-md-6 form-group">
                             <label>Address Line 1</label>
@@ -64,23 +64,20 @@
                         <div class="col-md-6 form-group">
                             <label>Country</label>
                             <select class="custom-select">
-                                <option selected>United States</option>
-                                <option>Afghanistan</option>
-                                <option>Albania</option>
-                                <option>Algeria</option>
+                                <option selected>Philippines</option>
                             </select>
                         </div>
                         <div class="col-md-6 form-group">
                             <label>City</label>
-                            <input class="form-control" type="text" placeholder="New York">
+                            <input class="form-control" type="text" placeholder="Manila">
                         </div>
                         <div class="col-md-6 form-group">
                             <label>State</label>
-                            <input class="form-control" type="text" placeholder="New York">
+                            <input class="form-control" type="text" placeholder="Manila">
                         </div>
                         <div class="col-md-6 form-group">
                             <label>ZIP Code</label>
-                            <input class="form-control" type="text" placeholder="123">
+                            <input class="form-control" type="text" placeholder="0000">
                         </div>
                         <div class="col-md-12 form-group">
                             <div class="custom-control custom-checkbox">
@@ -114,7 +111,7 @@
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Mobile No</label>
-                                <input class="form-control" type="text" placeholder="+123 456 789">
+                                <input class="form-control" type="text" placeholder="+63">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Address Line 1</label>
@@ -127,23 +124,20 @@
                             <div class="col-md-6 form-group">
                                 <label>Country</label>
                                 <select class="custom-select">
-                                    <option selected>United States</option>
-                                    <option>Afghanistan</option>
-                                    <option>Albania</option>
-                                    <option>Algeria</option>
+                                    <option selected>Philippines</option>
                                 </select>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>City</label>
-                                <input class="form-control" type="text" placeholder="New York">
+                                <input class="form-control" type="text" placeholder="Manila">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>State</label>
-                                <input class="form-control" type="text" placeholder="New York">
+                                <input class="form-control" type="text" placeholder="Manila">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>ZIP Code</label>
-                                <input class="form-control" type="text" placeholder="123">
+                                <input class="form-control" type="text" placeholder="0000">
                             </div>
                         </div>
                     </div>

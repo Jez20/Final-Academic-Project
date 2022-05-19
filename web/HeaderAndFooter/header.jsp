@@ -265,7 +265,7 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop <i class="fa fa-angle-down mt-1"></i></a>
                                 <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                <a href="shop.jsp" class="dropdown-item">Store</a>
+                                <a href="shop.jsp" class="dropdown-item">Store Items</a>
                                 <a href="detail.jsp" class="dropdown-item">Item Details</a>
                                 <a href="cart.jsp" class="dropdown-item">Cart</a>
                                 </div>
