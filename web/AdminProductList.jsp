@@ -38,8 +38,8 @@
                         <td>ewan</td><!-- comment -->
                         <td>
 <!--                            <from action="some in here" method="GET">-->
-                        <button type="button" name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>
-                        <button type="button" name="Action" value="Delete" type="Submit" class="btn btn-danger">Delete</button>
+                        <button name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>
+                        <button name="Action" value="Delete" type="Submit" class="btn btn-danger">Delete</button>
                         </td>
                 <!--some code here-->
                 </tbody>
@@ -47,7 +47,7 @@
         </div>
     </body>
     <footer>
-        <%--<%@ include file="HeaderAndFooter/footer.jsp"%>--%>
+        <%@ include file="HeaderAndFooter/footer.jsp"%>
     </footer>
 </html>
 <style>
