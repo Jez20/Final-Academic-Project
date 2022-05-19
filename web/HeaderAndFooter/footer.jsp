@@ -65,7 +65,7 @@
                         <div class="d-flex flex-column justify-content-start">
                             <a class="text-secondary mb-2" href="https://www.adamson.edu.ph/2018/" target="_blank"><i class="fa fa-angle-right mr-2"></i>Adamson University</a>
                             <a class="text-secondary mb-2" href="https://www.ateneo.edu" target="_blank"><i class="fa fa-angle-right mr-2"></i>Ateneo De Manila University</a>
-                            <a class="text-secondary mb-2" href="https://www.dlsu.edu.ph" target="_blank"><i class="fa fa-angle-right mr-2"></i>De Lasalle University</a>
+                            <a class="text-secondary mb-2" href="https://www.dlsu.edu.ph" target="_blank"><i class="fa fa-angle-right mr-2"></i>De La Salle University</a>
                             <a class="text-secondary mb-2" href="https://www.feu.edu.ph" target="_blank"><i class="fa fa-angle-right mr-2"></i>Far Eastern University</a>
                             <a class="text-secondary mb-2" href="https://national-u.edu.ph" target="_blank"><i class="fa fa-angle-right mr-2"></i>National University</a>
                             <a class="text-secondary mb-2" href="https://www.ue.edu.ph/mla/" target="_blank"><i class="fa fa-angle-right mr-2"></i>University Of The East</a>
