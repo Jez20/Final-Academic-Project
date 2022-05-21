@@ -12,7 +12,7 @@
         <title>The Store - Product List</title>
     </head>
     <header>
-        <%@ include file="HeaderAndFooter/header.jsp"%>
+         <%@ include file="HeaderAndFooter/header.jsp"%>
     </header>
     <body>
         
@@ -41,6 +41,55 @@
                         <button name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>
                         <button name="Action" value="Delete" type="Submit" class="btn btn-danger">Delete</button>
                         </td>
+                    </tr>
+                                        <tr>
+                        <td>Green Archer T-shirt</td>
+                        <td>DLSU T-shirt</td>
+                        <td>DLSU</td>
+                        <td>Shirts</td>
+                        <td>ewan</td><!-- comment -->
+                        <td>
+<!--                            <from action="some in here" method="GET">-->
+                        <button name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>
+                        <button name="Action" value="Delete" type="Submit" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Green Archer T-shirt</td>
+                        <td>DLSU T-shirt</td>
+                        <td>DLSU</td>
+                        <td>Shirts</td>
+                        <td>ewan</td><!-- comment -->
+                        <td>
+<!--                            <from action="some in here" method="GET">-->
+                        <button name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>
+                        <button name="Action" value="Delete" type="Submit" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Green Archer T-shirt</td>
+                        <td>DLSU T-shirt</td>
+                        <td>DLSU</td>
+                        <td>Shirts</td>
+                        <td>ewan</td><!-- comment -->
+                        <td>
+<!--                            <from action="some in here" method="GET">-->
+                        <button name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>
+                        <button name="Action" value="Delete" type="Submit" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>Green Archer T-shirt</td>
+                        <td>DLSU T-shirt</td>
+                        <td>DLSU</td>
+                        <td>Shirts</td>
+                        <td>ewan</td><!-- comment -->
+                        <td>
+<!--                            <from action="some in here" method="GET">-->
+                        <button name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>
+                        <button name="Action" value="Delete" type="Submit" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
                 <!--some code here-->
                 </tbody>
                 </table>
@@ -50,6 +99,21 @@
         <%@ include file="HeaderAndFooter/footer.jsp"%>
     </footer>
 </html>
+     <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
 <style>
     .content-table{
         border-collapse: collapse;
