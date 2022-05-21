@@ -67,7 +67,7 @@ public class LogInSignInServlet extends HttpServlet {
                 break;
 
             default:
-                response.sendRedirect("login.jsp");
+                response.sendRedirect("index.jsp");
         }
 
     }

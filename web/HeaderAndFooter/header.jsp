@@ -45,14 +45,31 @@
                                             <a class="text-body mr-3" href="https://shopee.ph/upbeat.ph/" target="_blank">UP</a>
                                             <a class="text-body mr-3" href="https://www.ue.edu.ph/mla/souvenir-shop/" target="_blank">UE</a>
                                             <a class="text-body mr-3" href="https://campusthreadph.com/product-tag/ust/" target="_blank">UST</a>-->
-                        <a class="text-body mr-3" href="shop.jsp#ADU">ADU</a>
-                        <a class="text-body mr-3" href="shop.jsp#ADMU">ADMU</a>
-                        <a class="text-body mr-3" href="shop.jsp#DLSU">DLSU</a>
-                        <a class="text-body mr-3" href="shop.jsp#FEU">FEU</a>
-                        <a class="text-body mr-3" href="shop.jsp#NU">NU</a>
-                        <a class="text-body mr-3" href="shop.jsp#UP">UP</a>
-                        <a class="text-body mr-3" href="shop.jsp#UE">UE</a>
-                        <a class="text-body mr-3" href="shop.jsp#UST">UST</a>
+                        <%
+                            if (session.getAttribute("email") != null) {
+                                {%>
+                        <a class="text-body mr-3" href="LoggedInServlet?action=ADAMSON">ADU</a>
+                        <a class="text-body mr-3" href="LoggedInServlet?action=ATENEO">ADMU</a>
+                        <a class="text-body mr-3" href="LoggedInServlet?action=LA SALLE">DLSU</a>
+                        <a class="text-body mr-3" href="LoggedInServlet?action=FEU">FEU</a>
+                        <a class="text-body mr-3" href="LoggedInServlet?action=NU">NU</a>
+                        <a class="text-body mr-3" href="LoggedInServlet?action=UP">UP</a>
+                        <a class="text-body mr-3" href="LoggedInServlet?action=UE">UE</a>
+                        <a class="text-body mr-3" href="LoggedInServlet?action=UST">UST</a>
+                        <%}
+                        } else {
+                            {%>
+                        <a class="text-body mr-3" href="LogInSignInServlet?action=ADAMSON">ADU</a>
+                        <a class="text-body mr-3" href="LogInSignInServlet?action=ATENEO">ADMU</a>
+                        <a class="text-body mr-3" href="LogInSignInServlet?action=LA SALLE">DLSU</a>
+                        <a class="text-body mr-3" href="LogInSignInServlet?action=FEU">FEU</a>
+                        <a class="text-body mr-3" href="LogInSignInServlet?action=NU">NU</a>
+                        <a class="text-body mr-3" href="LogInSignInServlet?action=UP">UP</a>
+                        <a class="text-body mr-3" href="LogInSignInServlet?action=UE">UE</a>
+                        <a class="text-body mr-3" href="LogInSignInServlet?action=UST">UST</a>
+                        <%}
+                            }
+                        %>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
@@ -63,7 +80,7 @@
                                     if (session.getAttribute("email") != null) {
                                         out.print((String) session.getAttribute("email"));
                                     } else {
-                                    out.print("My Account");
+                                        out.print("My Account");
                                     }
 
                                 %>

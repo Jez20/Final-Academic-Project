@@ -34,6 +34,33 @@ public class DatabaseManager {
         }
     }
 
+    public ResultSet returnproductSchool(HttpServletRequest request) {
+        String query = "SELECT DISTINCT\n"
+                + "PRODUCT_VARIANT_TABLE.PRODUCT_ID,\n"
+                + "PRODUCT_TABLE.PRODUCT_NAME,\n"
+                + "PRODUCT_TABLE.PRODUCT_DESC,\n"
+                + "PRODUCT_TABLE.PRODUCT_SCHOOL,\n"
+                + "PRODUCT_TABLE.PRODUCT_IMG_LINK,\n"
+                + "PRODUCT_GENDER_TABLE.PRODUCT_GENDER,\n"
+                + "PRODUCT_SIZE_TABLE.PRODUCT_SIZE,\n"
+                + "PRODUCT_VARIANT_TABLE.PRODUCT_PRICE,\n"
+                + "PRODUCT_VARIANT_TABLE.PRODUCT_STOCK\n"
+                + "FROM PRODUCT_VARIANT_TABLE\n"
+                + "JOIN PRODUCT_TABLE ON PRODUCT_TABLE.PRODUCT_ID = PRODUCT_VARIANT_TABLE.PRODUCT_ID\n"
+                + "JOIN PRODUCT_GENDER_TABLE ON PRODUCT_VARIANT_TABLE.PRODUCT_GENDER_ID = PRODUCT_GENDER_TABLE.PRODUCT_GENDER_ID\n"
+                + "JOIN PRODUCT_SIZE_TABLE ON PRODUCT_SIZE_TABLE.PRODUCT_SIZE_ID = PRODUCT_VARIANT_TABLE.PRODUCT_SIZE_ID\n"
+                + "AND PRODUCT_TABLE.PRODUCT_SCHOOL = ? ";
+        try {
+            PreparedStatement stmt = this.conn.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            stmt.setString(1, request.getParameter("action"));
+            ResultSet rs = stmt.executeQuery();
+            return rs;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public boolean signUp(HttpServletRequest request) {
         try {
             String password = request.getParameter("password");
@@ -70,7 +97,7 @@ public class DatabaseManager {
             HttpSession session = request.getSession();
 
             String query = "SELECT * FROM USER_TABLE WHERE USER_EMAIL = ?";
-            PreparedStatement stmt = this.conn.prepareStatement(query);
+            PreparedStatement stmt = this.conn.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             stmt.setString(1, request.getParameter("email"));
             ResultSet rs = stmt.executeQuery();
 
