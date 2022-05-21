@@ -71,6 +71,7 @@
                                 <label class="custom-control-label" for="price-6">₱1200-1500+</label>
                                 <span class="badge border font-weight-normal">100</span>
                             </div>
+                        <button class="btn btn-primary px-3"><i class="fa fa-filter mr-1"></i>Add Filter</button>
                         </form>
                     </div>
                     <!-- Price End -->
@@ -147,7 +148,9 @@
                                 <label class="custom-control-label" for="size-6">XL</label>
                                 <span class="badge border font-weight-normal">100</span>
                             </div>
+                            <button class="btn btn-primary px-3"><i class="fa fa-filter mr-1"></i>Add Filter</button>
                         </form>
+                                                
                     </div>
                     <!-- Size End -->
 
@@ -175,6 +178,7 @@
                                 <label class="custom-control-label" for="gender-4">Unisex</label>
                                 <span class="badge border font-weight-normal">100</span>
                             </div>
+                            <button class="btn btn-primary px-3"><i class="fa fa-filter mr-1"></i>Add Filter</button>
                         </form>
                     </div>
                     <!-- Gender End -->
@@ -228,6 +232,7 @@
                                 <label class="custom-control-label" for="university-9">UST Growling Tigers</label>
                                 <span class="badge border font-weight-normal">100</span>
                             </div>
+                            <button class="btn btn-primary px-3"><i class="fa fa-filter mr-1"></i>Add Filter</button>
                         </form>
                     </div>
                     <!-- University End -->
