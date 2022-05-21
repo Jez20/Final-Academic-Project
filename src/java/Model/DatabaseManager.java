@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -50,20 +51,18 @@ public class DatabaseManager {
                     break;
             }
             if (match) {
-                String query = "INSERT INTO USER_TABLE (USER_FNAME, USER_LNAME, USER_PASSWORD, USER_ROLE, USER_EMAIL) "
-                        + "VALUES (?, ?, ?, ?, ?)";
+                String query = "INSERT INTO USER_TABLE (USER_PASSWORD, USER_ROLE, USER_EMAIL) "
+                        + "VALUES (?, ?, ?)";
                 PreparedStatement stmt = this.conn.prepareStatement(query);
-                stmt.setString(1, "");
-                stmt.setString(2, "");
-                stmt.setString(3, this.encryptDecrypt.encrypt(password));
-                stmt.setString(4, role);
-                stmt.setString(5, request.getParameter("email").trim());
+                stmt.setString(1, this.encryptDecrypt.encrypt(password));
+                stmt.setString(2, role);
+                stmt.setString(3, request.getParameter("email").trim());
                 stmt.executeUpdate();
                 return true;
             }
             return false;
         }
-        catch (SQLException e) {
+        catch (Exception e) {
             e.printStackTrace();
             return false;
         }
