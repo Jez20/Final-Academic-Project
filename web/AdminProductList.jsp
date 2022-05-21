@@ -25,7 +25,11 @@
                         <th>Description</th>
                         <th>School</th>
                         <th>Category</th>
+                        <th>Gender</th>
+                        <th>Size</th>
+                        <th>Price</th>
                         <th>Product Image</th>
+                        <th>Stock</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -35,7 +39,11 @@
                         <td>DLSU T-shirt</td>
                         <td>DLSU</td>
                         <td>Shirts</td>
-                        <td>ewan</td><!-- comment -->
+                        <td>Male</td>
+                        <td>XL</td>
+                        <td>PHP2000</td>
+                        <td>img link here</td>
+                        <td>100</td>
                         <td>
 <!--                            <from action="some in here" method="GET">-->
                         <button name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>

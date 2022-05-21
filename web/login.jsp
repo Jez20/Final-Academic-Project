@@ -3,7 +3,7 @@
     Created on : May 7, 2022, 9:28:07 PM
     Author     : Joseph
 --%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -28,16 +28,18 @@
                 <p>Enter Password</p>
                 <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
                 <p>Prove that you are not a robot</p>
-                <!--enter captcha code here -->
+
+                <img src="<c:url value="Captcha.png" />">
+
                 <input type="text" name="captcha" class="form-control" placeholder="Enter phrase" required>
-                <center><button type="button" name="action" value="login">Log in</button></center><br><br>
+                <center><button type="SUBMIT" name="action" value="login">Log in</button></center><br><br>
                 <form>
                     <u><a href="#">Don't have an account? Sign up for free!</a></u><br>
                     <u><a href="#">Go back to Homepage</a></u>
                     </div>
                     </body>
                     </html>
-                    
+
                     <style>
                         body{
                             margin: 0;
@@ -86,7 +88,7 @@
                             color: white;
                             font-size: 16px;
                         }
-                        .loginbox button[type="button"]{
+                        .loginbox button[type="submit"]{
                             border: none;
                             outline: none;
                             height: 40px;
@@ -96,7 +98,7 @@
                             font-size: 20px;
                             border-radius: 10px;
                         }
-                        .loginbox button[type="button"]:hover{
+                        .loginbox button[type="submit"]:hover{
                             cursor: pointer;
                             background: yellowgreen;
                             color: black;
