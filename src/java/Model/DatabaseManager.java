@@ -27,11 +27,9 @@ public class DatabaseManager {
             this.conn = DriverManager.getConnection(url, userName, pass);
             this.encryptDecrypt = new Security(key);
             Class.forName(dbDriver);
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
-        }
-        catch (ClassNotFoundException a) {
+        } catch (ClassNotFoundException a) {
             a.printStackTrace();
         }
     }
@@ -61,8 +59,7 @@ public class DatabaseManager {
                 return true;
             }
             return false;
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -78,11 +75,12 @@ public class DatabaseManager {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                String dbPass = encryptDecrypt.decrypt(rs.getString(4));
+                String dbPass = encryptDecrypt.decrypt(rs.getString(2));
                 String userInputPass = request.getParameter("password");
                 boolean match = dbPass.equals(userInputPass);
                 if (match) {
-                    session.setAttribute("userid", rs.getInt(1));
+                    session.setAttribute("userid", encryptDecrypt.encrypt(Integer.toString(rs.getInt(1))));
+                    session.setAttribute("email", rs.getString(4));
                 }
                 rs.close();
                 stmt.close();
@@ -91,9 +89,11 @@ public class DatabaseManager {
             rs.close();
             stmt.close();
             return false;
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
+            return false;
+        } catch (NullPointerException ae) {
+            ae.printStackTrace();
             return false;
         }
     }

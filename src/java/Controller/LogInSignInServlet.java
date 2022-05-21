@@ -11,7 +11,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import nl.captcha.Captcha;
 import static nl.captcha.Captcha.NAME;
+
 /**
  *
  * @author FV
@@ -38,21 +40,28 @@ public class LogInSignInServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String action = request.getParameter("action").trim();
+        Captcha captcha = (Captcha) request.getSession().getAttribute(NAME);
         switch (action) {
             case "signup":
-                if (this.dbQueries.signUp(request)) {
-                    response.sendRedirect("login.jsp");
-                }
-                else {
+                if (captcha.isCorrect(request.getParameter("captcha").trim())) {
+                    if (this.dbQueries.signUp(request)) {
+                        response.sendRedirect("login.jsp");
+                    } else {
+                        response.sendRedirect("signup.jsp");
+                    }
+                } else {
                     response.sendRedirect("signup.jsp");
                 }
                 break;
 
             case "login":
-                if (this.dbQueries.logIn(request)) {
-                    response.sendRedirect("somejsp.jsp");
-                }
-                else {
+                if (captcha.isCorrect(request.getParameter("captcha").trim())) {
+                    if (this.dbQueries.logIn(request)) {
+                        response.sendRedirect("index.jsp");
+                    } else {
+                        response.sendRedirect("login.jsp");
+                    }
+                } else {
                     response.sendRedirect("login.jsp");
                 }
                 break;

@@ -46,8 +46,8 @@
 
                         <img src="<c:url value="Captcha.png" />">
 
-                        <input type="text" class="form-control" placeholder="Enter phrase" required>
-                        <center><button type="button" >Sign Up</button></center><br><br>
+                        <input type="text" name="captcha" class="form-control" placeholder="Enter phrase" required>
+                        <center><button type="submit" name="action" value="signup" >Sign Up</button></center><br><br>
                         <form>
                             <u><a href="#">I already have an account</a></u><br>
                             <u><a href="#">Go back to Homepage</a></u>
@@ -110,7 +110,7 @@
                                     color: white;
                                     font-size: 16px;
                                 }
-                                .loginbox button[type="button"]{
+                                .loginbox button[type="submit"]{
                                     border: none;
                                     outline: none;
                                     height: 40px;
@@ -120,7 +120,7 @@
                                     font-size: 20px;
                                     border-radius: 10px;
                                 }
-                                .loginbox button[type="button"]:hover{
+                                .loginbox button[type="submit"]:hover{
                                     cursor: pointer;
                                     background: yellowgreen;
                                     color: black;
