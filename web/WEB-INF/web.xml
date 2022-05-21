@@ -53,6 +53,14 @@
             <param-value>abcdefghijklopqr</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>GuestServlet</servlet-name>
+        <servlet-class>Controller.GuestServlet</servlet-class>
+        <init-param>
+            <param-name>key</param-name>
+            <param-value>abcdefghijklopqr</param-value>
+        </init-param>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LogInSignInServlet</servlet-name>
         <url-pattern>/LogInSignInServlet</url-pattern>
@@ -68,6 +76,10 @@
     <servlet-mapping>
         <servlet-name>LoggedInServlet</servlet-name>
         <url-pattern>/LoggedInServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GuestServlet</servlet-name>
+        <url-pattern>/GuestServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

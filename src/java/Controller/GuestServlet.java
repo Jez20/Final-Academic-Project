@@ -7,7 +7,6 @@ package Controller;
 
 import Model.DatabaseManager;
 import Model.Security;
-import Model.constantCateg;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
@@ -22,11 +21,19 @@ import javax.servlet.http.HttpSession;
  *
  * @author FV
  */
-public class LoggedInServlet extends HttpServlet {
+public class GuestServlet extends HttpServlet {
 
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     private DatabaseManager dbQueries;
     private Security encryptDecrypt;
-    private constantCateg savedCategSizeandGender;
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
@@ -42,11 +49,11 @@ public class LoggedInServlet extends HttpServlet {
                 .append(getServletContext().getInitParameter("databaseName"));
         this.dbQueries = new DatabaseManager(url.toString(), username, password, driver, config.getInitParameter("key"));
         this.encryptDecrypt = new Security(config.getInitParameter("key"));
-        this.savedCategSizeandGender = new constantCateg(dbQueries.returnSizeCateg(), dbQueries.returnGenderCateg());
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         String action = "";
         HttpSession session = request.getSession();
         if (request.getParameter("action") != null) {
@@ -78,18 +85,10 @@ public class LoggedInServlet extends HttpServlet {
             case "UST":
                 toTheshop(request, response);
                 break;
-            case "logout":
-                session.removeAttribute("email");
-                session.removeAttribute("userid");
-                response.sendRedirect("index.jsp");
-                break;
-            case "":
-                session.removeAttribute("email");
-                session.removeAttribute("userid");
+            default:
                 response.sendRedirect("index.jsp");
                 break;
         }
-
     }
 
     protected void toTheshop(HttpServletRequest request, HttpServletResponse response)

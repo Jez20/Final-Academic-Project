@@ -46,30 +46,25 @@
                                             <a class="text-body mr-3" href="https://www.ue.edu.ph/mla/souvenir-shop/" target="_blank">UE</a>
                                             <a class="text-body mr-3" href="https://campusthreadph.com/product-tag/ust/" target="_blank">UST</a>-->
                         <%
-                            if (session.getAttribute("email") != null) {
-                                {%>
-                        <a class="text-body mr-3" href="LoggedInServlet?action=ADAMSON">ADU</a>
-                        <a class="text-body mr-3" href="LoggedInServlet?action=ATENEO">ADMU</a>
-                        <a class="text-body mr-3" href="LoggedInServlet?action=LA SALLE">DLSU</a>
-                        <a class="text-body mr-3" href="LoggedInServlet?action=FEU">FEU</a>
-                        <a class="text-body mr-3" href="LoggedInServlet?action=NU">NU</a>
-                        <a class="text-body mr-3" href="LoggedInServlet?action=UP">UP</a>
-                        <a class="text-body mr-3" href="LoggedInServlet?action=UE">UE</a>
-                        <a class="text-body mr-3" href="LoggedInServlet?action=UST">UST</a>
-                        <%}
-                        } else {
-                            {%>
-                        <a class="text-body mr-3" href="LogInSignInServlet?action=ADAMSON">ADU</a>
-                        <a class="text-body mr-3" href="LogInSignInServlet?action=ATENEO">ADMU</a>
-                        <a class="text-body mr-3" href="LogInSignInServlet?action=LA SALLE">DLSU</a>
-                        <a class="text-body mr-3" href="LogInSignInServlet?action=FEU">FEU</a>
-                        <a class="text-body mr-3" href="LogInSignInServlet?action=NU">NU</a>
-                        <a class="text-body mr-3" href="LogInSignInServlet?action=UP">UP</a>
-                        <a class="text-body mr-3" href="LogInSignInServlet?action=UE">UE</a>
-                        <a class="text-body mr-3" href="LogInSignInServlet?action=UST">UST</a>
-                        <%}
+                            String servlet = "";
+                            if (session.getAttribute("email") == null && session.getAttribute("role") == null) {
+                                servlet = "GuestServlet";
+                            }
+                            if (session.getAttribute("email") != null && session.getAttribute("role") == null) {
+                                servlet = "LoggedInServlet";
+                            }
+                            if (session.getAttribute("email") != null && session.getAttribute("role") != null) {
+                                servlet = "LoggedInServlet";
                             }
                         %>
+                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=ADAMSON">ADU</a>
+                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=ATENEO">ADMU</a>
+                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=LA SALLE">DLSU</a>
+                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=FEU">FEU</a>
+                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=NU">NU</a>
+                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=UP">UP</a>
+                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=UE">UE</a>
+                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=UST">UST</a>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
@@ -212,10 +207,13 @@
                         <h6 class="text-dark m-0"><i class="fa fa-bars mr-2"></i>Categories</h6>
                         <i class="fa fa-angle-down text-dark"></i>
                     </a>
+                    <%
+
+                    %>
                     <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 999;">
                         <div class="navbar-nav w-100">
                             <div class="nav-item dropdown dropright">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ADU Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
+                                <a href="<%out.print(servlet);%>?action=ADAMSON" class="nav-link dropdown-toggle" data-toggle="dropdown">ADU Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
                                 <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
                                     <a href="" class="dropdown-item">Caps</a>
                                     <a href="" class="dropdown-item">Classic Shirts</a>
@@ -225,7 +223,7 @@
                                 </div>
                             </div>
                             <div class="nav-item dropdown dropright">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ADMU Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
+                                <a href="<%out.print(servlet);%>?action=ATENEO" class="nav-link dropdown-toggle" data-toggle="dropdown">ADMU Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
                                 <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
                                     <a href="" class="dropdown-item">Classic Shirts</a>
                                     <a href="" class="dropdown-item">Jackets</a>
@@ -235,40 +233,40 @@
                                 </div>
                             </div>
                             <div class="nav-item dropdown dropright">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DLSU Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
+                                <a href="<%out.print(servlet);%>?action=LA SALLE" class="nav-link dropdown-toggle" data-toggle="dropdown">DLSU Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
                                 <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
                                     <a href="" class="dropdown-item">Classic Shirts</a>
                                     <a href="" class="dropdown-item">SweatShirts</a>
                                 </div>
                             </div>
                             <div class="nav-item dropdown dropright">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">FEU Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
+                                <a href="<%out.print(servlet);%>?action=FEU" class="nav-link dropdown-toggle" data-toggle="dropdown">FEU Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
                                 <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
                                     <a href="" class="dropdown-item">Classic Shirts</a>
                                     <a href="" class="dropdown-item">Pocket Tees</a>                            
                                 </div>
                             </div>
                             <div class="nav-item dropdown dropright">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">NU Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
+                                <a href="<%out.print(servlet);%>?action=NU" class="nav-link dropdown-toggle" data-toggle="dropdown">NU Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
                                 <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
                                     <a href="" class="dropdown-item">Classic Shirts</a>
                                 </div>
                             </div>
                             <div class="nav-item dropdown dropright">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">UE Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
+                                <a href="<%out.print(servlet);%>?action=UE" class="nav-link dropdown-toggle" data-toggle="dropdown">UE Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
                                 <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
                                     <a href="" class="dropdown-item">Classic Shirts</a>
                                     <a href="" class="dropdown-item">Jackets</a>
                                 </div>
                             </div>
                             <div class="nav-item dropdown dropright">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">UP Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
+                                <a href="<%out.print(servlet);%>?action=UP" class="nav-link dropdown-toggle" data-toggle="dropdown">UP Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
                                 <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
                                     <a href="" class="dropdown-item">Classic Shirts</a>
                                 </div>
                             </div>
                             <div class="nav-item dropdown dropright">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">UST Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
+                                <a href="<%out.print(servlet);%>?action=UST" class="nav-link dropdown-toggle" data-toggle="dropdown">UST Apparel<i class="fa fa-angle-right float-right mt-1"></i></a>
                                 <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
                                     <a href="" class="dropdown-item">Classic Shirts</a>
                                     <a href="" class="dropdown-item">Jackets</a>

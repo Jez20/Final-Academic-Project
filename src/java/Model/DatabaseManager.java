@@ -34,6 +34,28 @@ public class DatabaseManager {
         }
     }
 
+    public ResultSet returnSizeCateg() {
+        try {
+            String query = "SELECT * FROM PRODUCT_SIZE_TABLE";
+            PreparedStatement statement = this.conn.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            return statement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public ResultSet returnGenderCateg() {
+        try {
+            String query = "SELECT * FROM PRODUCT_GENDER_TABLE";
+            PreparedStatement statement = this.conn.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            return statement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public ResultSet returnproductSchool(HttpServletRequest request) {
         String query = "SELECT DISTINCT\n"
                 + "PRODUCT_VARIANT_TABLE.PRODUCT_ID,\n"
