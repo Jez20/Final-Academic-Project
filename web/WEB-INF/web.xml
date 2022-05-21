@@ -63,6 +63,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>AdminProductList.jsp</welcome-file>
+        <welcome-file>UpdateProduct.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

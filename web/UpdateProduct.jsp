@@ -41,5 +41,17 @@
             <option value="Shirts">Sweat Shirts</option>
             <option value="Pocket Tees">Pocket Tees</option>
         </select>
+        <label for="">Choose Gender:</label>
+        <select name="gender" id="gender">
+            <option value="U">Unisex</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select>
+        <label for="">Choose Product Size:</label>
+        <select name="gender" id="gender">
+            <option value="U">Unisex</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select>
     </body>
 </html>
