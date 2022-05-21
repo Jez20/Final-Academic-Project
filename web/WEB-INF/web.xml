@@ -40,6 +40,11 @@
         <servlet-name>PaymentServlet</servlet-name>
         <servlet-class>Controller.PaymentServlet</servlet-class>
     </servlet>
+    <servlet>
+        <description>returns a captcha</description>
+        <servlet-name>SimpleCaptcha</servlet-name>
+        <servlet-class>nl.captcha.servlet.SimpleCaptchaServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LogInSignInServlet</servlet-name>
         <url-pattern>/LogInSignInServlet</url-pattern>
@@ -47,6 +52,10 @@
     <servlet-mapping>
         <servlet-name>PaymentServlet</servlet-name>
         <url-pattern>/PaymentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SimpleCaptcha</servlet-name>
+        <url-pattern>/Captcha.png</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
