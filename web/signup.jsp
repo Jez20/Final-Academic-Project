@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,7 +35,9 @@
                     <option value="administrator">Administrator </option>
                 </select><br><br>
                 <p>Prove that you are not a robot</p>
-                <!--Enter captcha code here -->
+                
+                <img src="<c:url value="Captcha.png" />">
+                
                 <input type="text" class="form-control" placeholder="Enter phrase" required>
                 <center><button type="button" >Sign Up</button></center><br><br>
                 <form>
