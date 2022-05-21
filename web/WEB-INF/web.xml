@@ -45,6 +45,14 @@
         <servlet-name>SimpleCaptcha</servlet-name>
         <servlet-class>nl.captcha.servlet.SimpleCaptchaServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoggedInServlet</servlet-name>
+        <servlet-class>Controller.LoggedInServlet</servlet-class>
+        <init-param>
+            <param-name>key</param-name>
+            <param-value>abcdefghijklopqr</param-value>
+        </init-param>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LogInSignInServlet</servlet-name>
         <url-pattern>/LogInSignInServlet</url-pattern>
@@ -56,6 +64,10 @@
     <servlet-mapping>
         <servlet-name>SimpleCaptcha</servlet-name>
         <url-pattern>/Captcha.png</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoggedInServlet</servlet-name>
+        <url-pattern>/LoggedInServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
