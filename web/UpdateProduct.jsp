@@ -31,8 +31,8 @@
             <option value="NU">National University</option>
             <option value="ADU">Adamson University</option>
         </select>
-        <label for="">Choose Category:</label>
-        <select name="category" id="category">
+        <label for="Apparel">Choose Apparel:</label>
+        <select name="category" id="apparel">
         <option value="Caps">Caps</option>
             <option value="Classic Shirts">Classic Shirts</option>
             <option value="Polo Shirts">Polo Shirts</option>
@@ -41,17 +41,29 @@
             <option value="Shirts">Sweat Shirts</option>
             <option value="Pocket Tees">Pocket Tees</option>
         </select>
-        <label for="">Choose Gender:</label>
+        <label for="Gender">Choose Gender:</label>
         <select name="gender" id="gender">
             <option value="U">Unisex</option>
             <option value="M">Male</option>
             <option value="F">Female</option>
         </select>
-        <label for="">Choose Product Size:</label>
-        <select name="gender" id="gender">
-            <option value="U">Unisex</option>
-            <option value="M">Male</option>
-            <option value="F">Female</option>
-        </select>
+        <label for="Sizes">Choose Product Size:</label>
+        <label class="container">S
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">M
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">L
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+         <p>Product Price</p>
+        <input type="text" name="Pname" required>
+        <p>Product Stock</p>
+        <input type="text" name="Pname" required>
+        
     </body>
 </html>

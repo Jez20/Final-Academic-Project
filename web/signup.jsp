@@ -42,15 +42,15 @@
                             <option value="customer">Customer </option>
                             <option value="administrator">Administrator </option>
                         </select><br><br>
-                        <p>Prove that you are not a robot</p>
+                        <p>Prove that you are not a robot</p><br>
 
                         <img src="<c:url value="Captcha.png" />">
 
                         <input type="text" name="captcha" class="form-control" placeholder="Enter phrase" required>
                         <center><button type="submit" name="action" value="signup" >Sign Up</button></center><br><br>
                         <form>
-                            <u><a href="#">I already have an account</a></u><br>
-                            <u><a href="#">Go back to Homepage</a></u>
+                            <u><a href="login.jsp">I already have an account</a></u><br>
+                            <u><a href="index.jsp">Go back to Homepage</a></u>
                             </div>
                             </body>
 
@@ -68,7 +68,7 @@
                                 }
                                 .loginbox{
                                     width: 420px;
-                                    height: 620px;
+                                    height: 670px;
                                     background: black;
                                     color: #fff;
                                     top: 50%;

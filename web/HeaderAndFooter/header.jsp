@@ -71,9 +71,9 @@
                             <div class="dropdown-menu dropdown-menu-right">
                                 <%                                    if (session.getAttribute("userid") != null) {
                                         {%>
-                                <a href="login.jsp">
-                                    <button class="dropdown-item" type="button">Log out</button>
-                                </a>
+                                <form action="LoggedInServlet" method="GET">
+                                    <button name="action" value="logout" class="dropdown-item" type="submit">Log out</button>
+                                </form>
                                 <%}
                                 } else {
                                     {%>
