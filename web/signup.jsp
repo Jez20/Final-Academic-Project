@@ -49,8 +49,8 @@
                         <input type="text" name="captcha" class="form-control" placeholder="Enter phrase" required>
                         <center><button type="submit" name="action" value="signup" >Sign Up</button></center><br><br>
                         <form>
-                            <u><a href="#">I already have an account</a></u><br>
-                            <u><a href="#">Go back to Homepage</a></u>
+                            <u><a href="login.jsp">I already have an account</a></u><br>
+                            <u><a href="index.jsp">Go back to Homepage</a></u>
                             </div>
                             </body>
 

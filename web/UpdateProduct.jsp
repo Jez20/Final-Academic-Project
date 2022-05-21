@@ -15,6 +15,10 @@
         <%@ include file="HeaderAndFooter/header.jsp"%>
     </header>
     <body>
+    <div class="container-fluid">
+    <div class="row px-xl-5">
+    <div class="col-lg-12 mb-5">
+    <div class="contact-form bg-light p-30">
         <h1>Administrator - Update Product</h1>
         <p>Product Name</p>
         <input type="text" name="Pname" required>
@@ -54,4 +58,27 @@
             <option value="F">Female</option>
         </select>
     </body>
+    </div>
+    </div>
+    </div>
+    </div>
+        <footer>
+        <%@ include file="HeaderAndFooter/footer.jsp"%>
+    </footer>
+     <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </html>

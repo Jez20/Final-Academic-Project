@@ -63,10 +63,10 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-<<<<<<< Updated upstream
+<!--<<<<<<< Updated upstream-->
         <welcome-file>UpdateProduct.jsp</welcome-file>
-=======
+<!--=======-->
         <welcome-file>AdminAddProduct.jsp</welcome-file>
->>>>>>> Stashed changes
+<!-->>>>>>> Stashed changes-->
     </welcome-file-list>
 </web-app>

@@ -34,8 +34,8 @@
                 <input type="text" name="captcha" class="form-control" placeholder="Enter phrase" required>
                 <center><button type="SUBMIT" name="action" value="login">Log in</button></center><br><br>
                 <form>
-                    <u><a href="#">Don't have an account? Sign up for free!</a></u><br>
-                    <u><a href="#">Go back to Homepage</a></u>
+                    <u><a href="signup.jsp">Don't have an account? Sign up for free!</a></u><br>
+                    <u><a href="index.jsp">Go back to Homepage</a></u>
                     </div>
                     </body>
                     </html>
