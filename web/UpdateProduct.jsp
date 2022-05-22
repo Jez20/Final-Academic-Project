@@ -65,30 +65,61 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-primary py-2 px-4" name="Action" type="submit" value="AddProduct" id="sendMessageButton">Add Product</button>
-                                <p class="help-block text-danger"></p>
+                                <button class="btn btn-primary py-2 px-4" name="Action" type="submit" value="AddProduct" id="sendMessageButton">Update Product</button>
                             </div>
                             <div class="contact-form bg-light p-30">
                                 <div id="success"></div>
                                 <table class="content-table">
                                     <thead>
                                         <tr>
-                                            <th>Product Name</th>
-                                            <th>Description</th>
-                                            <th>School</th>
-                                            <th>Category</th>
-                                            <th>Product Image</th>
+                                            <th>Gender</th>
+                                            <th>Size</th>
+                                            <th>Price</th>
+                                            <th>Stock</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     <form action="AdminServlet" method="GET">
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>
+                                                <div class="control-group">
+                                                    <select class="form-control">
+                                                        <option selected value="No gender selected">Choose gender...</option>
+                                                        <option value="U">Unisex</option>
+                                                        <option value="F">Female</option>
+                                                        <option value="M">Male</option>
+                                                    </select>
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="control-group">
+                                                    <select class="form-control">
+                                                        <option selected value="No size selected">Choose size...</option>
+                                                        <option value="XS">Extra Small</option>
+                                                        <option value="S">Small</option>
+                                                        <option value="M">Medium</option>
+                                                        <option value="L">Large</option>
+                                                        <option value="XL">Extra Large</option>
+                                                    </select>
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="control-group">
+                                                    <input type="number" class="form-control" id="email" placeholder="Product price..."
+                                                           required="required" data-validation-required-message="Please enter price." />
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="control-group">
+                                                    <input type="number" class="form-control" id="email" placeholder="Product stock..."
+                                                           required="required" data-validation-required-message="Please enter price." />
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </td>
                                             <td>
                                                 <button name="action" value="update" type="Submit" class="btn btn-success">Update</button>
                                                 <button name="action" value="delete" type="Submit" class="btn btn-danger">Delete</button>
@@ -101,11 +132,42 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>
+                                                <div class="control-group">
+                                                    <select class="form-control">
+                                                        <option selected value="No gender selected">Choose gender...</option>
+                                                        <option value="U">Unisex</option>
+                                                        <option value="F">Female</option>
+                                                        <option value="M">Male</option>
+                                                    </select>
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="control-group">
+                                                    <select class="form-control">
+                                                        <option selected value="No size selected">Choose size...</option>
+                                                        <option value="XS">Extra Small</option>
+                                                        <option value="S">Small</option>
+                                                        <option value="M">Medium</option>
+                                                        <option value="L">Large</option>
+                                                        <option value="XL">Extra Large</option>
+                                                    </select>
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </td>
+                                            <td><div class="control-group">
+                                                    <input type="number" class="form-control" id="email" placeholder="Product price..."
+                                                           required="required" data-validation-required-message="Please enter price." />
+                                                    <p class="help-block text-danger"></p>
+                                                </div></td>
+                                            <td>
+                                                <div class="control-group">
+                                                    <input type="number" class="form-control" id="email" placeholder="Product stock..."
+                                                           required="required" data-validation-required-message="Please enter price." />
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                            </td>
                                             <td>
                                                 <button name="action" value="update" type="Submit" class="btn btn-warning">Add</button>
                                             </td>
@@ -156,6 +218,21 @@
     <footer>
         <%@ include file="HeaderAndFooter/footer.jsp"%>
     </footer>
+             <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
 </html>
 <style>
     .content-table{
