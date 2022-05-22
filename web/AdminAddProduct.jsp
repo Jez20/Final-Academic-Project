@@ -21,20 +21,20 @@
                 <div class="col-lg-12 mb-5">
                     <div class="contact-form bg-light p-30">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <form action="AdminServlet" method="POST" >
                             <div class="control-group">
-                                <input type="text" class="form-control" id="name" placeholder="Product Name"
+                                <input name="productname" type="text" class="form-control" id="name" placeholder="Product Name"
                                        required="required" data-validation-required-message="Please enter the product name" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control" id="email" placeholder="Product Description"
+                                <input name="productdesc" type="text" class="form-control" id="email" placeholder="Product Description"
                                        <input type="text" class="form-control" id="text" placeholder="Product Description"
                                        required="required" data-validation-required-message="Please enter your product description" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <select class="form-control">
+                                <select name="productschool" class="form-control">
                                     <option selected value="No school selected">Choose a UAAP School...</option>
                                     <option value="ADMU">Ateneo De Manila University</option>
                                     <option value="DLSU">De La Salle University</option>
@@ -48,7 +48,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <select class="form-control">
+                                <select name="productcategory" class="form-control">
                                     <option selected value="No category selected">Choose apparel catergory...</option>
                                     <option value="Caps">Caps</option>
                                     <option value="Classic Shirts">Classic Shirts</option>
@@ -61,12 +61,12 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control" id="email" placeholder="Product image link"
+                                <input name="imgLink" type="text" class="form-control" id="email" placeholder="Product image link"
                                        required="required" data-validation-required-message="Please enter product image link." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <select class="form-control">
+                                <select name="gender" class="form-control">
                                     <option selected value="No gender selected">Choose gender...</option>
                                     <option value="U">Unisex</option>
                                     <option value="F">Female</option>
@@ -75,7 +75,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <select class="form-control">
+                                <select name="size" class="form-control">
                                     <option selected value="No gender selected">Choose product size...</option>
                                     <option value="XS">Extra Small</option>
                                     <option value="S">Small</option>
@@ -86,17 +86,17 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="number" class="form-control" id="email" placeholder="Product price..."
+                                <input name="productprice" type="number" class="form-control" id="email" placeholder="Product price..."
                                        required="required" data-validation-required-message="Please enter price." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="number" class="form-control" id="email" placeholder="Product stock..."
+                                <input name="productstock" type="number" class="form-control" id="email" placeholder="Product stock..."
                                        required="required" data-validation-required-message="Please enter stock." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-primary py-2 px-4" name="Action" type="submit" value="AddProduct" id="sendMessageButton">Add Product</button>
+                                <button class="btn btn-primary py-2 px-4" name="action" type="submit" value="addproduct" id="sendMessageButton">Add Product</button>
                             </div>
                     </div>
                     </form>

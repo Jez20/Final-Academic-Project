@@ -91,6 +91,10 @@ public class ConstantCateg {
     public String getIndextoGenterLabel(int index) {
         return this.indextoGenderLabel.get(index);
     }
+    
+    public String getIndextoSizeLabel(int index){
+    return this.indexToSizeLabel.get(index);
+    }
 
     public int getSizeLabeltoIndex(String size) {
         return this.sizeLabeltoIndex.get(size);

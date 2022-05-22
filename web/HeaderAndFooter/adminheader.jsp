@@ -297,7 +297,7 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
-<!--                                <a href="index.jsp" class="nav-item nav-link active">Home</a>
+                                <a href="index.jsp" class="nav-item nav-link active">Home</a>
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop <i class="fa fa-angle-down mt-1"></i></a>
                                     <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
@@ -312,7 +312,7 @@
                                         <a href="checkout.jsp" class="dropdown-item">Checkout</a>
                                         <a href="confirmation.jsp" class="dropdown-item">Confirmation</a>
                                     </div>
-                                </div>-->
+                                </div>
                                 <!--                            <div class="nav-item dropdown">
                                                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down mt-1"></i></a>
                                                                 <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
@@ -320,18 +320,8 @@
                                                                     <a href="checkout.jsp" class="dropdown-item">Checkout</a>
                                                                 </div>
                                                             </div>-->
-<!--                                <a href="contact.jsp" class="nav-item nav-link">Contact</a>-->
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reports <i class="fa fa-angle-down mt-1"></i></a>
-                                    <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                        <a href="checkout.jsp" class="dropdown-item">Sales Report</a>
-                                        <a href="confirmation.jsp" class="dropdown-item">Pending Orders Report</a>
-                                        <a href="checkout.jsp" class="dropdown-item">Completed Orders Report</a>
-                                        <a href="confirmation.jsp" class="dropdown-item">Inventory Report</a>
-                                        <a href="checkout.jsp" class="dropdown-item">Feedback Report</a>
-                                    </div>
-                                </div>
-                                <a href="AdminProductList.jsp" class="nav-item nav-link">Product List</a>
+                                <a href="contact.jsp" class="nav-item nav-link">Contact</a>
+                                <a href="AdminServlet?action=viewproducts" class="nav-item nav-link">Product List</a>
                                 <a href="AdminAddProduct.jsp" class="nav-item nav-link">Add Product</a>
                                 <a href="UpdateProduct.jsp" class="nav-item nav-link">Update Product</a>
                             </div>

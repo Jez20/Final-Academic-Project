@@ -7,7 +7,6 @@ package Controller;
 
 import Model.DatabaseManager;
 import Model.Security;
-import Model.ConstantCateg;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
@@ -22,8 +21,17 @@ import javax.servlet.http.HttpSession;
  *
  * @author FV
  */
-public class LoggedInServlet extends HttpServlet {
+public class AdminServlet extends HttpServlet {
 
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     private DatabaseManager dbQueries;
     private Security encryptDecrypt;
     private Security displayEncrypt;
@@ -53,13 +61,37 @@ public class LoggedInServlet extends HttpServlet {
             action = request.getParameter("action");
         }
         System.out.println(String.format("action: %s", action));
-        if (session.getAttribute("email") != null && session.getAttribute("role") == null) {
+        if (session.getAttribute("email") != null && session.getAttribute("role") != null) {
             switch (action) {
+                case "delete":
+                    if (dbQueries.deleteProduct(request)) {
+                        response.sendRedirect("AdminServlet?action=viewproducts");
+                    } else {
+                        response.sendRedirect("AdminServlet?action=viewproducts");
+                    }
+                    break;
+                case "addproduct":
+                    if (dbQueries.addProduct(request)) {
+                        response.sendRedirect("AdminServlet?action=viewproducts");
+                    } else {
+                        response.sendRedirect("AdminAddProduct");
+                    }
+                    break;
+                case "viewproducts":
+                    ResultSet rs = dbQueries.returnProductList();
+                    request.setAttribute("rs", rs);
+                    request.getRequestDispatcher("AdminProductList.jsp").forward(request, response);
+                    break;
                 case "filter":
                     ResultSet rs1 = dbQueries.applyFilter(request);
                     request.setAttribute("rs", rs1);
                     request.setAttribute("encrypt", this.displayEncrypt);
                     request.getRequestDispatcher("shop.jsp").forward(request, response);
+                    break;
+                case "update":
+                    ResultSet rs2 = dbQueries.returnProductVariation(request);
+                    request.setAttribute("rs", rs2);
+                    request.getRequestDispatcher("UpdateProduct.jsp").forward(request, response);
                     break;
                 case "ADAMSON":
                     toTheshop(request, response);
@@ -88,12 +120,14 @@ public class LoggedInServlet extends HttpServlet {
                 case "logout":
                     session.removeAttribute("email");
                     session.removeAttribute("userid");
-                    response.sendRedirect("index.jsp");
+                    session.removeAttribute("role");
+                    response.sendRedirect("GuestServlet");
                     break;
                 case "":
                     session.removeAttribute("email");
                     session.removeAttribute("userid");
-                    response.sendRedirect("index.jsp");
+                    session.removeAttribute("role");
+                    response.sendRedirect("GuestServlet");
                     break;
             }
         } else {
