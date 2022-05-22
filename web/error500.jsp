@@ -16,6 +16,12 @@
 		<div class="inner-content">
 			<h1 class="heading">500</h1>
 			<p class="subheading">The server encountered an internal error or misconfiguration and was unable to complete your request.</p>
+                        &nbsp
+                        <center>
+                            <a href="index.jsp">
+                            <button class="btn btn-primary px-3">Go Back to Homepage</button>
+                            </a>
+                        </center>
 		</div>
 	</div>
 	<div class="right-section">

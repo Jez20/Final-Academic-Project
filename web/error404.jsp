@@ -6,6 +6,11 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<head>
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="CSS/style.css" rel="stylesheet">
+</head>
+
 <html>
     <link href="CSS/errorstyle.css" rel="stylesheet" type="text/css"/>
 <div class="background">
@@ -16,8 +21,15 @@
 		<div class="inner-content">
 			<h1 class="heading">404</h1>
 			<p class="subheading">Looks like the page you were looking for is no longer here.</p>
+                        &nbsp
+                        <center>
+                            <a href="index.jsp">
+                            <button class="btn btn-primary px-3">Go Back to Homepage</button>
+                            </a>
+                        </center>
 		</div>
 	</div>
+    
 	<div class="right-section">
 		<svg class="svgimg" xmlns="http://www.w3.org/2000/svg" viewBox="51.5 -15.288 385 505.565">
         <g class="bench-legs">

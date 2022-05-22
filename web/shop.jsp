@@ -87,32 +87,32 @@
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="price-1" name="price" value="0-999999" checked>
                                 <label class="custom-control-label" for="price-1">All Price</label>
-                                <span class="badge border font-weight-normal">500</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="price-2" name="price" value="100-300">
                                 <label class="custom-control-label" for="price-2">₱100-300</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="price-3" name="price" value="300-600">
                                 <label class="custom-control-label" for="price-3">₱300-600</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="price-4" name="price" value="600-900">
                                 <label class="custom-control-label" for="price-4">₱600-900</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="price-5" name="price" value="900-1200">
                                 <label class="custom-control-label" for="price-5">₱900-1200</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="price-6" name="price" value="1200-1500">
                                 <label class="custom-control-label" for="price-6">₱1200-1500+</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <button name="action" value="filter" type="submit" class="btn btn-primary px-3"><i class="fa fa-filter mr-1"></i>Apply Filter</button>
 
@@ -195,32 +195,32 @@
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="size-1" name="size" value="" <%=allSize%>>
                                 <label class="custom-control-label" for="size-1">All Size</label>
-                                <span class="badge border font-weight-normal">500</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="size-2" name="size" value="XS" <%=XS%>>
                                 <label class="custom-control-label" for="size-2">XS</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="size-3" name="size" value="S" <%=S%>>
                                 <label class="custom-control-label" for="size-3">S</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="size-4" name="size" value="M" <%=M%>>
                                 <label class="custom-control-label" for="size-4">M</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="size-5" name="size" value="L" <%=L%>>
                                 <label class="custom-control-label" for="size-5">L</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="size-6" name="size" value="XL" <%=XL%>>
                                 <label class="custom-control-label" for="size-6">XL</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <button name="action" value="filter" type="submit" class="btn btn-primary px-3"><i class="fa fa-filter mr-1"></i>Apply Filter</button>
 
@@ -260,22 +260,22 @@
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="gender-1" name="gender" value="" <%=allGender%>>
                                 <label class="custom-control-label" for="gender-1">All Gender</label>
-                                <span class="badge border font-weight-normal">300</span>
+                                
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="gender-2" name="gender" value="M" <%=male%>>
                                 <label class="custom-control-label" for="gender-2">Male</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="gender-3" name="gender" value="F" <%=female%>>
                                 <label class="custom-control-label" for="gender-3">Female</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3" <%=unisex%>>
                                 <input type="radio" class="custom-control-input" id="gender-4" name="gender" value="U">
                                 <label class="custom-control-label" for="gender-4">Unisex</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <button type="submit" value="filter" class="btn btn-primary px-3"><i class="fa fa-filter mr-1"></i>Apply Filter</button>
 
@@ -333,47 +333,47 @@
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="university-1" name="university" value="" <%=allUniv%>>
                                 <label class="custom-control-label" for="university-1">All Universities</label>
-                                <span class="badge border font-weight-normal">800</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="university-2" name="university" value="ADAMSON" <%=adamson%>>
                                 <label class="custom-control-label" for="university-2">Adamson Soaring Falcons</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="university-3" name="university" value="ATENEO" <%=ateneo%>>
                                 <label class="custom-control-label" for="university-3">Ateneo Blue Eagles</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="university-4" name="university" value="LA SALLE" <%=la_salle%>>
                                 <label class="custom-control-label" for="university-4">De Lasalle Green Archers</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="university-5" name="university" value="FEU" <%=feu%>>
                                 <label class="custom-control-label" for="university-5">FEU Tamaraws</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="university-6" name="university" value="NU" <%=nu%>>
                                 <label class="custom-control-label" for="university-6">NU Bulldogs</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="university-7" name="university" value="UE" <%=ue%>>
                                 <label class="custom-control-label" for="university-7">UE Red Warriors</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="university-8" name="university" value="UP" <%=up%>>
                                 <label class="custom-control-label" for="university-8">UP Fighting Maroons</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="university-9" name="university" value="UST" <%=ust%>>
                                 <label class="custom-control-label" for="university-9">UST Growling Tigers</label>
-                                <span class="badge border font-weight-normal">100</span>
+
                             </div>
                             <button name="action" value="filter" type="submit" class="btn btn-primary px-3"><i class="fa fa-filter mr-1"></i>Apply Filter</button>
 

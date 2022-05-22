@@ -34,7 +34,7 @@
                                 <div class="p-3" style="max-width: 600px;">
                                     <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Men Fashion</h1>
                                     <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Get the best clothes that you are yearning for with fashion for men here at theStore.</p>
-                                    <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="shop.jsp">Shop Now</a>
+                                    <button class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="shop.jsp">Shop Now</button>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +128,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>Adamson Soaring Falcons</h6>
-                            <small class="text-body">100 Products</small>
+
                         </div>
                     </div>
                 </a>
@@ -141,7 +141,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>Ateneo Blue Eagles</h6>
-                            <small class="text-body">100 Products</small>
+
                         </div>
                     </div>
                 </a>
@@ -154,7 +154,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>De Lasalle Green Archers</h6>
-                            <small class="text-body">100 Products</small>
+
                         </div>
                     </div>
                 </a>
@@ -167,7 +167,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>FEU Tamaraws</h6>
-                            <small class="text-body">100 Products</small>
+
                         </div>
                     </div>
                 </a>
@@ -180,7 +180,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>NU Bulldogs</h6>
-                            <small class="text-body">100 Products</small>
+
                         </div>
                     </div>
                 </a>
@@ -193,7 +193,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>UE Red Warriors</h6>
-                            <small class="text-body">100 Products</small>
+
                         </div>
                     </div>
                 </a>
@@ -206,7 +206,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>UP Fighting Maroons</h6>
-                            <small class="text-body">100 Products</small>
+
                         </div>
                     </div>
                 </a>
@@ -219,7 +219,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>UST Growling Tigers</h6>
-                            <small class="text-body">100 Products</small>
+
                         </div>
                     </div>
                 </a>
@@ -232,7 +232,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
+
                         </div>
                     </div>
                 </a>
@@ -245,7 +245,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
+
                         </div>
                     </div>
                 </a>
@@ -258,7 +258,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
+
                         </div>
                     </div>
                 </a>
@@ -271,7 +271,7 @@
                         </div>
                         <div class="flex-fill pl-3">
                             <h6>Category Name</h6>
-                            <small class="text-body">100 Products</small>
+
                         </div>
                     </div>
                 </a>
