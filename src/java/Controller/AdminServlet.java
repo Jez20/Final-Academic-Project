@@ -63,6 +63,20 @@ public class AdminServlet extends HttpServlet {
         System.out.println(String.format("action: %s", action));
         if (session.getAttribute("email") != null && session.getAttribute("role") != null) {
             switch (action) {
+                case "delete":
+                    if (dbQueries.deleteProduct(request)) {
+                        response.sendRedirect("AdminServlet?action=viewproducts");
+                    } else {
+                        response.sendRedirect("AdminServlet?action=viewproducts");
+                    }
+                    break;
+                case "addproduct":
+                    if (dbQueries.addProduct(request)) {
+                        response.sendRedirect("AdminServlet?action=viewproducts");
+                    } else {
+                        response.sendRedirect("AdminAddProduct");
+                    }
+                    break;
                 case "viewproducts":
                     ResultSet rs = dbQueries.returnProductList();
                     request.setAttribute("rs", rs);
@@ -76,7 +90,6 @@ public class AdminServlet extends HttpServlet {
                     break;
                 case "update":
                     ResultSet rs2 = dbQueries.returnProductVariation(request);
-                    dbQueries.printResultSets(rs2);
                     request.setAttribute("rs", rs2);
                     request.getRequestDispatcher("UpdateProduct.jsp").forward(request, response);
                     break;
@@ -107,12 +120,14 @@ public class AdminServlet extends HttpServlet {
                 case "logout":
                     session.removeAttribute("email");
                     session.removeAttribute("userid");
-                    response.sendRedirect("index.jsp");
+                    session.removeAttribute("role");
+                    response.sendRedirect("GuestServlet");
                     break;
                 case "":
                     session.removeAttribute("email");
                     session.removeAttribute("userid");
-                    response.sendRedirect("index.jsp");
+                    session.removeAttribute("role");
+                    response.sendRedirect("GuestServlet");
                     break;
             }
         } else {

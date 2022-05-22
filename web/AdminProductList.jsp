@@ -60,7 +60,7 @@
                                     <td>
                                         <button name="action" value="update" type="Submit" class="btn btn-success">Update</button>
                                         <button name="action" value="delete" type="Submit" class="btn btn-danger">Delete</button>
-                                        <input type="hidden" name="id" value="<%=id%>"/>
+                                        <input type="hidden" name="productid" value="<%=id%>"/>
                                         <input type="hidden" name="productname" value="<%=name%>"/>
                                         <input type="hidden" name="productdesc" value="<%=desc%>"/>
                                         <input type="hidden" name="productschool" value="<%=school%>"/>
