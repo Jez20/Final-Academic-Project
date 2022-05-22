@@ -9,14 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>The Store - Product List</title>
+        <title>Product List</title>
     </head>
     <header>
-         <%@ include file="HeaderAndFooter/header.jsp"%>
+         <%@ include file="HeaderAndFooter/adminheader.jsp"%>
     </header>
     <body>
-        <div style="overflow-x:auto;">
-            <center><h1> Administrator - Product List</h1></center>
+        <div class="container-fluid">
+            <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Product List</span></h2>
+            <div class="row px-xl-5">
+                <div class="col-lg-12 mb-5">
+                    <div class="contact-form bg-light p-30">
+                        <div id="success"></div>
         <table class="content-table">
                 <thead>
                     <tr>
@@ -93,12 +97,15 @@
                 </tbody>
                 </table>
         </div>
+    </div>
+    </div>
+    </div>            
     </body>
     <footer>
         <%@ include file="HeaderAndFooter/footer.jsp"%>
     </footer>
-</html>
-     <!-- Back to Top -->
+    
+         <!-- Back to Top -->
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
     
         <!-- JavaScript Libraries -->
@@ -113,6 +120,8 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+</html>
+
 <style>
     .content-table{
         border-collapse: collapse;

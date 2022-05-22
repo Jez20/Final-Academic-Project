@@ -1,6 +1,6 @@
 <%-- 
-    Document   : header
-    Created on : Apr 23, 2022, 11:14:33 AM
+    Document   : adminheader
+    Created on : May 22, 2022, 9:20:07 PM
     Author     : USER
 --%>
 
@@ -321,6 +321,9 @@
                                                                 </div>
                                                             </div>-->
                                 <a href="contact.jsp" class="nav-item nav-link">Contact</a>
+                                <a href="AdminProductList.jsp" class="nav-item nav-link">Product List</a>
+                                <a href="AdminAddProduct.jsp" class="nav-item nav-link">Add Product</a>
+                                <a href="UpdateProduct.jsp" class="nav-item nav-link">Update Product</a>
                             </div>
                             <!--                        <div class="col-lg-4 col-6 text-left">-->
 <!--                            <form action="<%=servlet%>">
