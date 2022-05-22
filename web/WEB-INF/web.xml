@@ -33,7 +33,7 @@
         <servlet-class>Controller.LogInSignInServlet</servlet-class>
         <init-param>
             <param-name>key</param-name>
-            <param-value>abcdefghijklopqr</param-value>
+            <param-value>HkydND9SmuvhEas4</param-value>
         </init-param>
     </servlet>
     <servlet>
@@ -50,7 +50,11 @@
         <servlet-class>Controller.LoggedInServlet</servlet-class>
         <init-param>
             <param-name>key</param-name>
-            <param-value>abcdefghijklopqr</param-value>
+            <param-value>HkydND9SmuvhEas4</param-value>
+        </init-param>
+        <init-param>
+            <param-name>displaykey</param-name>
+            <param-value>j1bFJX1W9zx4OwrU</param-value>
         </init-param>
     </servlet>
     <servlet>
@@ -58,7 +62,11 @@
         <servlet-class>Controller.GuestServlet</servlet-class>
         <init-param>
             <param-name>key</param-name>
-            <param-value>abcdefghijklopqr</param-value>
+            <param-value>NTubJRFb5SAgIWPi</param-value>
+        </init-param>
+        <init-param>
+            <param-name>displaykey</param-name>
+            <param-value>bVHHYxEQxktCImSR</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
@@ -81,7 +89,7 @@
         <servlet-name>GuestServlet</servlet-name>
         <url-pattern>/GuestServlet</url-pattern>
     </servlet-mapping>
-    <session-config>
+      <session-config>
         <session-timeout>
             30
         </session-timeout>
