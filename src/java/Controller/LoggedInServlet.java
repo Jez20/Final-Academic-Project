@@ -7,7 +7,7 @@ package Controller;
 
 import Model.DatabaseManager;
 import Model.Security;
-import Model.constantCateg;
+import Model.ConstantCateg;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
@@ -23,11 +23,12 @@ import javax.servlet.http.HttpSession;
  * @author FV
  */
 public class LoggedInServlet extends HttpServlet {
-
+    
     private DatabaseManager dbQueries;
     private Security encryptDecrypt;
-    private constantCateg savedCategSizeandGender;
-
+    private Security displayEncrypt;
+    
+    
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         String driver = getServletContext().getInitParameter("jdbcClassName");
@@ -42,9 +43,9 @@ public class LoggedInServlet extends HttpServlet {
                 .append(getServletContext().getInitParameter("databaseName"));
         this.dbQueries = new DatabaseManager(url.toString(), username, password, driver, config.getInitParameter("key"));
         this.encryptDecrypt = new Security(config.getInitParameter("key"));
-        this.savedCategSizeandGender = new constantCateg(dbQueries.returnSizeCateg(), dbQueries.returnGenderCateg());
+        this.displayEncrypt = new Security(config.getInitParameter("displaykey"));
     }
-
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String action = "";
@@ -53,50 +54,53 @@ public class LoggedInServlet extends HttpServlet {
             action = request.getParameter("action");
         }
         System.out.println(String.format("action: %s", action));
-        switch (action) {
-            case "ADAMSON":
-                toTheshop(request, response);
-                break;
-            case "ATENEO":
-                toTheshop(request, response);
-                break;
-            case "LA SALLE":
-                toTheshop(request, response);
-                break;
-            case "FEU":
-                toTheshop(request, response);
-                break;
-            case "NU":
-                toTheshop(request, response);
-                break;
-            case "UP":
-                toTheshop(request, response);
-                break;
-            case "UE":
-                toTheshop(request, response);
-                break;
-            case "UST":
-                toTheshop(request, response);
-                break;
-            case "logout":
-                session.removeAttribute("email");
-                session.removeAttribute("userid");
-                response.sendRedirect("index.jsp");
-                break;
-            case "":
-                session.removeAttribute("email");
-                session.removeAttribute("userid");
-                response.sendRedirect("index.jsp");
-                break;
+        if (session.getAttribute("email") != null && session.getAttribute("role") == null) {
+            switch (action) {
+                case "ADAMSON":
+                    toTheshop(request, response);
+                    break;
+                case "ATENEO":
+                    toTheshop(request, response);
+                    break;
+                case "LA SALLE":
+                    toTheshop(request, response);
+                    break;
+                case "FEU":
+                    toTheshop(request, response);
+                    break;
+                case "NU":
+                    toTheshop(request, response);
+                    break;
+                case "UP":
+                    toTheshop(request, response);
+                    break;
+                case "UE":
+                    toTheshop(request, response);
+                    break;
+                case "UST":
+                    toTheshop(request, response);
+                    break;
+                case "logout":
+                    session.removeAttribute("email");
+                    session.removeAttribute("userid");
+                    response.sendRedirect("index.jsp");
+                    break;
+                case "":
+                    session.removeAttribute("email");
+                    session.removeAttribute("userid");
+                    response.sendRedirect("index.jsp");
+                    break;
+            }
+        } else {
+            response.sendRedirect("GuestServlet");
         }
-
     }
-
+    
     protected void toTheshop(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         ResultSet rs = this.dbQueries.returnproductSchool(request);
         request.setAttribute("rs", rs);
-        request.setAttribute("encrypt", this.encryptDecrypt);
+        request.setAttribute("encrypt", this.displayEncrypt);
         request.getRequestDispatcher("shop.jsp").forward(request, response);
     }
 

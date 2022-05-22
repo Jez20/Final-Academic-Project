@@ -34,6 +34,7 @@ public class GuestServlet extends HttpServlet {
      */
     private DatabaseManager dbQueries;
     private Security encryptDecrypt;
+    private Security displayEncrypt;
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
@@ -49,6 +50,7 @@ public class GuestServlet extends HttpServlet {
                 .append(getServletContext().getInitParameter("databaseName"));
         this.dbQueries = new DatabaseManager(url.toString(), username, password, driver, config.getInitParameter("key"));
         this.encryptDecrypt = new Security(config.getInitParameter("key"));
+        this.displayEncrypt = new Security(config.getInitParameter("displaykey"));
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -60,7 +62,14 @@ public class GuestServlet extends HttpServlet {
             action = request.getParameter("action");
         }
         System.out.println(String.format("action: %s", action));
+
         switch (action) {
+            case "filter":
+                ResultSet rs1 = dbQueries.applyFilter(request);
+                request.setAttribute("rs", rs1);
+                request.setAttribute("encrypt", this.displayEncrypt);
+                request.getRequestDispatcher("shop.jsp").forward(request, response);
+                break;
             case "ADAMSON":
                 toTheshop(request, response);
                 break;
@@ -95,7 +104,7 @@ public class GuestServlet extends HttpServlet {
             throws ServletException, IOException {
         ResultSet rs = this.dbQueries.returnproductSchool(request);
         request.setAttribute("rs", rs);
-        request.setAttribute("encrypt", this.encryptDecrypt);
+        request.setAttribute("encrypt", this.displayEncrypt);
         request.getRequestDispatcher("shop.jsp").forward(request, response);
     }
 
