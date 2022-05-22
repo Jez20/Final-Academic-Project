@@ -23,12 +23,11 @@ import javax.servlet.http.HttpSession;
  * @author FV
  */
 public class LoggedInServlet extends HttpServlet {
-    
+
     private DatabaseManager dbQueries;
     private Security encryptDecrypt;
     private Security displayEncrypt;
-    
-    
+
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         String driver = getServletContext().getInitParameter("jdbcClassName");
@@ -45,7 +44,7 @@ public class LoggedInServlet extends HttpServlet {
         this.encryptDecrypt = new Security(config.getInitParameter("key"));
         this.displayEncrypt = new Security(config.getInitParameter("displaykey"));
     }
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String action = "";
@@ -56,6 +55,12 @@ public class LoggedInServlet extends HttpServlet {
         System.out.println(String.format("action: %s", action));
         if (session.getAttribute("email") != null && session.getAttribute("role") == null) {
             switch (action) {
+                case "filter":
+                    ResultSet rs1 = dbQueries.applyFilter(request);
+                    request.setAttribute("rs", rs1);
+                    request.setAttribute("encrypt", this.displayEncrypt);
+                    request.getRequestDispatcher("shop.jsp").forward(request, response);
+                    break;
                 case "ADAMSON":
                     toTheshop(request, response);
                     break;
@@ -95,7 +100,7 @@ public class LoggedInServlet extends HttpServlet {
             response.sendRedirect("GuestServlet");
         }
     }
-    
+
     protected void toTheshop(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         ResultSet rs = this.dbQueries.returnproductSchool(request);
