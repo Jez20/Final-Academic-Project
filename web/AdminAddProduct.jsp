@@ -16,7 +16,7 @@
     </header>
     <body>
         <div class="container-fluid">
-            <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Administrator - Add Product</span></h2>
+            <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Add Product</span></h2>
             <div class="row px-xl-5">
                 <div class="col-lg-7 mb-5">
                     <div class="contact-form bg-light p-30">
@@ -28,7 +28,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="email" class="form-control" id="email" placeholder="Product Description"
+                                <input type="text" class="form-control" id="text" placeholder="Product Description"
                                        required="required" data-validation-required-message="Please enter your product description" />
                                 <p class="help-block text-danger"></p>
                             </div>
@@ -65,11 +65,11 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="gridCheck1" value="U">
                                         <label class="form-check-label" for="gridCheck1">
-                                            Unisex
+                                            Unisex Choose Size/s:
                                         </label>
                                     </div>
                                     <div class="form-group row">
-                                        <div class="col-sm-2">Choose Size/s:</div>
+<!--                                        <div class="col-sm-2">Choose Size/s:</div>-->
                                         <div class="col-sm-10">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" id="gridCheck1" value="XS">
@@ -106,13 +106,13 @@
                                     </div>
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                <div class="form-check">
+<!--                                <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="gridCheck1" value="M">
                                     <label class="form-check-label" for="gridCheck1">
                                         Male
                                     </label>
-                                </div>
-                                <div class="form-group row">
+                                </div>-->
+<!--                                <div class="form-group row">
                                     <div class="col-sm-2">Choose Size/s:</div>
                                     <div class="col-sm-10">
                                         <div class="form-check">
@@ -147,8 +147,8 @@
                                         </div>
                                         <p class="help-block text-danger"></p>
                                     </div>
-                                </div>
-                                <div class="form-check">
+                                </div>-->
+<!--                                <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="gridCheck1" value="F">
                                     <label class="form-check-label" for="gridCheck1">
                                         Female
@@ -189,7 +189,7 @@
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                             <div>
                                 <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Add Product</button>
