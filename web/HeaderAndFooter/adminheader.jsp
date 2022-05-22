@@ -321,7 +321,7 @@
                                                                 </div>
                                                             </div>-->
                                 <a href="contact.jsp" class="nav-item nav-link">Contact</a>
-                                <a href="AdminProductList.jsp" class="nav-item nav-link">Product List</a>
+                                <a href="AdminServlet?action=viewproducts" class="nav-item nav-link">Product List</a>
                                 <a href="AdminAddProduct.jsp" class="nav-item nav-link">Add Product</a>
                                 <a href="UpdateProduct.jsp" class="nav-item nav-link">Update Product</a>
                             </div>

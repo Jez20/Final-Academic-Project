@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import nl.captcha.Captcha;
 import static nl.captcha.Captcha.NAME;
 
@@ -40,6 +41,7 @@ public class LogInSignInServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String action = request.getParameter("action").trim();
+        HttpSession session = request.getSession();
         Captcha captcha = (Captcha) request.getSession().getAttribute(NAME);
         switch (action) {
             case "signup":
@@ -57,7 +59,11 @@ public class LogInSignInServlet extends HttpServlet {
             case "login":
                 if (captcha.isCorrect(request.getParameter("captcha").trim())) {
                     if (this.dbQueries.logIn(request)) {
-                        response.sendRedirect("index.jsp");
+                        if (session.getAttribute("userid") != null && session.getAttribute("role") != null) {
+                            response.sendRedirect("AdminServlet?action=viewproducts");
+                        } else {
+                            response.sendRedirect("index.jsp");
+                        }
                     } else {
                         response.sendRedirect("login.jsp");
                     }

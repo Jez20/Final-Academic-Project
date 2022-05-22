@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -44,7 +45,6 @@ public class DatabaseManager {
             PreparedStatement statement = this.conn.prepareStatement(query.getQuery(), ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             return statement.executeQuery();
         } catch (SQLException e) {
-            e.printStackTrace();
             return null;
         }
     }
@@ -52,12 +52,43 @@ public class DatabaseManager {
     public ResultSet returnGenderCateg() {
         try {
             query = Queries.valueOf("returnGenderCateg");
-            PreparedStatement statement = this.conn.prepareStatement(query.getQuery(), ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            PreparedStatement statement = this.conn.prepareStatement(query.getQuery(),
+                    ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_READ_ONLY);
+
             return statement.executeQuery();
         } catch (SQLException e) {
-            e.printStackTrace();
             return null;
         }
+    }
+
+    public ResultSet returnProductList() {
+        try {
+            query = Queries.valueOf("returnProductList");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery(),
+                    ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = stmt.executeQuery();
+            return rs;
+
+        } catch (Exception e) {
+            return null;
+        }
+
+    }
+
+    public ResultSet returnProductVariation(HttpServletRequest request) {
+        try {
+            query = Queries.valueOf("returnProductVariation");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery(),
+                    ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_READ_ONLY);
+            stmt.setInt(1, Integer.parseInt(request.getParameter("id")));
+            ResultSet rs = stmt.executeQuery();
+        } catch (Exception e) {
+            return null;
+        }
+        return null;
     }
 
     public ResultSet applyFilter(HttpServletRequest request) {
@@ -194,6 +225,9 @@ public class DatabaseManager {
                 if (match) {
                     session.setAttribute("userid", encryptDecrypt.encrypt(Integer.toString(rs.getInt(1))));
                     session.setAttribute("email", rs.getString(4));
+                    if (rs.getString(3).equals("administrator")) {
+                        session.setAttribute("role", rs.getString(3));
+                    }
                 }
                 rs.close();
                 stmt.close();

@@ -4,15 +4,21 @@
     Author     : Joseph
 --%>
 
+<%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
+        <%
+//        if(session.getAttribute("userid") == null && session.getAttribute("role") == null){
+//            response.sendRedirect("GuestServlet");
+            //           }
+        %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Product List</title>
     </head>
     <header>
-         <%@ include file="HeaderAndFooter/adminheader.jsp"%>
+        <%@ include file="HeaderAndFooter/adminheader.jsp"%>
     </header>
     <body>
         <div class="container-fluid">
@@ -21,105 +27,81 @@
                 <div class="col-lg-12 mb-5">
                     <div class="contact-form bg-light p-30">
                         <div id="success"></div>
-        <table class="content-table">
-                <thead>
-                    <tr>
-                        <th>Product Name</th>
-                        <th>Description</th>
-                        <th>School</th>
-                        <th>Category</th>
-                        <th>Product Image</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Green Archer T-shirt</td>
-                        <td>DLSU T-shirt</td>
-                        <td>DLSU</td>
-                        <td>Shirts</td>
-                        <td>img link here</td>
-                        <td>
-<!--                            <from action="some in here" method="GET">-->
-                        <button name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>
-                        <button name="Action" value="Delete" type="Submit" class="btn btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                                        <tr>
-                        <td>Green Archer T-shirt</td>
-                        <td>DLSU T-shirt</td>
-                        <td>DLSU</td>
-                        <td>Shirts</td>
-                        <td>ewan</td><!-- comment -->
-                        <td>
-<!--                            <from action="some in here" method="GET">-->
-                        <button name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>
-                        <button name="Action" value="Delete" type="Submit" class="btn btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                                        <tr>
-                        <td>Green Archer T-shirt</td>
-                        <td>DLSU T-shirt</td>
-                        <td>DLSU</td>
-                        <td>Shirts</td>
-                        <td>ewan</td><!-- comment -->
-                        <td>
-<!--                            <from action="some in here" method="GET">-->
-                        <button name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>
-                        <button name="Action" value="Delete" type="Submit" class="btn btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                                        <tr>
-                        <td>Green Archer T-shirt</td>
-                        <td>DLSU T-shirt</td>
-                        <td>DLSU</td>
-                        <td>Shirts</td>
-                        <td>ewan</td><!-- comment -->
-                        <td>
-<!--                            <from action="some in here" method="GET">-->
-                        <button name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>
-                        <button name="Action" value="Delete" type="Submit" class="btn btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                                        <tr>
-                        <td>Green Archer T-shirt</td>
-                        <td>DLSU T-shirt</td>
-                        <td>DLSU</td>
-                        <td>Shirts</td>
-                        <td>ewan</td><!-- comment -->
-                        <td>
-                        <!--<from action="some in here" method="GET">-->
-                        <button name="Action" value="Update" type="Submit" class="btn btn-success">Update</button>
-                        <button name="Action" value="Delete" type="Submit" class="btn btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                <!--some code here-->
-                </tbody>
-                </table>
-        </div>
-    </div>
-    </div>
-    </div>            
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Description</th>
+                                    <th>School</th>
+                                    <th>Category</th>
+                                    <th>Product Image</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <%
+                                    ResultSet rs = (ResultSet) request.getAttribute("rs");
+                                    if (rs != null) {
+                                        while (rs.next()) {
+                                    String id = rs.getString(1);
+                                    String name = rs.getString(2);                                    
+                                    String desc = rs.getString(3);
+                                    String school = rs.getString(4);
+                                    String category = rs.getString(5);
+                                    String imgLink = rs.getString(6);
+                                            {%>
+                                <form action="AdminServlet" method="GET">
+                                    <tr>
+                                    <td><%=name%></td>
+                                    <td><%=desc%></td>
+                                    <td><%=school%></td>
+                                    <td><%=category%></td>
+                                    <td><%=imgLink%></td>
+                                    <td>
+                                        <button name="action" value="update" type="Submit" class="btn btn-success">Update</button>
+                                        <button name="action" value="delete" type="Submit" class="btn btn-danger">Delete</button>
+                                        <input type="hidden" name="id" value="<%=id%>"/>
+                                        <input type="hidden" name="productname" value="<%=name%>"/>
+                                        <input type="hidden" name="productdesc" value="<%=desc%>"/>
+                                        <input type="hidden" name="productschool" value="<%=school%>"/>
+                                        <input type="hidden" name="productcategory" value="<%=category%>"/>
+                                        <input type="hidden" name="productimglink" value="<%=imgLink%>"/>
+                                    </td>
+                                </tr>
+                                </form>
+                                <%}
+                                        }
+
+                                    }
+
+                                %>
+                                <!--some code here-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>            
     </body>
     <footer>
         <%@ include file="HeaderAndFooter/footer.jsp"%>
     </footer>
-    
-         <!-- Back to Top -->
+
+    <!-- Back to Top -->
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-    
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </html>
 
 <style>
