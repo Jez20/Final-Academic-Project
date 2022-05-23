@@ -46,18 +46,6 @@
             &nbsp
             &nbsp
             &nbsp
-            <div class="col-lg-2.5">
-                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Paymaya</span></h5>
-                <div class="bg-light p-30 mb-5">
-                    <div class="row">
-                        <img src="img/Paymaya.jpeg" alt="" />
-                    </div>
-                </div>
-            <div class="bg-light p-30">
-            <button class="btn btn-block btn-primary font-weight-bold py-3">Print Paymaya Invoice</button>
-            </div>
-            </div>
-
         </div>
     </div>
     <!-- Confirmation End -->

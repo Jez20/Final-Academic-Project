@@ -57,7 +57,6 @@
                             <a class="text-secondary mb-2" href="shop.jsp"><i class="fa fa-angle-right mr-2"></i>Shop</a>
                             <a class="text-secondary mb-2" href="cart.jsp"><i class="fa fa-angle-right mr-2"></i>Cart</a>
                             <a class="text-secondary mb-2" href="checkout.jsp"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                            <a class="text-secondary" href="contact.jsp"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                         </div>
                     </div>
                     <div class="col-md-4 mb-5">
