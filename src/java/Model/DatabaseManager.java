@@ -93,6 +93,21 @@ public class DatabaseManager {
             return null;
         }
     }
+    
+        public ResultSet returnProductVariation(HttpServletRequest request, Security decrypt) {
+        try {
+            query = Queries.valueOf("returnProductVariation");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery(),
+                    ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_READ_ONLY);
+            stmt.setInt(1, Integer.parseInt(decrypt.decrypt(request.getParameter("productid"))));
+            ResultSet rs = stmt.executeQuery();
+            return rs;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
     public boolean deleteProduct(HttpServletRequest request) {
         try {
@@ -390,6 +405,7 @@ public class DatabaseManager {
             return null;
         }
     }
+    
 
     public boolean signUp(HttpServletRequest request) {
         try {

@@ -7,11 +7,13 @@ package Controller;
 import Model.DatabaseManager;
 import Model.Security;
 import java.io.IOException;
+import java.sql.ResultSet;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -20,12 +22,12 @@ import javax.servlet.http.HttpServletResponse;
 public class PaymentServlet extends HttpServlet {
 
     private Security encryptDecrypt;
-    private DatabaseManager managesDB;
+    private DatabaseManager dbQueries;
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         String dbDriver = getServletContext().getInitParameter("jdbcClassName");
-        StringBuffer url = new StringBuffer(getServletContext().getInitParameter("jdbcDriverUrl"))
+        StringBuffer url = new StringBuffer(getServletContext().getInitParameter("jdbcDriverurl"))
                 .append("://")
                 .append(getServletContext().getInitParameter("dbHostName"))
                 .append(":")
@@ -36,11 +38,21 @@ public class PaymentServlet extends HttpServlet {
         String dbUsername = getServletContext().getInitParameter("dbUserName");
         String key = config.getInitParameter("key");
         this.encryptDecrypt = new Security();
-        this.managesDB = new DatabaseManager(url.toString(),dbPassword,dbDriver,dbDriver,key);
+        this.dbQueries = new DatabaseManager(url.toString(), dbPassword, dbDriver, dbDriver, key);
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        String action = request.getParameter("action");
+        switch (action) {
+            case "":
+                break;
+            default:
+                response.sendRedirect("LoggedInServlet");
+                break;
+        }
+
     }
 
     @Override

@@ -64,6 +64,11 @@ public class GuestServlet extends HttpServlet {
         System.out.println(String.format("action: %s", action));
 
         switch (action) {
+            case "detail":
+                ResultSet rs = dbQueries.returnProductVariation(request,this.displayEncrypt);
+                request.setAttribute("rs", rs);
+                request.getRequestDispatcher("detail.jsp").forward(request, response);
+                break;
             case "filter":
                 ResultSet rs1 = dbQueries.applyFilter(request);
                 request.setAttribute("rs", rs1);

@@ -22,7 +22,7 @@ public class HeaderFooterPageEvent extends PdfPageEventHelper {
     private Image logo;
 
     public HeaderFooterPageEvent(String user) {
-        String imageFile = "";
+        String imageFile = "img/logo.png";
         try {
             this.logo = Image.getInstance(imageFile);
             this.generatedBy = user;

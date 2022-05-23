@@ -259,7 +259,7 @@
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="gender-1" name="gender" value="" <%=allGender%>>
                                 <label class="custom-control-label" for="gender-1">All Gender</label>
-                                
+
                             </div>
                             <div class="custom-control custom-radio d-flex align-items-center justify-content-between mb-3">
                                 <input type="radio" class="custom-control-input" id="gender-2" name="gender" value="M" <%=male%>>
@@ -429,17 +429,22 @@
                                 <div class="product-img position-relative overflow-hidden">
                                     <img class="img-fluid w-100" id="ADU" src=<%=link%> alt="">
                                     <div class="product-action">
-                                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                                        <form action="GuestServlet" method="GET">
+                                            <button name="action" value="detail" class="btn btn-outline-dark btn-square"><i class="fa fa-search"></i></button>
+                                            <input type="hidden" name="productid" value=<%=id%>/>
+                                            <input type="hidden" name="productname" value="<%=name%>">
+                                            <input type="hidden" name="productdesc" value="<%=desc%>">
+                                            <input type="hidden" name="productschool" value="<%=school%>">
+                                            <input type="hidden" name="productimglink" value="<%=link%>">
+                                            <input type="hidden" name="productprice" value="<%=price%>">
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="text-center py-4">
                                     <a class="h6 text-decoration-none text-truncate" href=""><%=name%></a>
                                     <div class="d-flex align-items-center justify-content-center mt-2">
                                         <h5>₱ <%=price%></h5>
-                                        <input type="hidden" name="id" value=<%}
-                                            out.print(id);
-                                            {%>/>
+
                                     </div>
                                 </div>
                             </div>
