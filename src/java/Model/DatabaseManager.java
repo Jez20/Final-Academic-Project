@@ -15,6 +15,7 @@ import java.sql.Statement;
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -218,18 +219,34 @@ public class DatabaseManager {
     public boolean insertNewOrder(HttpServletRequest request) {
         try {
             query = Queries.valueOf("insertnewOrder");
-            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
-            stmt.setInt(1, 0); //user id
-            stmt.setString(2, ""); //order name
-            stmt.setInt(3, 0);//order quantity
-            stmt.setInt(4, 0);//order price
-            stmt.setString(5, "");//order address
-            LocalDate date = LocalDate.now();
-            stmt.setDate(6, Date.valueOf(date));//order date 
-            stmt.setDate(7, null);//order date completed
-            stmt.setBoolean(8, false); //is paid
-            stmt.setString(9, ""); //img link
-            stmt.executeUpdate();
+            String formattedAddress = String.format("%s %s %s %s %s %s",
+                    request.getParameter("addressline1"),
+                    request.getParameter("addressline2"),
+                    request.getParameter("country"),
+                    request.getParameter("city"),
+                    request.getParameter("state"),
+                    request.getParameter("zipcode"));
+            HttpSession session = request.getSession();
+
+            ArrayList<Order> cart2 = new ArrayList<Order>();
+            cart2 = (ArrayList<Order>) session.getAttribute("cart");
+
+            for (int i = 0; i < cart2.size(); i++) {
+                Order thisOrder = cart2.get(i);
+                PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+                int userid = (Integer) session.getAttribute("userid");
+                stmt.setInt(1, userid); //user id
+                stmt.setString(2, thisOrder.getOrderName()); //order name
+                stmt.setInt(3, thisOrder.getOrderQuantity());//order quantity
+                stmt.setInt(4, thisOrder.getOrderPrice());//order price
+                stmt.setString(5, formattedAddress);//order address
+                LocalDate date = LocalDate.now();
+                stmt.setDate(6, Date.valueOf(date));//order date 
+                stmt.setDate(7, null);//order date completed
+                stmt.setBoolean(8, false); //is paid
+                stmt.setString(9, thisOrder.getImgLink()); //img link
+                stmt.executeUpdate();
+            }
             return true;
         } catch (Exception e) {
             e.printStackTrace();

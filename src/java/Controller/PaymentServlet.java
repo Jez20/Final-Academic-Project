@@ -6,7 +6,6 @@ package Controller;
 
 import Model.DatabaseManager;
 import Model.Order;
-import Model.Security;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.time.LocalDate;
@@ -47,15 +46,45 @@ public class PaymentServlet extends HttpServlet {
         String action = request.getParameter("action");
         if (session.getAttribute("userid") != null && session.getAttribute("email") != null) {
             switch (action) {
+                case "deletesample":
+                    ArrayList<Order> cart2 = new ArrayList<Order>();
+                    cart2 = (ArrayList<Order>) session.getAttribute("cart");
+                    cart2.remove(Integer.parseInt(request.getParameter("cartindex")));
+                    request.getRequestDispatcher("cart.jsp").forward(request, response);
+                    break;
+                case "deletecart":
+                    session.removeAttribute("counter");
+                    session.removeAttribute("cart");
+                    request.getRequestDispatcher("cart.jsp").forward(request, response);
+                    break;
+                case "confirm":
+                    if (dbQueries.insertNewOrder(request)) {
+                        String payment = request.getParameter("payment");
+                        switch (payment) {
+                            case "gcash":
+                                session.removeAttribute("counter");
+                                session.removeAttribute("cart");
+                                response.sendRedirect("confirmationGcash.jsp");
+                                break;
+                            case "paymaya":
+                                session.removeAttribute("counter");
+                                session.removeAttribute("cart");
+                                response.sendRedirect("confirmationPaymaya.jsp");
+                                break;
+                        }
+                    } else {
+                        request.getRequestDispatcher("cart.jsp");
+                    }
+                    break;
                 case "checkout":
                     request.getRequestDispatcher("checkout.jsp").forward(request, response);
                     break;
                 case "addtocart":
                                 try {
-                                    ArrayList<Order> cart = new ArrayList<>();
+                    ArrayList<Order> cart = new ArrayList<>();
                     ResultSet available = dbQueries.checkAvailability(request);
                     dbQueries.printResultSets(available);
-                    if(session.getAttribute("cart") != null){
+                    if (session.getAttribute("cart") != null) {
                         cart = (ArrayList<Order>) session.getAttribute("cart");
                     }
                     Order createdorder = new Order();

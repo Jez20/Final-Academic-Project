@@ -86,7 +86,12 @@
                                     1
                                 </td>
                                 <td class="align-middle"><%=orderTotalPrice%></td>
-                                <td class="align-middle"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td>
+                                <td class="align-middle">
+                                    <form action="PaymentServlet" method="POST">
+                                        <button name="action" value="deletesample" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button>
+                                        <input name="cartindex" type="hidden" value="<%=i%>">
+                                    </form>
+                                </td>
                             </tr>
                             <%}
                                 }
