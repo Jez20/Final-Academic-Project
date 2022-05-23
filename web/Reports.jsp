@@ -36,7 +36,9 @@
                                         <td><input type="date" id="birthday" name="birthday"></td>
                                         <td>
                                             <div>
-                                                <button class="btn btn-primary py-2 px-4" name="action" type="submit" value="updateproduct" id="sendMessageButton">Generate Sales Report</button>
+                                                <a href="PdfServlet?pdftype=salesreport" target="_blank">
+                                                <button class="btn btn-primary py-2 px-4" name="action" type="submit" value="updateproduct">Generate Sales Report</button>
+                                                </a>
                                             </div>
                                         </td>
                                     </tr>
@@ -47,7 +49,9 @@
                                         </center>
                                         <td>
                                             <div>
-                                                <button class="btn btn-primary py-2 px-4" name="action" type="submit" value="updateproduct" id="sendMessageButton">Generate User Report</button>
+                                                <a href="PdfServlet?pdftype=userreport">
+                                                <button class="btn btn-primary py-2 px-4" name="action" type="submit" value="updateproduct">Generate User Report</button>
+                                                </a>
                                             </div>
                                         </td>
                                     </tr>
@@ -58,7 +62,9 @@
                                         </center>
                                         <td>
                                             <div>
-                                                <button class="btn btn-primary py-2 px-4" name="action" type="submit" value="updateproduct" id="sendMessageButton">Generate Pending Orders Report</button>
+                                                <a href="PdfServlet?pdftype=pendingorders" target="_blank">
+                                                <button class="btn btn-primary py-2 px-4" name="action" type="submit" value="updateproduct">Generate Pending Orders Report</button>
+                                                </a>
                                             </div>
                                         </td>
                                     </tr>
@@ -69,7 +75,9 @@
                                         </center>
                                         <td>
                                             <div>
-                                                <button class="btn btn-primary py-2 px-4" name="action" type="submit" value="updateproduct" id="sendMessageButton">Generate Completed Orders Report</button>
+                                                <a href="PdfServlet?pdftype=salesreport" target="_blank">
+                                                <button class="btn btn-primary py-2 px-4" name="action" type="submit" value="updateproduct">Generate Completed Orders Report</button>
+                                                </a>
                                             </div>
                                         </td>
                                     </tr>
@@ -80,7 +88,9 @@
                                         </center>
                                         <td>
                                             <div>
-                                                <button class="btn btn-primary py-2 px-4" name="action" type="submit" value="updateproduct" id="sendMessageButton">Generate Inventory Report</button>
+                                                <a href="PdfServlet?pdftype=inventoryreport" target="_blank">
+                                                <button class="btn btn-primary py-2 px-4" name="action" type="submit" value="updateproduct">Generate Inventory Report</button>
+                                                </a>
                                             </div>
                                         </td>
                                     </tr>

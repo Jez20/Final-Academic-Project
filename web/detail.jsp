@@ -67,44 +67,44 @@
                         <h3 class="font-weight-semi-bold mb-4">$150.00</h3>
                         <p class="mb-4"><%=request.getParameter("productdesc")%></p>
                         <div class="d-flex mb-3">
-                            <strong class="text-dark mr-3">Sizes:</strong>
+                            <strong class="text-dark mr-3">Gender:</strong>
                             <form>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input" id="size-1" name="XS">
-                                    <label class="custom-control-label" for="size-1">XS</label>
+                                <input type="radio" class="custom-control-input" id="gender-1" name="gender" value="Unisex">
+                                <label class="custom-control-label" for="gender-1">U</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input" id="size-2" name="S">
-                                    <label class="custom-control-label" for="size-2">S</label>
+                                <input type="radio" class="custom-control-input" id="gender-2" name="gender" value="Femaile">
+                                <label class="custom-control-label" for="gender-2">F</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input" id="size-3" name="M">
-                                    <label class="custom-control-label" for="size-3">M</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input" id="size-4" name="L">
-                                    <label class="custom-control-label" for="size-4">L</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input" id="size-5" name="XL">
-                                    <label class="custom-control-label" for="size-5">XL</label>
+                                <input type="radio" class="custom-control-input" id="gender-3" name="gender" value="Male">
+                                <label class="custom-control-label" for="gender-3">M</label>
                                 </div>
                             </form>
                         </div>
                         <div class="d-flex mb-3">
-                            <strong class="text-dark mr-3">Gender:</strong>
+                             <strong class="text-dark mr-3">Sizes:</strong>
                             <form>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input1" id="size-1" name="U" value="U">
-                                    <label class="custom-control-label" for="size-1">U</label>
+                                <input type="radio" class="custom-control-input" id="size-1" name="size" value="XS">
+                                <label class="custom-control-label" for="size-1">XS</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input1" id="size-2" name="M" value="M">
-                                    <label class="custom-control-label" for="size-2">M</label>
+                                <input type="radio" class="custom-control-input" id="size-2" name="size" value="S">
+                                <label class="custom-control-label" for="size-2">S</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input1" id="size-3" name="F" value="F">
-                                    <label class="custom-control-label" for="size-3">F</label>
+                                <input type="radio" class="custom-control-input" id="size-3" name="size" value="M">
+                                <label class="custom-control-label" for="size-3">M</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="size-4" name="size" value="L">
+                                <label class="custom-control-label" for="size-4">L</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="size-5" name="size" value="XL">
+                                <label class="custom-control-label" for="size-5">XL</label>
                                 </div>
                             </form>
                         </div>
@@ -282,219 +282,6 @@
             </div>
         </div>
         <!-- Shop Detail End -->
-
-
-        <!-- Products Start -->
-        <div class="container-fluid py-5">
-            <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">You May Also Like</span></h2>
-            <div class="row px-xl-5">
-                <div class="col">
-                    <div class="owl-carousel related-carousel">
-                        <div class="product-item bg-light">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://i.ibb.co/h259qCg/resized-image-Promo-3.jpg" alt="">
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                    <!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center py-4">
-                                <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                                <div class="d-flex align-items-center justify-content-center mt-2">
-                                    <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                                </div>
-                                <!--                            <div class="d-flex align-items-center justify-content-center mb-1">
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small>(99)</small>
-                                                            </div>-->
-                            </div>
-                        </div>
-                        <div class="product-item bg-light">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_Ateneo_SBC-A-123-RB-Ateneo-Curve-Front-600x600.jpg" alt="">
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                    <!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center py-4">
-                                <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                                <div class="d-flex align-items-center justify-content-center mt-2">
-                                    <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                                </div>
-                                <!--                            <div class="d-flex align-items-center justify-content-center mb-1">
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small>(99)</small>
-                                                            </div>-->
-                            </div>
-                        </div>
-                        <div class="product-item bg-light">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_DLSU_SBC-B-101-GN_Front-600x600.jpg" alt="">
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                    <!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center py-4">
-                                <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                                <div class="d-flex align-items-center justify-content-center mt-2">
-                                    <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                                </div>
-                                <!--                            <div class="d-flex align-items-center justify-content-center mb-1">
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small>(99)</small>
-                                                            </div>-->
-                            </div>
-                        </div>
-                        <div class="product-item bg-light">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_FEU_SBC-C-103-Y-FEU-Vinyl-front-600x600.jpg" alt="">
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                    <!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center py-4">
-                                <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                                <div class="d-flex align-items-center justify-content-center mt-2">
-                                    <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                                </div>
-                                <!--                            <div class="d-flex align-items-center justify-content-center mb-1">
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small>(99)</small>
-                                                            </div>-->
-                            </div>
-                        </div>
-                        <div class="product-item bg-light">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/SBC-E-105-MB-National-U-Vinyl-Front.jpg" alt="">
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                    <!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center py-4">
-                                <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                                <div class="d-flex align-items-center justify-content-center mt-2">
-                                    <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                                </div>
-                                <!--                            <div class="d-flex align-items-center justify-content-center mb-1">
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small>(99)</small>
-                                                            </div>-->
-                            </div>
-                        </div>
-                        <div class="product-item bg-light">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://i.ibb.co/3mvqtLN/resized-image-Promo.jpg" alt="">
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                    <!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center py-4">
-                                <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                                <div class="d-flex align-items-center justify-content-center mt-2">
-                                    <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                                </div>
-                                <!--                            <div class="d-flex align-items-center justify-content-center mb-1">
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small>(99)</small>
-                                                            </div>-->
-                            </div>
-                        </div>
-                        <div class="product-item bg-light">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2019/03/UP-Oblation-front800x800-600x600.jpg" alt="">
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                    <!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center py-4">
-                                <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                                <div class="d-flex align-items-center justify-content-center mt-2">
-                                    <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                                </div>
-                                <!--                            <div class="d-flex align-items-center justify-content-center mb-1">
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small>(99)</small>
-                                                            </div>-->
-                            </div>
-                        </div>
-                        <div class="product-item bg-light">
-                            <div class="product-img position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="https://www.schoolbusclothing.com/wp-content/uploads/2018/09/schoolbus-clothing_UST_SBC-D-106-Y_Front-600x600.jpg" alt="">
-                                <div class="product-action">
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                                    <!--                                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                                                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>-->
-                                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center py-4">
-                                <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                                <div class="d-flex align-items-center justify-content-center mt-2">
-                                    <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                                </div>
-                                <!--                            <div class="d-flex align-items-center justify-content-center mb-1">
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small class="fa fa-star text-primary mr-1"></small>
-                                                                <small>(99)</small>
-                                                            </div>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Products End -->
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
