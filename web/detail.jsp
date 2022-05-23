@@ -93,6 +93,23 @@
                                 </div>
                             </form>
                         </div>
+                        <div class="d-flex mb-3">
+                            <strong class="text-dark mr-3">Gender:</strong>
+                            <form>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input1" id="size-1" name="U" value="U">
+                                    <label class="custom-control-label" for="size-1">U</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input1" id="size-2" name="M" value="M">
+                                    <label class="custom-control-label" for="size-2">M</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input1" id="size-3" name="F" value="F">
+                                    <label class="custom-control-label" for="size-3">F</label>
+                                </div>
+                            </form>
+                        </div>
                         <!--                    <div class="d-flex mb-4">
                                                 <strong class="text-dark mr-3">Colors:</strong>
                                                 <form>
@@ -133,7 +150,7 @@
                                 </div>
                             </div>
                             <form>
-                            <button class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Add To
+                                <button class="btn btn-primary px-3" type="submit" name="addtocart"><i class="fa fa-shopping-cart mr-1"></i> Add To
                                 Cart</button>
                         </div>
                         </form>
