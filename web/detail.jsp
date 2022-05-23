@@ -23,7 +23,6 @@
                 <div class="col-12">
                     <nav class="breadcrumb bg-light mb-30">
                         <a class="breadcrumb-item text-dark" href="index.jsp">Home</a>
-                        <span class="breadcrumb-item active">Shop</span>
                         <span class="breadcrumb-item active">Item Details</span>
                     </nav>
                 </div>

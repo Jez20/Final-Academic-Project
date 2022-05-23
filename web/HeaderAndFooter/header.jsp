@@ -297,21 +297,26 @@
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
                                 <a href="index.jsp" class="nav-item nav-link active">Home</a>
-                                <div class="nav-item dropdown">
+                                <a href="shop.jsp" class="nav-item nav-link active">Store Items</a>
+                                <a href="detail.jsp" class="nav-item nav-link active">Item Details</a>
+                                <a href="cart.jsp" class="nav-item nav-link active">Cart</a>
+                                <a href="checkout.jsp" class="nav-item nav-link active">Checkout</a>
+                                <a href="confirmation.jsp" class="nav-item nav-link active">Confirmation</a>
+<!--                                <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop <i class="fa fa-angle-down mt-1"></i></a>
                                     <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
                                         <a href="shop.jsp" class="dropdown-item">Store Items</a>
                                         <a href="detail.jsp" class="dropdown-item">Item Details</a>
                                         <a href="cart.jsp" class="dropdown-item">Cart</a>
                                     </div>
-                                </div>
-                                <div class="nav-item dropdown">
+                                </div>-->
+<!--                                <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Orders <i class="fa fa-angle-down mt-1"></i></a>
                                     <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
                                         <a href="checkout.jsp" class="dropdown-item">Checkout</a>
                                         <a href="confirmation.jsp" class="dropdown-item">Confirmation</a>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!--                            <div class="nav-item dropdown">
                                                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down mt-1"></i></a>
                                                                 <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
@@ -319,7 +324,6 @@
                                                                     <a href="checkout.jsp" class="dropdown-item">Checkout</a>
                                                                 </div>
                                                             </div>-->
-                                <a href="contact.jsp" class="nav-item nav-link">Contact</a>
                             </div>
                             <!--                        <div class="col-lg-4 col-6 text-left">-->
 <!--                            <form action="<%=servlet%>">
