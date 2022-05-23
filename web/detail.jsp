@@ -72,23 +72,23 @@
                             <strong class="text-dark mr-3">Sizes:</strong>
                             <form>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input" id="size-1" name="size">
+                                    <input type="radio" class="custom-control-input" id="size-1" name="XS">
                                     <label class="custom-control-label" for="size-1">XS</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input" id="size-2" name="size">
+                                    <input type="radio" class="custom-control-input" id="size-2" name="S">
                                     <label class="custom-control-label" for="size-2">S</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input" id="size-3" name="size">
+                                    <input type="radio" class="custom-control-input" id="size-3" name="M">
                                     <label class="custom-control-label" for="size-3">M</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input" id="size-4" name="size">
+                                    <input type="radio" class="custom-control-input" id="size-4" name="L">
                                     <label class="custom-control-label" for="size-4">L</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" class="custom-control-input" id="size-5" name="size">
+                                    <input type="radio" class="custom-control-input" id="size-5" name="XL">
                                     <label class="custom-control-label" for="size-5">XL</label>
                                 </div>
                             </form>
@@ -132,9 +132,11 @@
                                     </button>
                                 </div>
                             </div>
+                            <form>
                             <button class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Add To
                                 Cart</button>
                         </div>
+                        </form>
                         <div class="d-flex pt-2">
                             <strong class="text-dark mr-2">Share on:</strong>
                             <div class="d-inline-flex">
