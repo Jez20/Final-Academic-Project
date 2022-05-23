@@ -330,11 +330,11 @@
                                         <a href="PdfServlet?pdftype=pendingorders" target="_blank" class="dropdown-item">Pending Orders Report</a>
                                         <a href="PdfServlet?pdftype=completedorders" target="_blank" class="dropdown-item">Completed Orders Report</a>
                                         <a href="PdfServlet?pdftype=inventoryreport" target="_blank" class="dropdown-item">Inventory Report</a>
-                                        <a href="PdfServlet?pdftype=salesreport" target="_blank" class="dropdown-item">Feedback Report</a>
                                     </div>
                                 </div>
                                 <a href="AdminServlet?action=viewproducts" class="nav-item nav-link">Product List</a>
                                 <a href="AdminAddProduct.jsp" class="nav-item nav-link">Add Product</a>
+                                <a href="AdminOrderList.jsp" class="nav-item nav-link">Customer Order List</a>
                             </div>
                             <!--                        <div class="col-lg-4 col-6 text-left">-->
 <!--                            <form action="<%=servlet%>">
