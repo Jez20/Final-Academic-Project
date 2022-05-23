@@ -32,7 +32,7 @@
                                         <th>Customer Address</th>
                                         <th>Order Date Created</th>
                                         <th>Date Completed</th>
-                                        <th>Is order paid?</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -45,12 +45,29 @@
                                         <td>Date Field</td>
                                         <td><input type="date" id="birthday" name="birthday"></td>
                                         <td>
-                                            <center><input type="checkbox" id="ispaid" name="ispaid" value="True"></center>
+                                        <center>
+                                            <span class="badge badge-success" id="status" name="status">Completed</span>
+<!--                                            <input type="checkbox" id="ispaid" name="ispaid" value="True">-->
+                                        </center>
                                         </td>
-
                                     </tr>
-
-                                    <!--some code here-->
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td>nedwoots@hotgirls.com</td>
+                                        <td>DLSU T-Shirt</td>
+                                        <td>1</td>
+                                        <td>200</td>
+                                        <td>123 Cubao</td>
+                                        <td>Date Field</td>
+                                        <td><input type="date" id="birthday" name="birthday"></td>
+                                        <td>
+                                        <center>
+                                            <span class="badge badge-warning" id="status" name="status">Pending</span>
+<!--                                            <input type="checkbox" id="ispaid" name="ispaid" value="True">-->
+                                        </center>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
