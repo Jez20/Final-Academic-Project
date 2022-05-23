@@ -42,7 +42,7 @@
                             </div>
                             <div class="control-group">
                                 <select name="productschool" class="form-control">
-                                    <option selected value="No school selected">Choose a UAAP School...</option>
+                                    <option selected value="No school selected">Product School</option>
                                     <option value="ADMU">Ateneo De Manila University</option>
                                     <option value="DLSU">De La Salle University</option>
                                     <option value="AdU">Adamson University</option>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="control-group">
                                 <select name="productcategory" class="form-control">
-                                    <option selected value="No category selected">Choose apparel catergory...</option>
+                                    <option selected value="No category selected">Product Category</option>
                                     <option value="Caps">Caps</option>
                                     <option value="Classic Shirts">Classic Shirts</option>
                                     <option value="Polo Shirts">Polo Shirts</option>
@@ -68,13 +68,13 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input name="imgLink" type="text" class="form-control" id="email" placeholder="Product image link"
+                                <input name="imgLink" type="text" class="form-control" id="email" placeholder="Product Image"
                                        required="required" data-validation-required-message="Please enter product image link." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
                                 <select name="gender" class="form-control">
-                                    <option selected value="No gender selected">Choose gender...</option>
+                                    <option selected value="No gender selected">Product Gender</option>
                                     <option value="U">Unisex</option>
                                     <option value="F">Female</option>
                                     <option value="M">Male</option>
@@ -83,7 +83,7 @@
                             </div>
                             <div class="control-group">
                                 <select name="size" class="form-control">
-                                    <option selected value="No gender selected">Choose product size...</option>
+                                    <option selected value="No gender selected">Product Size</option>
                                     <option value="XS">Extra Small</option>
                                     <option value="S">Small</option>
                                     <option value="M">Medium</option>
@@ -93,12 +93,12 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input name="productprice" type="number" class="form-control" id="email" placeholder="Product price..."
+                                <input name="productprice" type="number" class="form-control" id="email" placeholder="Product Price"
                                        required="required" data-validation-required-message="Please enter price." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input name="productstock" type="number" class="form-control" id="email" placeholder="Product stock..."
+                                <input name="productstock" type="number" class="form-control" id="email" placeholder="Product Stock"
                                        required="required" data-validation-required-message="Please enter stock." />
                                 <p class="help-block text-danger"></p>
                             </div>

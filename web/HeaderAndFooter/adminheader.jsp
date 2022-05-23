@@ -322,7 +322,7 @@
                                                             </div>-->
 
 <!--                                <a href="contact.jsp" class="nav-item nav-link">Contact</a>-->
-                                <div class="nav-item dropdown">
+<!--                                <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reports <i class="fa fa-angle-down mt-1"></i></a>
                                     <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
                                         <a href="PdfServlet?pdftype=userreport" target="_blank" class="dropdown-item">User Report</a>
@@ -331,7 +331,8 @@
                                         <a href="PdfServlet?pdftype=completedorders" target="_blank" class="dropdown-item">Completed Orders Report</a>
                                         <a href="PdfServlet?pdftype=inventoryreport" target="_blank" class="dropdown-item">Inventory Report</a>
                                     </div>
-                                </div>
+                                </div>-->
+                                <a href="Reports.jsp" class="nav-item nav-link">Reports</a>
                                 <a href="AdminServlet?action=viewproducts" class="nav-item nav-link">Product List</a>
                                 <a href="AdminAddProduct.jsp" class="nav-item nav-link">Add Product</a>
                                 <a href="AdminOrderList.jsp" class="nav-item nav-link">Customer Order List</a>
