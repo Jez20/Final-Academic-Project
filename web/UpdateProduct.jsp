@@ -48,7 +48,7 @@
                 <div class="col-lg-9 mb-5">
                     <div class="contact-form bg-light p-30">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <form action="AdminServlet" method="POST" >
                             <div class="control-group">
                                 <input type="text" class="form-control" id="name" placeholder="Product Name"
                                        required="required" data-validation-required-message="Please enter the product name" name="productname" value="<%=productName%>" />
@@ -62,7 +62,7 @@
 
                             <div class="control-group">
                                 <select class="form-control">
-                                    <option selected value="<%=productSchool%>"><%=productSchool%></option>
+                                    <option name="productschool" selected value="<%=productSchool%>"><%=productSchool%></option>
                                     <option value="ATENEO">ATENEO</option>
                                     <option value="LA SALLE">LA SALLE</option>
                                     <option value="ADAMSON">ADAMSON</option>
@@ -75,7 +75,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <select class="form-control">
+                                <select name="productcategory" class="form-control">
                                     <option selected value="<%=productCateg%>"><%=productCateg%></option>
                                     <option value="Caps">Caps</option>
                                     <option value="Classic Shirts">Classic Shirts</option>
@@ -93,8 +93,10 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-primary py-2 px-4" name="Action" type="submit" value="AddProduct" id="sendMessageButton">Update Product</button>
+                                <button class="btn btn-primary py-2 px-4" name="action" type="submit" value="updateproduct" id="sendMessageButton">Update Product</button>
+                                <input type="hidden" name="productid" value="<%=productid%>"/>
                             </div>
+                        </form>
                             <div class="contact-form bg-light p-30">
                                 <div id="success"></div>
                                 <table class="content-table">
@@ -125,7 +127,7 @@
                                             <td>
                                                 <div class="control-group">
                                                     <select class="form-control">
-                                                        <option selected value="<%=gender%>"><%=gender%></option>
+                                                        <option name ="productgender" selected value="<%=gender%>"><%=gender%></option>
                                                         <option value="U">Unisex</option>
                                                         <option value="F">Female</option>
                                                         <option value="M">Male</option>
@@ -136,7 +138,7 @@
                                             <td>
                                                 <div class="control-group">
                                                     <select class="form-control">
-                                                        <option selected value="<%=size%>"><%=size%></option>
+                                                        <option name="productsize" selected value="<%=size%>"><%=size%></option>
                                                         <option value="XS">Extra Small</option>
                                                         <option value="S">Small</option>
                                                         <option value="M">Medium</option>
@@ -148,22 +150,23 @@
                                             </td>
                                             <td>
                                                 <div class="control-group">
-                                                    <input type="number" class="form-control" id="email" placeholder="Product price..."
+                                                    <input name="productprice" type="number" class="form-control" id="email" placeholder="Product price..."
                                                            required="required" data-validation-required-message="Please enter price." name="price" value="<%=price%>"/>
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="control-group">
-                                                    <input type="number" class="form-control" id="email" placeholder="Product stock..."
-                                                           required="required" data-validation-required-message="Please enter stock." name="stock" value="<%=stock%>" />
+                                                    <input name="productstock" type="number" class="form-control" id="email" placeholder="Product stock..."
+                                                           required="required" data-validation-required-message="Please enter stock." value="<%=stock%>" />
                                                     <p class="help-block text-danger"></p>
                                                 </div>
                                             </td>
                                             <td>
-                                                <button name="action" value="update" type="Submit" class="btn btn-success">Update</button>
-                                                <button name="action" value="delete" type="Submit" class="btn btn-danger">Delete</button>
+                                                <button name="action" value="updateproductvariation" type="Submit" class="btn btn-success">Update</button>
+                                                <button name="action" value="deleteproductvariation" type="Submit" class="btn btn-danger">Delete</button>
                                                 <input type="hidden" name="variantid" value="<%=id%>"/>
+                                                <input type="hidden" name="productid" value="<%=productid%>"/>
                                             </td>
                                         </tr>
                                     </form>

@@ -81,6 +81,14 @@
             <param-value>j1bFJX1W9zx4OwrU</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>PdfServlet</servlet-name>
+        <servlet-class>Controller.PdfServlet</servlet-class>
+        <init-param>
+            <param-name>key</param-name>
+            <param-value>HkydND9SmuvhEas4</param-value>
+        </init-param>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LogInSignInServlet</servlet-name>
         <url-pattern>/LogInSignInServlet</url-pattern>
@@ -104,6 +112,10 @@
     <servlet-mapping>
         <servlet-name>AdminServlet</servlet-name>
         <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PdfServlet</servlet-name>
+        <url-pattern>/PdfServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

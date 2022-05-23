@@ -12,8 +12,9 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
+import java.sql.Date;
+import java.time.LocalDate;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -99,7 +100,7 @@ public class DatabaseManager {
             PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
             stmt.setInt(1, Integer.parseInt(request.getParameter("productid")));
             stmt.executeUpdate();
-            
+
             query = Queries.valueOf("deleteProduct");
             stmt = this.conn.prepareStatement(query.getQuery());
             stmt.setInt(1, Integer.parseInt(request.getParameter("productid")));
@@ -109,6 +110,20 @@ public class DatabaseManager {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public boolean deleteProductVariation(HttpServletRequest request) {
+        try {
+            query = Queries.valueOf("deleteProductVariation");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            stmt.setInt(1, 0); //variant id
+            stmt.executeUpdate();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
     }
 
     public boolean addProduct(HttpServletRequest request) {
@@ -133,6 +148,100 @@ public class DatabaseManager {
             stmt.setInt(3, savedCategSizeandGender.getSizeLabeltoIndex(request.getParameter("size")));
             stmt.setInt(4, Integer.parseInt(request.getParameter("productprice")));
             stmt.setInt(5, Integer.parseInt(request.getParameter("productstock")));
+            stmt.executeUpdate();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean addProductVariation(HttpServletRequest request) {
+        try {
+            query = Queries.valueOf("addProductVariation");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery(), Statement.RETURN_GENERATED_KEYS);
+            stmt.setInt(1, Integer.parseInt(request.getParameter("productid"))); //product id
+            stmt.setInt(2, savedCategSizeandGender.getGenderLabeltoIndex(request.getParameter("gender"))); //gender id
+            stmt.setInt(3, savedCategSizeandGender.getSizeLabeltoIndex(request.getParameter("size"))); //product size id
+            stmt.setInt(4, Integer.parseInt(request.getParameter("productprice"))); //product price
+            stmt.setInt(5, Integer.parseInt(request.getParameter("productstock"))); // product stock
+            stmt.executeUpdate();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+    }
+
+    public boolean updateProduct(HttpServletRequest request) {
+        try {
+            query = Queries.valueOf("updateProduct");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            stmt.setString(1, request.getParameter("productname")); //product name
+            stmt.setString(2, request.getParameter("productdescription")); //product desc
+            stmt.setString(3, request.getParameter("productschool")); //school
+            stmt.setString(4, request.getParameter("productcategory")); //category
+            stmt.setString(5, request.getParameter("productimglink")); //img link
+            stmt.setInt(5, Integer.parseInt(request.getParameter("productid"))); //product id
+            stmt.executeUpdate();
+            return true;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+    }
+
+    public boolean insertNewOrder(HttpServletRequest request) {
+        try {
+            query = Queries.valueOf("insertnewOrder");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            stmt.setInt(1, 0); //user id
+            stmt.setString(2, ""); //order name
+            stmt.setInt(3, 0);//order quantity
+            stmt.setInt(4, 0);//order price
+            stmt.setString(5, "");//order address
+            LocalDate date = LocalDate.now();
+            stmt.setDate(6, Date.valueOf(date));//order date 
+            stmt.setDate(7, null);//order date completed
+            stmt.setBoolean(8, false); //is paid
+            stmt.setString(9, ""); //img link
+            stmt.executeUpdate();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+
+    }
+
+    public boolean updateProductVariation(HttpServletRequest request) {
+        try {
+            query = Queries.valueOf("updateProductVariation");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            stmt.setInt(1, savedCategSizeandGender.getGenderLabeltoIndex(request.getParameter("productgender"))); //gender id
+            stmt.setInt(2, savedCategSizeandGender.getSizeLabeltoIndex(request.getParameter("productsize"))); // size id
+            stmt.setInt(3, Integer.parseInt(request.getParameter("productprice"))); // product price
+            stmt.setInt(4, Integer.parseInt(request.getParameter("productstock"))); // product stock
+            stmt.setInt(5, Integer.parseInt(request.getParameter("variantid"))); // variant id
+            stmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+    }
+
+    public boolean updateOrder(HttpServletRequest request) {
+        try {
+            query = Queries.valueOf("updateOrder");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            stmt.setDate(1, null); //date completed
+            stmt.setBoolean(2, true); //is paid
+            stmt.setInt(3, -999); //order id
             stmt.executeUpdate();
             return true;
         } catch (Exception e) {
@@ -213,6 +322,57 @@ public class DatabaseManager {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public ResultSet returnallUsers() {
+        query = Queries.valueOf("returnallUsers");
+        try {
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            ResultSet rs = stmt.executeQuery();
+            return rs;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public ResultSet returnAllOrders() {
+        try {
+            query = Queries.valueOf("returnallOrders");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            ResultSet rs = stmt.executeQuery();
+            return rs;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public ResultSet returnAllPendingOrders() {
+        try {
+            query = Queries.valueOf("returnAllPendingOrders");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            ResultSet rs = stmt.executeQuery();
+            return rs;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public ResultSet returnOrderDateRange(HttpServletRequest request) {
+        try {
+            query = Queries.valueOf("returnOrderDateRange");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            stmt.setDate(1, Date.valueOf(LocalDate.MAX)); //start date constraint by now
+            stmt.setDate(2, Date.valueOf(LocalDate.MAX)); // end date contraint by the start date and now
+            ResultSet rs = stmt.executeQuery();
+            return rs;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+
     }
 
     public ResultSet returnProductDetail(HttpServletRequest request) {
