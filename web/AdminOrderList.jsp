@@ -17,7 +17,7 @@
     <body>
         <form>
             <div class="container-fluid">
-                <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Order List</span></h2>
+                <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Administrator - Order List</span></h2>
                 <div class="row px-xl-5">
                     <div class="col-lg-12 mb-5">
                         <div class="contact-form bg-light p-30">
