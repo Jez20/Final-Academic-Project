@@ -63,8 +63,48 @@ public class AdminServlet extends HttpServlet {
         System.out.println(String.format("action: %s", action));
         if (session.getAttribute("email") != null && session.getAttribute("role") != null) {
             switch (action) {
+                case "addvariation":
+                    if (dbQueries.addProductVariation(request)) {
+                        ResultSet rs2 = dbQueries.returnProductVariation(request);
+                        request.setAttribute("rs", rs2);
+                        request.getRequestDispatcher("UpdateProduct.jsp").forward(request, response);
+                    } else {
+                        ResultSet rs2 = dbQueries.returnProductVariation(request);
+                        request.setAttribute("rs", rs2);
+                        request.getRequestDispatcher("UpdateProduct.jsp").forward(request, response);
+                    }
+                    break;
+                case "deletevariation":
+                    if (dbQueries.deleteProductVariation(request)) {
+                        ResultSet rs2 = dbQueries.returnProductVariation(request);
+                        request.setAttribute("rs", rs2);
+                        request.getRequestDispatcher("UpdateProduct.jsp").forward(request, response);
+                    } else {
+                        ResultSet rs2 = dbQueries.returnProductVariation(request);
+                        request.setAttribute("rs", rs2);
+                        request.getRequestDispatcher("UpdateProduct.jsp").forward(request, response);
+                    }
+                    break;
+                case "updatevariation":
+                    if (dbQueries.updateProductVariation(request)) {
+                        ResultSet rs2 = dbQueries.returnProductVariation(request);
+                        request.setAttribute("rs", rs2);
+                        request.getRequestDispatcher("UpdateProduct.jsp").forward(request, response);
+                    } else {
+                        ResultSet rs2 = dbQueries.returnProductVariation(request);
+                        request.setAttribute("rs", rs2);
+                        request.getRequestDispatcher("UpdateProduct.jsp").forward(request, response);
+                    }
+                    break;
                 case "delete":
                     if (dbQueries.deleteProduct(request)) {
+                        response.sendRedirect("AdminServlet?action=viewproducts");
+                    } else {
+                        response.sendRedirect("AdminServlet?action=viewproducts");
+                    }
+                    break;
+                case "updateproduct":
+                    if (dbQueries.updateProduct(request)) {
                         response.sendRedirect("AdminServlet?action=viewproducts");
                     } else {
                         response.sendRedirect("AdminServlet?action=viewproducts");
@@ -74,7 +114,7 @@ public class AdminServlet extends HttpServlet {
                     if (dbQueries.addProduct(request)) {
                         response.sendRedirect("AdminServlet?action=viewproducts");
                     } else {
-                        response.sendRedirect("AdminAddProduct");
+                        response.sendRedirect("AdminServlet");
                     }
                     break;
                 case "viewproducts":
@@ -118,16 +158,20 @@ public class AdminServlet extends HttpServlet {
                     toTheshop(request, response);
                     break;
                 case "logout":
+                    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
                     session.removeAttribute("email");
                     session.removeAttribute("userid");
                     session.removeAttribute("role");
                     response.sendRedirect("GuestServlet");
+                    session.invalidate();
                     break;
                 case "":
                     session.removeAttribute("email");
                     session.removeAttribute("userid");
                     session.removeAttribute("role");
+                    session.invalidate();
                     response.sendRedirect("GuestServlet");
+                    
                     break;
             }
         } else {

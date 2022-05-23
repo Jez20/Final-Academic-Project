@@ -86,14 +86,18 @@ public class LoggedInServlet extends HttpServlet {
                     toTheshop(request, response);
                     break;
                 case "logout":
+                    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
                     session.removeAttribute("email");
                     session.removeAttribute("userid");
-                    response.sendRedirect("index.jsp");
+                    session.invalidate();
+                    response.sendRedirect("GuestServlet");
                     break;
                 case "":
                     session.removeAttribute("email");
                     session.removeAttribute("userid");
+                    session.invalidate();
                     response.sendRedirect("index.jsp");
+                    
                     break;
             }
         } else {

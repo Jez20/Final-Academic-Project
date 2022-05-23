@@ -15,32 +15,36 @@
     <header>
         <%@ include file="HeaderAndFooter/adminheader.jsp"%>
     </header>
-                                <%
-                                String productName = "";
-                                String productDesc = "";
-                                String productSchool = "";
-                                String productCateg = "";
-                                String imgLink = "";
-                                String productid = "";
-                                if (request.getParameter("productname") != null) {
-                                    productName = request.getParameter("productname");
-                                }
-                                if (request.getParameter("productdesc") != null) {
-                                    productDesc = request.getParameter("productdesc");
-                                }
-                                if (request.getParameter("productschool") != null) {
-                                    productSchool = request.getParameter("productschool");
-                                }
-                                if (request.getParameter("productcategory") != null) {
-                                    productCateg = request.getParameter("productcategory");
-                                }
-                                if (request.getParameter("productimglink") != null) {
-                                    imgLink = request.getParameter("productimglink");
-                                }
-                                if(request.getParameter("productid") != null){
-                                    productid = request.getParameter("productid");
-                                }
-                            %>
+    <%
+        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        if (session.getAttribute("userid") == null && session.getAttribute("role") == null) {
+            response.sendRedirect("GuestServlet");
+        }
+        String productName = "";
+        String productDesc = "";
+        String productSchool = "";
+        String productCateg = "";
+        String imgLink = "";
+        String productid = "";
+        if (request.getParameter("productname") != null) {
+            productName = request.getParameter("productname");
+        }
+        if (request.getParameter("productdesc") != null) {
+            productDesc = request.getParameter("productdesc");
+        }
+        if (request.getParameter("productschool") != null) {
+            productSchool = request.getParameter("productschool");
+        }
+        if (request.getParameter("productcategory") != null) {
+            productCateg = request.getParameter("productcategory");
+        }
+        if (request.getParameter("productimglink") != null) {
+            imgLink = request.getParameter("productimglink");
+        }
+        if (request.getParameter("productid") != null) {
+            productid = request.getParameter("productid");
+        }
+    %>
     <body>
         <div class="container-fluid">
             <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Administrator - Update Product</span></h2>
@@ -61,8 +65,8 @@
                             </div>
 
                             <div class="control-group">
-                                <select class="form-control">
-                                    <option name="productschool" selected value="<%=productSchool%>"><%=productSchool%></option>
+                                <select name="productschool" class="form-control">
+                                    <option selected value="<%=productSchool%>"><%=productSchool%></option>
                                     <option value="ATENEO">ATENEO</option>
                                     <option value="LA SALLE">LA SALLE</option>
                                     <option value="ADAMSON">ADAMSON</option>
@@ -97,167 +101,171 @@
                                 <input type="hidden" name="productid" value="<%=productid%>"/>
                             </div>
                         </form>
-                            <div class="contact-form bg-light p-30">
-                                <div id="success"></div>
-                                <table class="content-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Gender</th>
-                                            <th>Size</th>
-                                            <th>Price</th>
-                                            <th>Stock</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <%
-                                            ResultSet rs = (ResultSet) request.getAttribute("rs");
-                                            if (rs != null) {
-                                                while (rs.next()) {
-                                                    String id = rs.getString(1);
-                                                    String gender = rs.getString(2);
-                                                    String size = rs.getString(3);
-                                                    String price = rs.getString(4);
-                                                    String stock = rs.getString(5);
-                                                    System.out.println(gender);
+                        <div class="contact-form bg-light p-30">
+                            <div id="success"></div>
+                            <table class="content-table">
+                                <thead>
+                                    <tr>
+                                        <th>Gender</th>
+                                        <th>Size</th>
+                                        <th>Price</th>
+                                        <th>Stock</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <%
+                                        ResultSet rs = (ResultSet) request.getAttribute("rs");
+                                        if (rs != null) {
+                                            while (rs.next()) {
+                                                String id = rs.getString(1);
+                                                String gender = rs.getString(2);
+                                                String size = rs.getString(3);
+                                                String price = rs.getString(4);
+                                                String stock = rs.getString(5);
 
-                                                    {%>
-                                    <form action="AdminServlet" method="GET">
-                                        <tr>
-                                            <td>
-                                                <div class="control-group">
-                                                    <select class="form-control">
-                                                        <option name ="productgender" selected value="<%=gender%>"><%=gender%></option>
-                                                        <option value="U">Unisex</option>
-                                                        <option value="F">Female</option>
-                                                        <option value="M">Male</option>
-                                                    </select>
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="control-group">
-                                                    <select class="form-control">
-                                                        <option name="productsize" selected value="<%=size%>"><%=size%></option>
-                                                        <option value="XS">Extra Small</option>
-                                                        <option value="S">Small</option>
-                                                        <option value="M">Medium</option>
-                                                        <option value="L">Large</option>
-                                                        <option value="XL">Extra Large</option>
-                                                    </select>
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="control-group">
-                                                    <input name="productprice" type="number" class="form-control" id="email" placeholder="Product price..."
-                                                           required="required" data-validation-required-message="Please enter price." name="price" value="<%=price%>"/>
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="control-group">
-                                                    <input name="productstock" type="number" class="form-control" id="email" placeholder="Product stock..."
-                                                           required="required" data-validation-required-message="Please enter stock." value="<%=stock%>" />
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button name="action" value="updateproductvariation" type="Submit" class="btn btn-success">Update</button>
-                                                <button name="action" value="deleteproductvariation" type="Submit" class="btn btn-danger">Delete</button>
-                                                <input type="hidden" name="variantid" value="<%=id%>"/>
-                                                <input type="hidden" name="productid" value="<%=productid%>"/>
-                                            </td>
-                                        </tr>
-                                    </form>
-                                    <%}
-                                            }
+                                                {%>
+                                <form action="AdminServlet" method="GET">
+                                    <tr>
+                                        <td>
+                                            <div class="control-group">
+                                                <select name ="productgender" class="form-control">
+                                                    <option selected value="<%=gender%>"><%=gender%></option>
+                                                    <option value="U">Unisex</option>
+                                                    <option value="F">Female</option>
+                                                    <option value="M">Male</option>
+                                                </select>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="control-group">
+                                                <select name="productsize" class="form-control">
+                                                    <option selected value="<%=size%>"><%=size%></option>
+                                                    <option value="XS">Extra Small</option>
+                                                    <option value="S">Small</option>
+                                                    <option value="M">Medium</option>
+                                                    <option value="L">Large</option>
+                                                    <option value="XL">Extra Large</option>
+                                                </select>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="control-group">
+                                                <input name="productprice" type="number" class="form-control" id="email" placeholder="Product price..."
+                                                       required="required" data-validation-required-message="Please enter price." name="price" value="<%=price%>"/>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="control-group">
+                                                <input name="productstock" type="number" class="form-control" id="email" placeholder="Product stock..."
+                                                       required="required" data-validation-required-message="Please enter stock." value="<%=stock%>" />
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button name="action" value="updatevariation" type="Submit" class="btn btn-success">Update</button>
+                                            <button name="action" value="deletevariation" type="Submit" class="btn btn-danger">Delete</button>
+                                            <input type="hidden" name="variantid" value="<%=id%>"/>
+                                            <input type="hidden" name="productname" value="<%=productName%>"/>
+                                            <input type="hidden" name="productdesc" value="<%=productDesc%>"/>
+                                            <input type="hidden" name="productschool" value="<%=productSchool%>"/>
+                                            <input type="hidden" name="productcategory" value="<%=productCateg%>"/>
+                                            <input type="hidden" name="productimglink" value="<%=imgLink%>"/>
+                                            <input type="hidden" name="productid" value="<%=productid%>"/>
+                                        </td>
+                                    </tr>
+                                </form>
+                                <%}
                                         }
-                                    %>
-                                    <form>
-                                        <tr>
-                                            <td>
-                                                <div class="control-group">
-                                                    <select class="form-control">
-                                                        <option selected value="No gender selected">Choose gender...</option>
-                                                        <option value="U">Unisex</option>
-                                                        <option value="F">Female</option>
-                                                        <option value="M">Male</option>
-                                                    </select>
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="control-group">
-                                                    <select class="form-control">
-                                                        <option selected value="No size selected">Choose size...</option>
-                                                        <option value="XS">Extra Small</option>
-                                                        <option value="S">Small</option>
-                                                        <option value="M">Medium</option>
-                                                        <option value="L">Large</option>
-                                                        <option value="XL">Extra Large</option>
-                                                    </select>
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </td>
-                                            <td><div class="control-group">
-                                                    <input type="number" class="form-control" id="email" placeholder="Product price..."
-                                                           required="required" data-validation-required-message="Please enter price." />
-                                                    <p class="help-block text-danger"></p>
-                                                </div></td>
-                                            <td>
-                                                <div class="control-group">
-                                                    <input type="number" class="form-control" id="email" placeholder="Product stock..."
-                                                           required="required" data-validation-required-message="Please enter price." />
-                                                    <p class="help-block text-danger"></p>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button name="action" value="update" type="Submit" class="btn btn-warning">Add</button>
-                                                <input type="hidden" name="productname" value="<%=productName%>"/>
-                                                <input type="hidden" name="productdesc" value="<%=productDesc%>"/>
-                                                <input type="hidden" name="productschool" value="<%=productSchool%>"/>
-                                                <input type="hidden" name="productcategory" value="<%=productCateg%>"/>
-                                                <input type="hidden" name="productimglink" value="<%=imgLink%>"/>
-                                                <input type="hidden" name="productid" value="<%=productid%>"/>
-                                            </td>
-                                        </tr>
-                                    </form>
-                                    <!--some code here-->
-                                    </tbody>
-                                </table>
-                            </div>
+                                    }
+                                %>
+                                <form action="AdminServlet" method="POST">
+                                    <tr>
+                                        <td>
+                                            <div class="control-group">
+                                                <select name="productgender" class="form-control">
+                                                    <option selected value="">Choose gender...</option>
+                                                    <option value="U">Unisex</option>
+                                                    <option value="F">Female</option>
+                                                    <option value="M">Male</option>
+                                                </select>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="control-group">
+                                                <select name="productsize" class="form-control">
+                                                    <option selected value="">Choose size...</option>
+                                                    <option value="XS">Extra Small</option>
+                                                    <option value="S">Small</option>
+                                                    <option value="M">Medium</option>
+                                                    <option value="L">Large</option>
+                                                    <option value="XL">Extra Large</option>
+                                                </select>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </td>
+                                        <td><div class="control-group">
+                                                <input name="productprice" type="number" class="form-control" id="email" placeholder="Product price..."
+                                                       required="required" data-validation-required-message="Please enter price." />
+                                                <p class="help-block text-danger"></p>
+                                            </div></td>
+                                        <td>
+                                            <div class="control-group">
+                                                <input name="productstock" type="number" class="form-control" id="email" placeholder="Product stock..."
+                                                       required="required" data-validation-required-message="Please enter price." />
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button name="action" value="addvariation" type="Submit" class="btn btn-warning">Add</button>
+                                            <input type="hidden" name="productname" value="<%=productName%>"/>
+                                            <input type="hidden" name="productdesc" value="<%=productDesc%>"/>
+                                            <input type="hidden" name="productschool" value="<%=productSchool%>"/>
+                                            <input type="hidden" name="productcategory" value="<%=productCateg%>"/>
+                                            <input type="hidden" name="productimglink" value="<%=imgLink%>"/>
+                                            <input type="hidden" name="productid" value="<%=productid%>"/>
+                                        </td>
+                                    </tr>
+                                </form>
+                                <!--some code here-->
+                                </tbody>
+                            </table>
+                        </div>
 
-                            <!--                            <div class="control-group">
-                                                            <select class="form-control">
-                                                                <option selected value="No gender selected">Choose gender...</option>
-                                                                <option value="U">Unisex</option>
-                                                                <option value="F">Female</option>
-                                                                <option value="M">Male</option>
-                                                            </select>
-                                                            <p class="help-block text-danger"></p>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <select class="form-control">
-                                                                <option selected value="No gender selected">Choose product size...</option>
-                                                                <option value="XS">Extra Small</option>
-                                                                <option value="S">Small</option>
-                                                                <option value="M">Medium</option>
-                                                                <option value="L">Large</option>
-                                                                <option value="XL">Extra Large</option>
-                                                            </select>
-                                                            <p class="help-block text-danger"></p>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <input type="number" class="form-control" id="email" placeholder="Product price..."
-                                                                   required="required" data-validation-required-message="Please enter price." />
-                                                            <p class="help-block text-danger"></p>
-                                                        </div>
-                                                        <div class="control-group">
-                                                            <input type="number" class="form-control" id="email" placeholder="Product stock..."
-                                                                   required="required" data-validation-required-message="Please enter stock." />
-                                                            <p class="help-block text-danger"></p>
-                                                        </div>-->
+                        <!--                            <div class="control-group">
+                                                        <select class="form-control">
+                                                            <option selected value="No gender selected">Choose gender...</option>
+                                                            <option value="U">Unisex</option>
+                                                            <option value="F">Female</option>
+                                                            <option value="M">Male</option>
+                                                        </select>
+                                                        <p class="help-block text-danger"></p>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <select class="form-control">
+                                                            <option selected value="No gender selected">Choose product size...</option>
+                                                            <option value="XS">Extra Small</option>
+                                                            <option value="S">Small</option>
+                                                            <option value="M">Medium</option>
+                                                            <option value="L">Large</option>
+                                                            <option value="XL">Extra Large</option>
+                                                        </select>
+                                                        <p class="help-block text-danger"></p>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <input type="number" class="form-control" id="email" placeholder="Product price..."
+                                                               required="required" data-validation-required-message="Please enter price." />
+                                                        <p class="help-block text-danger"></p>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <input type="number" class="form-control" id="email" placeholder="Product stock..."
+                                                               required="required" data-validation-required-message="Please enter stock." />
+                                                        <p class="help-block text-danger"></p>
+                                                    </div>-->
 
                     </div>
                     </form>

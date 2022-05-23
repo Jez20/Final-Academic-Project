@@ -325,14 +325,15 @@
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reports <i class="fa fa-angle-down mt-1"></i></a>
                                     <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                        <a href="checkout.jsp" class="dropdown-item">Sales Report</a>
-                                        <a href="confirmation.jsp" class="dropdown-item">Pending Orders Report</a>
-                                        <a href="checkout.jsp" class="dropdown-item">Completed Orders Report</a>
-                                        <a href="confirmation.jsp" class="dropdown-item">Inventory Report</a>
-                                        <a href="checkout.jsp" class="dropdown-item">Feedback Report</a>
+                                        <a href="PdfServlet?pdftype=userreport" target="_blank" class="dropdown-item">User Report</a>
+                                        <a href="PdfServlet?pdftype=salesreport" target="_blank" class="dropdown-item">Sales Report</a>
+                                        <a href="PdfServlet?pdftype=pendingorders" target="_blank" class="dropdown-item">Pending Orders Report</a>
+                                        <a href="PdfServlet?pdftype=completedorders" target="_blank" class="dropdown-item">Completed Orders Report</a>
+                                        <a href="PdfServlet?pdftype=inventoryreport" target="_blank" class="dropdown-item">Inventory Report</a>
+                                        <a href="PdfServlet?pdftype=salesreport" target="_blank" class="dropdown-item">Feedback Report</a>
                                     </div>
                                 </div>
-                                <a href="AdminProductList.jsp" class="nav-item nav-link">Product List</a>
+                                <a href="AdminServlet?action=viewproducts" class="nav-item nav-link">Product List</a>
                                 <a href="AdminAddProduct.jsp" class="nav-item nav-link">Add Product</a>
                             </div>
                             <!--                        <div class="col-lg-4 col-6 text-left">-->

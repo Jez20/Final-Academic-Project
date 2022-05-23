@@ -116,7 +116,7 @@ public class DatabaseManager {
         try {
             query = Queries.valueOf("deleteProductVariation");
             PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
-            stmt.setInt(1, 0); //variant id
+            stmt.setInt(1, Integer.parseInt(request.getParameter("variantid"))); //variant id
             stmt.executeUpdate();
             return true;
         } catch (Exception e) {
@@ -161,8 +161,8 @@ public class DatabaseManager {
             query = Queries.valueOf("addProductVariation");
             PreparedStatement stmt = this.conn.prepareStatement(query.getQuery(), Statement.RETURN_GENERATED_KEYS);
             stmt.setInt(1, Integer.parseInt(request.getParameter("productid"))); //product id
-            stmt.setInt(2, savedCategSizeandGender.getGenderLabeltoIndex(request.getParameter("gender"))); //gender id
-            stmt.setInt(3, savedCategSizeandGender.getSizeLabeltoIndex(request.getParameter("size"))); //product size id
+            stmt.setInt(2, savedCategSizeandGender.getGenderLabeltoIndex(request.getParameter("productgender"))); //gender id
+            stmt.setInt(3, savedCategSizeandGender.getSizeLabeltoIndex(request.getParameter("productsize"))); //product size id
             stmt.setInt(4, Integer.parseInt(request.getParameter("productprice"))); //product price
             stmt.setInt(5, Integer.parseInt(request.getParameter("productstock"))); // product stock
             stmt.executeUpdate();
@@ -183,7 +183,7 @@ public class DatabaseManager {
             stmt.setString(3, request.getParameter("productschool")); //school
             stmt.setString(4, request.getParameter("productcategory")); //category
             stmt.setString(5, request.getParameter("productimglink")); //img link
-            stmt.setInt(5, Integer.parseInt(request.getParameter("productid"))); //product id
+            stmt.setInt(6, Integer.parseInt(request.getParameter("productid"))); //product id
             stmt.executeUpdate();
             return true;
 
@@ -221,6 +221,8 @@ public class DatabaseManager {
         try {
             query = Queries.valueOf("updateProductVariation");
             PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            System.out.println(this.savedCategSizeandGender);
+            System.out.println("product size: " + request.getParameter("productsize") );
             stmt.setInt(1, savedCategSizeandGender.getGenderLabeltoIndex(request.getParameter("productgender"))); //gender id
             stmt.setInt(2, savedCategSizeandGender.getSizeLabeltoIndex(request.getParameter("productsize"))); // size id
             stmt.setInt(3, Integer.parseInt(request.getParameter("productprice"))); // product price
@@ -228,7 +230,7 @@ public class DatabaseManager {
             stmt.setInt(5, Integer.parseInt(request.getParameter("variantid"))); // variant id
             stmt.executeUpdate();
             return true;
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }

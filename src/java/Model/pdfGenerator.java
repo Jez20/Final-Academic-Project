@@ -23,7 +23,6 @@ import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
 import com.itextpdf.text.pdf.PdfWriter;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.sql.ResultSet;
@@ -61,17 +60,61 @@ public class pdfGenerator {
         };
     }
 
-    public void generateSampleReport(PdfWriter writer,Document document,ResultSet data, OutputStream out) {
+    public void pendingOrderReport(PdfWriter writer, Document document, ResultSet data, OutputStream out, String email) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yy HH-mm-ss");
         Date dateNow = new Date();
-        String fileName = "SampleReport.pdf";
         try {
-            HeaderFooterPageEvent event = new HeaderFooterPageEvent("SampleUrl.com");
+            String preTitle = "PendingOrderReport.pdf";
+            String pdfTitle = String.format("%s - %s", dateFormat.format(dateNow), preTitle);
+            HeaderFooterPageEvent event = new HeaderFooterPageEvent("TheStore.com");
             writer.setPageEvent(event);
             document.open();
             document.setMargins(1, 1, 1, 1);
-            addMetaData(document);
-            addTitlePage(document, "Sample");
+            addMetaData(pdfTitle, "Pending Orders in DB", "user", email, document);
+            addTitlePage(document, "Pending Orders", email);
+
+            Paragraph content4 = new Paragraph("", smallBold);
+            content4.add("Document Description");
+            content4.setAlignment(Element.ALIGN_CENTER);
+            addEmptyLine(content4, 1);
+            document.add(content4);
+
+            Paragraph start = new Paragraph("", smallRegular);
+            start.add("All orders that are pending");
+            start.setAlignment(Element.ALIGN_LEFT);
+            addEmptyLine(start, 4);
+            document.add(start);
+
+            document.newPage();
+            document.setMargins(1, 1, 1, 1);
+            Paragraph spaceMaker = new Paragraph("");
+            addEmptyLine(spaceMaker, 3);
+            document.add(spaceMaker);
+
+            Paragraph desc = new Paragraph("", bigFont);
+            desc.add("Order Table");
+            desc.setAlignment(Element.ALIGN_CENTER);
+            addEmptyLine(desc, 1);
+            document.add(desc);
+
+            createTable(document, data);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void generateUserReport(PdfWriter writer, Document document, ResultSet data, OutputStream out, String email) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yy HH-mm-ss");
+        Date dateNow = new Date();
+        try {
+            String preTitle = "UserReport.pdf";
+            String pdfTitle = String.format("%s - %s", dateFormat.format(dateNow), preTitle);
+            HeaderFooterPageEvent event = new HeaderFooterPageEvent("TheStore.com");
+            writer.setPageEvent(event);
+            document.open();
+            document.setMargins(1, 1, 1, 1);
+            addMetaData(pdfTitle, "User Data in DB", "user", email, document);
+            addTitlePage(document, "User Report", email);
 
             Paragraph content4 = new Paragraph("", smallBold);
             content4.add("Document Description");
@@ -98,24 +141,26 @@ public class pdfGenerator {
             document.add(desc);
 
             createTable(document, data);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        String newFileLocation = String.format("%s - %s", dateFormat.format(dateNow), fileName);
-        putPageNumbers(newFileLocation, newFileLocation, out);
-
+        //String newFileLocation = String.format("%s - %s", dateFormat.format(dateNow), fileName);
+        //putPageNumbers(newFileLocation, newFileLocation, out);
     }
 
-    private void addMetaData(Document document) {
-        document.addTitle("My first PDF");
-        document.addSubject("Created Using iText");
-        document.addKeywords("Java, PDF, iText");
-        document.addAuthor("Feivel Doctora");
+    private void addMetaData(String title,
+            String subject,
+            String keyWords,
+            String author,
+            Document document) {
+        document.addTitle(title);
+        document.addSubject(subject);
+        document.addKeywords(author);
+        document.addAuthor(author);
         document.addCreator("<User Id Name>");
     }
 
-    private void addTitlePage(Document document, String reportType) {
+    private void addTitlePage(Document document, String reportType, String email) {
         try {
             Paragraph blankSpace = new Paragraph("");
             addEmptyLine(blankSpace, 2);
@@ -128,7 +173,7 @@ public class pdfGenerator {
             document.add(content1);
 
             Paragraph content2 = new Paragraph("", smallBold);
-            content2.add(String.format("Report generated by:  %s", "Sample User"));
+            content2.add(String.format("Report generated by:  %s", email));
             content2.setAlignment(Element.ALIGN_LEFT);
             addEmptyLine(content2, 1);
             document.add(content2);
@@ -142,8 +187,7 @@ public class pdfGenerator {
             addEmptyLine(content3, 1);
             document.add(content3);
 
-        }
-        catch (DocumentException e) {
+        } catch (DocumentException e) {
             e.printStackTrace();
         }
     }
@@ -178,11 +222,9 @@ public class pdfGenerator {
                 dataTable.completeRow();
                 document.add(dataTable);
             }
-        }
-        catch (DocumentException e) {
+        } catch (DocumentException e) {
             e.printStackTrace();
-        }
-        catch (SQLException ae) {
+        } catch (SQLException ae) {
             ae.printStackTrace();
         }
 
@@ -200,11 +242,9 @@ public class pdfGenerator {
             }
             stamper.close();
             reader.close();
-        }
-        catch (DocumentException e) {
+        } catch (DocumentException e) {
             e.printStackTrace();
-        }
-        catch (IOException a) {
+        } catch (IOException a) {
             a.printStackTrace();
         }
         deleteFile(src);

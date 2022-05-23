@@ -30,7 +30,7 @@ public class HeaderFooterPageEvent extends PdfPageEventHelper {
 
     public void onEndPage(PdfWriter writer, Document document) {
         ColumnText.showTextAligned(writer.getDirectContent(), Element.ALIGN_CENTER, new Phrase(this.url), 110, 30, 0);
-//        ColumnText.showTextAligned(writer.getDirectContent(), Element.ALIGN_CENTER, new Phrase(String.format("page %d", document.getPageNumber())), 550, 30, 0);
+        ColumnText.showTextAligned(writer.getDirectContent(), Element.ALIGN_CENTER, new Phrase(String.format("%d", document.getPageNumber())), 550, 30, 0);
     }
 
 }

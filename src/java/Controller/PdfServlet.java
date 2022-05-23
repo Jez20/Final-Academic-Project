@@ -20,6 +20,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -50,22 +51,41 @@ public class PdfServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("application/pdf");
         OutputStream out = response.getOutputStream();
-        try {
-            Document document = new Document(PageSize.A4);
-            /* Basic PDF Creation inside servlet */
-            PdfWriter writer = PdfWriter.getInstance(document, out);
+        HttpSession session = request.getSession();
+        String pdfType = request.getParameter("pdftype");
+        if (session.getAttribute("userid") != null && session.getAttribute("role") != null) {
+            try {
+                Document document = new Document(PageSize.A4);
+                PdfWriter writer = PdfWriter.getInstance(document, out);
+                String email = (String) session.getAttribute("email");
+                switch (pdfType) {
+                    case "userreport":
+                        this.reportGenerate.generateUserReport(writer, document, dbQueries.returnallUsers(), out, email);
+                        document.close();
+                        writer.close();
+                        break;
+                    case "pendingorders":
+                        this.reportGenerate.pendingOrderReport(writer, document, dbQueries.returnAllPendingOrders(), out, email);
+                        document.close();
+                        writer.close();
+                        break;
+                    case "inventoryreport":
+                        break;
+                    case "salesreport":
+                        break;
+                    default:
+                        response.sendRedirect("GuestServlet");
+                        break;
+                }
+                /* Basic PDF Creation inside servlet */
 //            document.open();
-            this.reportGenerate.generateSampleReport(writer, document, dbQueries.returnallUsers(), out);
-
 //            document.add(new Paragraph("Tutorial to Generate PDF using Servlet"));
 //            document.add(new Paragraph("PDF Created Using Servlet, iText Example Works"));
-            document.close();
-            writer.close();
-
-        } catch (DocumentException exc) {
-            throw new IOException(exc.getMessage());
-        } finally {
-            out.close();
+            } catch (DocumentException exc) {
+                throw new IOException(exc.getMessage());
+            } finally {
+                out.close();
+            }
         }
     }
 

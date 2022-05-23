@@ -5,7 +5,6 @@
 package Controller;
 
 import Model.DatabaseManager;
-import Model.PdfReportGenerator;
 import Model.Security;
 import java.io.IOException;
 import javax.servlet.ServletConfig;
@@ -20,7 +19,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class PaymentServlet extends HttpServlet {
 
-    private PdfReportGenerator pdfGenerate;
     private Security encryptDecrypt;
     private DatabaseManager managesDB;
 
@@ -37,7 +35,6 @@ public class PaymentServlet extends HttpServlet {
         String dbPassword = getServletContext().getInitParameter("dbPassword");
         String dbUsername = getServletContext().getInitParameter("dbUserName");
         String key = config.getInitParameter("key");
-        this.pdfGenerate = new PdfReportGenerator();
         this.encryptDecrypt = new Security();
         this.managesDB = new DatabaseManager(url.toString(),dbPassword,dbDriver,dbDriver,key);
     }

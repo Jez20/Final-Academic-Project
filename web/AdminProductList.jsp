@@ -10,9 +10,10 @@
 <html>
     <head>
         <%
-//        if(session.getAttribute("userid") == null && session.getAttribute("role") == null){
-//            response.sendRedirect("GuestServlet");
-            //           }
+        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        if(session.getAttribute("userid") == null && session.getAttribute("role") == null){
+            response.sendRedirect("GuestServlet");
+                       }
         %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Product List</title>
