@@ -235,38 +235,6 @@
                                 </tbody>
                             </table>
                         </div>
-
-                        <!--                            <div class="control-group">
-                                                        <select class="form-control">
-                                                            <option selected value="No gender selected">Choose gender...</option>
-                                                            <option value="U">Unisex</option>
-                                                            <option value="F">Female</option>
-                                                            <option value="M">Male</option>
-                                                        </select>
-                                                        <p class="help-block text-danger"></p>
-                                                    </div>
-                                                    <div class="control-group">
-                                                        <select class="form-control">
-                                                            <option selected value="No gender selected">Choose product size...</option>
-                                                            <option value="XS">Extra Small</option>
-                                                            <option value="S">Small</option>
-                                                            <option value="M">Medium</option>
-                                                            <option value="L">Large</option>
-                                                            <option value="XL">Extra Large</option>
-                                                        </select>
-                                                        <p class="help-block text-danger"></p>
-                                                    </div>
-                                                    <div class="control-group">
-                                                        <input type="number" class="form-control" id="email" placeholder="Product price..."
-                                                               required="required" data-validation-required-message="Please enter price." />
-                                                        <p class="help-block text-danger"></p>
-                                                    </div>
-                                                    <div class="control-group">
-                                                        <input type="number" class="form-control" id="email" placeholder="Product stock..."
-                                                               required="required" data-validation-required-message="Please enter stock." />
-                                                        <p class="help-block text-danger"></p>
-                                                    </div>-->
-
                     </div>
                     </form>
                 </div>
