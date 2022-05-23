@@ -47,7 +47,6 @@
                                         <td>
                                         <center>
                                             <span class="badge badge-success" id="status" name="status">Completed</span>
-<!--                                            <input type="checkbox" id="ispaid" name="ispaid" value="True">-->
                                         </center>
                                         </td>
                                     </tr>
@@ -64,7 +63,6 @@
                                         <td>
                                         <center>
                                             <span class="badge badge-warning" id="status" name="status">Pending</span>
-<!--                                            <input type="checkbox" id="ispaid" name="ispaid" value="True">-->
                                         </center>
                                         </td>
                                     </tr>

@@ -76,7 +76,6 @@
                                     }
 
                                 %>
-                                <!--some code here-->
                             </tbody>
                         </table>
                     </div>

@@ -28,7 +28,6 @@
     </div>
     <!-- Breadcrumb End -->
 
-
     <!-- Checkout Start -->
     <div class="container-fluid">
         <div class="row px-xl-5">
