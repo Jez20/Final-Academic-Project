@@ -23,11 +23,11 @@ import javax.servlet.http.HttpSession;
  * @author FV
  */
 public class LoggedInServlet extends HttpServlet {
-
+    
     private DatabaseManager dbQueries;
     private Security encryptDecrypt;
     private Security displayEncrypt;
-
+    
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         String driver = getServletContext().getInitParameter("jdbcClassName");
@@ -44,7 +44,7 @@ public class LoggedInServlet extends HttpServlet {
         this.encryptDecrypt = new Security(config.getInitParameter("key"));
         this.displayEncrypt = new Security(config.getInitParameter("displaykey"));
     }
-
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String action = "";
@@ -100,11 +100,13 @@ public class LoggedInServlet extends HttpServlet {
                     
                     break;
             }
+        } else if (session.getAttribute("email") != null && session.getAttribute("role") == null) {
+            response.sendRedirect("AdminServlet");
         } else {
             response.sendRedirect("GuestServlet");
         }
     }
-
+    
     protected void toTheshop(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         ResultSet rs = this.dbQueries.returnproductSchool(request);

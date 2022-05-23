@@ -17,10 +17,10 @@ public enum Queries {
     returnAllPendingOrders("SELECT * FROM ORDER_TABLE WHERE ORDER_DATE_COMPLETED IS NULL ORDER BY ORDER_DATE ASC"),
     returnOrderDateRange("SELECT * FROM ORDER_TABLE WHERE ORDER_DATE_COMPLETED BETWEEN ? AND ? \n"
             + "ORDER BY ORDER_DATE ASC"),
-    returnallUsers("SELECT \n" +
-"USER_EMAIL AS EMAIL,\n" +
-"USER_ROLE AS ROLE\n" +
-"FROM USER_TABLE"),
+    returnallUsers("SELECT \n"
+            + "USER_EMAIL AS EMAIL,\n"
+            + "USER_ROLE AS ROLE\n"
+            + "FROM USER_TABLE"),
     returnproductSchool("SELECT DISTINCT\n"
             + "PRODUCT_VARIANT_TABLE.PRODUCT_ID,\n"
             + "PRODUCT_TABLE.PRODUCT_NAME,\n"
@@ -55,6 +55,20 @@ public enum Queries {
             + "JOIN PRODUCT_SIZE_TABLE ON PRODUCT_SIZE_TABLE.PRODUCT_SIZE_ID = PRODUCT_VARIANT_TABLE.PRODUCT_SIZE_ID\n"
             + "AND PRODUCT_TABLE.PRODUCT_SCHOOL = ? \n"
             + "AND PRODUCT_VARIANT_TABLE.PRODUCT_ID = ? AND PRODUCT_VARIANT_TABLE.PRODUCT_STOCK > 0"),
+    allPendingServletViewOrders("SELECT \n"
+            + "ORDER_TABLE.ORDER_ID,\n"
+            + "USER_TABLE.USER_EMAIL,\n"
+            + "ORDER_TABLE.ORDER_NAME,\n"
+            + "ORDER_TABLE.ORDER_QUANTITY,\n"
+            + "ORDER_TABLE.ORDER_PRICE,\n"
+            + "ORDER_TABLE.ORDER_ADDRESS,\n"
+            + "ORDER_TABLE.ORDER_DATE,\n"
+            + "ORDER_TABLE.ORDER_DATE_COMPLETED,\n"
+            + "ORDER_TABLE.ORDER_ISPAID,\n"
+            + "ORDER_TABLE.ORDER_IMG_LINK\n"
+            + "FROM ORDER_TABLE \n"
+            + "JOIN USER_TABLE ON USER_TABLE.USER_ID = ORDER_TABLE.USER_ID\n"
+            + "AND ORDER_TABLE.ORDER_DATE_COMPLETED IS NULL"),
     querywithSize("SELECT DISTINCT\n"
             + "PRODUCT_VARIANT_TABLE.PRODUCT_ID,\n"
             + "PRODUCT_TABLE.PRODUCT_NAME,\n"
