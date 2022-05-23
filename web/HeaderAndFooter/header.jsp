@@ -125,7 +125,13 @@
                                             </a>-->
                         <a href="" class="btn px-0 ml-2">
                             <i class="fas fa-shopping-cart text-dark"></i>
-                            <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;">0</span>
+                            <%
+                                int cartNumber = 0;
+                                if (session.getAttribute("counter") != null) {
+                                    cartNumber = (Integer) session.getAttribute("counter");
+                                }
+                            %>
+                            <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;"></span>
                         </a>
                     </div>
                 </div>
@@ -298,26 +304,25 @@
                             <div class="navbar-nav mr-auto py-0">
                                 <a href="index.jsp" class="nav-item nav-link">Home</a>
                                 <a href="shop.jsp" class="nav-item nav-link">Store Items</a>
-                                <a href="detail.jsp" class="nav-item nav-link">Item Details</a>
                                 <a href="cart.jsp" class="nav-item nav-link">Cart</a>
                                 <a href="checkout.jsp" class="nav-item nav-link">Checkout</a>
                                 <a href="confirmationGcash.jsp" class="nav-item nav-link">Confirmation</a>
                                 <a href="confirmationPaymaya.jsp" class="nav-item nav-link">Confirmation</a>
-<!--                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop <i class="fa fa-angle-down mt-1"></i></a>
-                                    <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                        <a href="shop.jsp" class="dropdown-item">Store Items</a>
-                                        <a href="detail.jsp" class="dropdown-item">Item Details</a>
-                                        <a href="cart.jsp" class="dropdown-item">Cart</a>
-                                    </div>
-                                </div>-->
-<!--                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Orders <i class="fa fa-angle-down mt-1"></i></a>
-                                    <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                        <a href="checkout.jsp" class="dropdown-item">Checkout</a>
-                                        <a href="confirmation.jsp" class="dropdown-item">Confirmation</a>
-                                    </div>
-                                </div>-->
+                                <!--                                <div class="nav-item dropdown">
+                                                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop <i class="fa fa-angle-down mt-1"></i></a>
+                                                                    <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
+                                                                        <a href="shop.jsp" class="dropdown-item">Store Items</a>
+                                                                        <a href="detail.jsp" class="dropdown-item">Item Details</a>
+                                                                        <a href="cart.jsp" class="dropdown-item">Cart</a>
+                                                                    </div>
+                                                                </div>-->
+                                <!--                                <div class="nav-item dropdown">
+                                                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Orders <i class="fa fa-angle-down mt-1"></i></a>
+                                                                    <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
+                                                                        <a href="checkout.jsp" class="dropdown-item">Checkout</a>
+                                                                        <a href="confirmation.jsp" class="dropdown-item">Confirmation</a>
+                                                                    </div>
+                                                                </div>-->
                                 <!--                            <div class="nav-item dropdown">
                                                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down mt-1"></i></a>
                                                                 <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
@@ -346,7 +351,7 @@
                                                             </a>-->
                                 <a href="" class="btn px-0 ml-3">
                                     <i class="fas fa-shopping-cart text-primary"></i>
-                                    <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
+                                    <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;"><%=cartNumber%></span>
                                 </a>
                             </div>   
                         </div>

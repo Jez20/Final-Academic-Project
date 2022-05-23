@@ -93,16 +93,22 @@ public class DatabaseManager {
             return null;
         }
     }
-    
-        public ResultSet returnProductVariation(HttpServletRequest request, Security decrypt) {
+
+    public ResultSet checkAvailability(HttpServletRequest request) {
         try {
-            query = Queries.valueOf("returnProductVariation");
+            query = Queries.valueOf("checkAvailability");
             PreparedStatement stmt = this.conn.prepareStatement(query.getQuery(),
                     ResultSet.TYPE_SCROLL_INSENSITIVE,
                     ResultSet.CONCUR_READ_ONLY);
-            stmt.setInt(1, Integer.parseInt(decrypt.decrypt(request.getParameter("productid"))));
+            stmt.setString(1, request.getParameter("productgender"));
+            stmt.setString(2, request.getParameter("productsize"));
+            stmt.setInt(3, Integer.parseInt(request.getParameter("productid")));
             ResultSet rs = stmt.executeQuery();
-            return rs;
+            if (rs.next()) {
+                rs.beforeFirst();
+                return rs;
+            }
+            return null;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -237,7 +243,7 @@ public class DatabaseManager {
             query = Queries.valueOf("updateProductVariation");
             PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
             System.out.println(this.savedCategSizeandGender);
-            System.out.println("product size: " + request.getParameter("productsize") );
+            System.out.println("product size: " + request.getParameter("productsize"));
             stmt.setInt(1, savedCategSizeandGender.getGenderLabeltoIndex(request.getParameter("productgender"))); //gender id
             stmt.setInt(2, savedCategSizeandGender.getSizeLabeltoIndex(request.getParameter("productsize"))); // size id
             stmt.setInt(3, Integer.parseInt(request.getParameter("productprice"))); // product price
@@ -405,7 +411,6 @@ public class DatabaseManager {
             return null;
         }
     }
-    
 
     public boolean signUp(HttpServletRequest request) {
         try {
@@ -451,7 +456,7 @@ public class DatabaseManager {
                 String userInputPass = request.getParameter("password");
                 boolean match = dbPass.equals(userInputPass);
                 if (match) {
-                    session.setAttribute("userid", encryptDecrypt.encrypt(Integer.toString(rs.getInt(1))));
+                    session.setAttribute("userid", rs.getInt(1));
                     session.setAttribute("email", rs.getString(4));
                     if (rs.getString(3).equals("administrator")) {
                         session.setAttribute("role", rs.getString(3));

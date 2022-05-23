@@ -39,6 +39,10 @@
     <servlet>
         <servlet-name>PaymentServlet</servlet-name>
         <servlet-class>Controller.PaymentServlet</servlet-class>
+        <init-param>
+            <param-name>key</param-name>
+            <param-value>HkydND9SmuvhEas4</param-value>
+        </init-param>
     </servlet>
     <servlet>
         <description>returns a captcha</description>
@@ -123,7 +127,7 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>Reports.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
     <error-page>
         <error-code>404</error-code>

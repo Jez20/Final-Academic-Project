@@ -6,7 +6,24 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<%
+    String servlet2 = "";
+    if (session.getAttribute("email") == null && session.getAttribute("role") == null) {
+        response.sendRedirect("GuestServlet");
+        servlet2 = "GuestServlet";
+    }
+    if (session.getAttribute("email") != null && session.getAttribute("role") == null) {
+        
+        servlet2 = "LoggedInServlet";
+    }
+    if (session.getAttribute("email") != null && session.getAttribute("role") != null) {
+        
+        servlet2 = "LoggedInServlet";
+    }
+%>
 <html>
+    
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Confirmation</title>

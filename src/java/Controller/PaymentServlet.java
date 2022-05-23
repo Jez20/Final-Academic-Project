@@ -5,9 +5,12 @@
 package Controller;
 
 import Model.DatabaseManager;
+import Model.Order;
 import Model.Security;
 import java.io.IOException;
 import java.sql.ResultSet;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -21,12 +24,13 @@ import javax.servlet.http.HttpSession;
  */
 public class PaymentServlet extends HttpServlet {
 
-    private Security encryptDecrypt;
     private DatabaseManager dbQueries;
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        String dbDriver = getServletContext().getInitParameter("jdbcClassName");
+        String driver = getServletContext().getInitParameter("jdbcClassName");
+        String username = getServletContext().getInitParameter("dbUserName");
+        String password = getServletContext().getInitParameter("dbPassword");
         StringBuffer url = new StringBuffer(getServletContext().getInitParameter("jdbcDriverurl"))
                 .append("://")
                 .append(getServletContext().getInitParameter("dbHostName"))
@@ -34,23 +38,67 @@ public class PaymentServlet extends HttpServlet {
                 .append(getServletContext().getInitParameter("dbPort"))
                 .append("/")
                 .append(getServletContext().getInitParameter("databaseName"));
-        String dbPassword = getServletContext().getInitParameter("dbPassword");
-        String dbUsername = getServletContext().getInitParameter("dbUserName");
-        String key = config.getInitParameter("key");
-        this.encryptDecrypt = new Security();
-        this.dbQueries = new DatabaseManager(url.toString(), dbPassword, dbDriver, dbDriver, key);
+        this.dbQueries = new DatabaseManager(url.toString(), username, password, driver, config.getInitParameter("key"));
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         String action = request.getParameter("action");
-        switch (action) {
-            case "":
+        if (session.getAttribute("userid") != null && session.getAttribute("email") != null) {
+            switch (action) {
+                case "checkout":
+                    request.getRequestDispatcher("checkout.jsp").forward(request, response);
+                    break;
+                case "addtocart":
+                                try {
+                                    ArrayList<Order> cart = new ArrayList<>();
+                    ResultSet available = dbQueries.checkAvailability(request);
+                    dbQueries.printResultSets(available);
+                    if(session.getAttribute("cart") != null){
+                        cart = (ArrayList<Order>) session.getAttribute("cart");
+                    }
+                    Order createdorder = new Order();
+                    if (available.next()) {
+                        createdorder.setImgLink(request.getParameter("productimglink"));
+                        int stock = available.getInt(5);
+                        int wantedQuantity = Integer.parseInt(request.getParameter("productquantity"));
+                        if (wantedQuantity < stock) {
+                            createdorder.setOrderQuantity(available.getInt(5));
+                        } else {
+                            String induceException = "1x";
+                            createdorder.setOrderQuantity(Integer.parseInt(induceException));
+                        }
+                        createdorder.setVariantId(available.getInt(1));
+                        createdorder.setIsPaid(false);
+                        createdorder.setOrderName(request.getParameter("productname"));
+                        createdorder.setOrderPrice(available.getInt(4) * wantedQuantity);
+                        LocalDate dateNow = LocalDate.now();
+                        createdorder.setOrderDate(dateNow);
+                        createdorder.setOrderDateCompleted(null);
+                    }
+                    cart.add(createdorder);
+                    session.setAttribute("cart", cart);
+                    if (session.getAttribute("counter") != null) {
+                        int counter = (Integer) session.getAttribute("counter");
+                        counter++;
+                        session.setAttribute("counter", counter);
+
+                    } else {
+                        session.setAttribute("counter", 1);
+                    }
+                    response.sendRedirect("cart.jsp");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    request.getRequestDispatcher("detail.jsp").forward(request, response);
+                }
                 break;
-            default:
-                response.sendRedirect("LoggedInServlet");
-                break;
+                default:
+                    response.sendRedirect("LoggedInServlet");
+                    break;
+            }
+        } else {
+            response.sendRedirect("login.jsp");
         }
 
     }

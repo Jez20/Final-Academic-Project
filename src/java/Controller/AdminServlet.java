@@ -33,8 +33,6 @@ public class AdminServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     private DatabaseManager dbQueries;
-    private Security encryptDecrypt;
-    private Security displayEncrypt;
 
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
@@ -49,8 +47,6 @@ public class AdminServlet extends HttpServlet {
                 .append("/")
                 .append(getServletContext().getInitParameter("databaseName"));
         this.dbQueries = new DatabaseManager(url.toString(), username, password, driver, config.getInitParameter("key"));
-        this.encryptDecrypt = new Security(config.getInitParameter("key"));
-        this.displayEncrypt = new Security(config.getInitParameter("displaykey"));
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -63,6 +59,11 @@ public class AdminServlet extends HttpServlet {
         System.out.println(String.format("action: %s", action));
         if (session.getAttribute("email") != null && session.getAttribute("role") != null) {
             switch (action) {
+                case "detail":
+                    ResultSet rs = dbQueries.returnProductVariation(request);
+                    request.setAttribute("rs", rs);
+                    request.getRequestDispatcher("detail.jsp").forward(request, response);
+                    break;
                 case "addvariation":
                     if (dbQueries.addProductVariation(request)) {
                         ResultSet rs2 = dbQueries.returnProductVariation(request);
@@ -118,19 +119,18 @@ public class AdminServlet extends HttpServlet {
                     }
                     break;
                 case "viewproducts":
-                    ResultSet rs = dbQueries.returnProductList();
-                    request.setAttribute("rs", rs);
+                    ResultSet rs2 = dbQueries.returnProductList();
+                    request.setAttribute("rs", rs2);
                     request.getRequestDispatcher("AdminProductList.jsp").forward(request, response);
                     break;
                 case "filter":
                     ResultSet rs1 = dbQueries.applyFilter(request);
                     request.setAttribute("rs", rs1);
-                    request.setAttribute("encrypt", this.displayEncrypt);
                     request.getRequestDispatcher("shop.jsp").forward(request, response);
                     break;
                 case "update":
-                    ResultSet rs2 = dbQueries.returnProductVariation(request);
-                    request.setAttribute("rs", rs2);
+                    ResultSet rs3 = dbQueries.returnProductVariation(request);
+                    request.setAttribute("rs", rs3);
                     request.getRequestDispatcher("UpdateProduct.jsp").forward(request, response);
                     break;
                 case "ADAMSON":
@@ -161,9 +161,12 @@ public class AdminServlet extends HttpServlet {
                     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
                     session.removeAttribute("email");
                     session.removeAttribute("userid");
+                    session.removeAttribute("cart");
+                    session.removeAttribute("counter");
                     session.removeAttribute("role");
-                    response.sendRedirect("GuestServlet");
                     session.invalidate();
+                    response.sendRedirect("GuestServlet");
+
                     break;
                 case "":
                     session.removeAttribute("email");
@@ -171,7 +174,7 @@ public class AdminServlet extends HttpServlet {
                     session.removeAttribute("role");
                     session.invalidate();
                     response.sendRedirect("GuestServlet");
-                    
+
                     break;
             }
         } else {
@@ -183,7 +186,6 @@ public class AdminServlet extends HttpServlet {
             throws ServletException, IOException {
         ResultSet rs = this.dbQueries.returnproductSchool(request);
         request.setAttribute("rs", rs);
-        request.setAttribute("encrypt", this.displayEncrypt);
         request.getRequestDispatcher("shop.jsp").forward(request, response);
     }
 

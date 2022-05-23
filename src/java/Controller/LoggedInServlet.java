@@ -23,11 +23,11 @@ import javax.servlet.http.HttpSession;
  * @author FV
  */
 public class LoggedInServlet extends HttpServlet {
-    
+
     private DatabaseManager dbQueries;
     private Security encryptDecrypt;
     private Security displayEncrypt;
-    
+
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         String driver = getServletContext().getInitParameter("jdbcClassName");
@@ -42,9 +42,9 @@ public class LoggedInServlet extends HttpServlet {
                 .append(getServletContext().getInitParameter("databaseName"));
         this.dbQueries = new DatabaseManager(url.toString(), username, password, driver, config.getInitParameter("key"));
         this.encryptDecrypt = new Security(config.getInitParameter("key"));
-        this.displayEncrypt = new Security(config.getInitParameter("displaykey"));
+        this.displayEncrypt = new Security(config.getInitParameter("key"));
     }
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String action = "";
@@ -55,6 +55,11 @@ public class LoggedInServlet extends HttpServlet {
         System.out.println(String.format("action: %s", action));
         if (session.getAttribute("email") != null && session.getAttribute("role") == null) {
             switch (action) {
+                case "detail":
+                    ResultSet rs = dbQueries.returnProductVariation(request);
+                    request.setAttribute("rs", rs);
+                    request.getRequestDispatcher("detail.jsp").forward(request, response);
+                    break;
                 case "filter":
                     ResultSet rs1 = dbQueries.applyFilter(request);
                     request.setAttribute("rs", rs1);
@@ -89,15 +94,14 @@ public class LoggedInServlet extends HttpServlet {
                     response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
                     session.removeAttribute("email");
                     session.removeAttribute("userid");
+                    session.removeAttribute("cart");
+                    session.removeAttribute("counter");
+                    session.removeAttribute("role");
                     session.invalidate();
                     response.sendRedirect("GuestServlet");
                     break;
-                case "":
-                    session.removeAttribute("email");
-                    session.removeAttribute("userid");
-                    session.invalidate();
-                    response.sendRedirect("index.jsp");
-                    
+                default:
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
                     break;
             }
         } else if (session.getAttribute("email") != null && session.getAttribute("role") == null) {
@@ -106,7 +110,7 @@ public class LoggedInServlet extends HttpServlet {
             response.sendRedirect("GuestServlet");
         }
     }
-    
+
     protected void toTheshop(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         ResultSet rs = this.dbQueries.returnproductSchool(request);

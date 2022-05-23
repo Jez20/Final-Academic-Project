@@ -15,7 +15,7 @@ public class Order {
 
     private int variantId;
     private String orderName;
-    private String orderQuantity;
+    private int orderQuantity;
     private int orderPrice;
     private String orderAddress;
     private LocalDate orderDate;
@@ -34,7 +34,7 @@ public class Order {
         this.orderName = orderName;
     }
 
-    public void setOrderQuantity(String orderQuantity) {
+    public void setOrderQuantity(int orderQuantity) {
         this.orderQuantity = orderQuantity;
     }
 
@@ -70,7 +70,7 @@ public class Order {
         return orderName;
     }
 
-    public String getOrderQuantity() {
+    public int getOrderQuantity() {
         return orderQuantity;
     }
 

@@ -412,12 +412,12 @@
                                 </div>
                             </div>
                         </div>
-                        <%                            ResultSet rs = (ResultSet) request.getAttribute("rs");
-                            Security security = (Security) request.getAttribute("encrypt");
+                        <%                            
+                            ResultSet rs = (ResultSet) request.getAttribute("rs");
                             if (rs != null) {
                                 String previousName = "";
                                 while (rs.next()) {
-                                    String id = security.encrypt(rs.getString(1));
+                                    String id = rs.getString(1);
                                     String name = rs.getString(2);
                                     String desc = rs.getString(3);
                                     String school = rs.getString(4);
@@ -431,7 +431,7 @@
                                     <div class="product-action">
                                         <form action="GuestServlet" method="GET">
                                             <button name="action" value="detail" class="btn btn-outline-dark btn-square"><i class="fa fa-search"></i></button>
-                                            <input type="hidden" name="productid" value=<%=id%>/>
+                                            <input type="hidden" name="productid" value="<%=id%>">
                                             <input type="hidden" name="productname" value="<%=name%>">
                                             <input type="hidden" name="productdesc" value="<%=desc%>">
                                             <input type="hidden" name="productschool" value="<%=school%>">
