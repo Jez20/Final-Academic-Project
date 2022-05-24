@@ -10,11 +10,9 @@ import Model.pdfGenerator;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.PageSize;
-import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.PrintWriter;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -57,6 +55,7 @@ public class PdfServlet extends HttpServlet {
             try {
                 Document document = new Document(PageSize.A4);
                 PdfWriter writer = PdfWriter.getInstance(document, out);
+                System.out.println(String.format("pdftype: %s", request.getParameter("pdftype")));
                 String email = (String) session.getAttribute("email");
                 switch (pdfType) {
                     case "userreport":
@@ -70,8 +69,19 @@ public class PdfServlet extends HttpServlet {
                         writer.close();
                         break;
                     case "inventoryreport":
+                        this.reportGenerate.generateInventoryReport(writer, document, dbQueries.returnInventory(), out, email);
+                        document.close();
+                        writer.close();
                         break;
                     case "salesreport":
+                        this.reportGenerate.salesReport(writer, document, dbQueries.returnOrderDateRange(request), out, email);
+                        document.close();
+                        writer.close();
+                        break;
+                    case "completedorders":
+                        this.reportGenerate.completedOrdersReport(writer, document, dbQueries.returnAllCompleted(), out, email);
+                        document.close();
+                        writer.close();
                         break;
                     default:
                         response.sendRedirect("GuestServlet");
@@ -82,10 +92,8 @@ public class PdfServlet extends HttpServlet {
 //            document.add(new Paragraph("Tutorial to Generate PDF using Servlet"));
 //            document.add(new Paragraph("PDF Created Using Servlet, iText Example Works"));
             } catch (DocumentException exc) {
-                throw new IOException(exc.getMessage());
-            } finally {
-                out.close();
-            }
+                exc.printStackTrace();
+            } 
         }
     }
 

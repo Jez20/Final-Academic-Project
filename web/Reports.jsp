@@ -32,59 +32,65 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+
                                     <tr>
-                                        <td><input type="date" id="birthday" name="datestarted"></td>
-                                        <td><input type="date" id="birthday" name="birthday"></td>
+
+                                        <td><input type="date" id="birthday" name="startdate"></td>
+                                        <td><input type="date" id="birthday" name="enddate"></td>
                                         <td>
                                             <div>
-                                                <button onclick="location.href='PdfServlet?pdftype=salesreport'" type="button" class="btn btn-primary py-2 px-4" name="action" value="updateproduct">Generate Sales Report</button>
+                                                <form action="PdfServlet" method="GET">
+                                                    <button type="button" class="btn btn-primary py-2 px-4" name="pdftype" value="salesreport">Generate Sales Report</button>
+                                                </form>
                                             </div>
                                         </td>
+
                                     </tr>
+
                                     <tr>
-                                        <center>
-                                        <td> --- </td>
-                                        <td> --- </td>
-                                        </center>
-                                        <td>
-                                            <div>
-                                            <button onclick="location.href='PdfServlet?pdftype=userreport'" type="button" class="btn btn-primary py-2 px-4" name="action" value="updateproduct">Generate User Report</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <center>
-                                        <td> --- </td>
-                                        <td> --- </td>
-                                        </center>
-                                        <td>
-                                            <div>
-                                                <button onclick="location.href='PdfServlet?pdftype=pendingorders'" type="button" class="btn btn-primary py-2 px-4" name="action" value="updateproduct">Generate Pending Orders Report</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <center>
-                                        <td> --- </td>
-                                        <td> --- </td>
-                                        </center>
-                                        <td>
-                                            <div>
-                                                 <button onclick="location.href='PdfServlet?pdftype=pendingorders'" type="button" class="btn btn-primary py-2 px-4" name="action" value="updateproduct">Generate Completed Orders Report</button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <center>
-                                        <td> --- </td>
-                                        <td> --- </td>
-                                        </center>
-                                        <td>
-                                            <div>
-                                             <button onclick="location.href='PdfServlet?pdftype=inventoryreport'" type="button" class="btn btn-primary py-2 px-4" name="action" value="updateproduct">Generate Inventory Report</button>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                <center>
+                                    <td> --- </td>
+                                    <td> --- </td>
+                                </center>
+                                <td>
+                                    <div>
+                                        <button onclick="location.href = 'PdfServlet?pdftype=userreport'" type="button" class="btn btn-primary py-2 px-4" name="action" value="updateproduct">Generate User Report</button>
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <center>
+                                    <td> --- </td>
+                                    <td> --- </td>
+                                </center>
+                                <td>
+                                    <div>
+                                        <button onclick="location.href = 'PdfServlet?pdftype=pendingorders'" type="button" class="btn btn-primary py-2 px-4" name="action" value="updateproduct">Generate Pending Orders Report</button>
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <center>
+                                    <td> --- </td>
+                                    <td> --- </td>
+                                </center>
+                                <td>
+                                    <div>
+                                        <button onclick="location.href = 'PdfServlet?pdftype=completedorders'" type="button" class="btn btn-primary py-2 px-4" name="action" value="updateproduct">Generate Completed Orders Report</button>
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr>
+                                <center>
+                                    <td> --- </td>
+                                    <td> --- </td>
+                                </center>
+                                <td>
+                                    <div>
+                                        <button onclick="location.href = 'PdfServlet?pdftype=inventoryreport'" type="button" class="btn btn-primary py-2 px-4" name="action" value="updateproduct">Generate Inventory Report</button>
+                                    </div>
+                                </td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -96,7 +102,7 @@
     <footer>
         <%@ include file="HeaderAndFooter/adminfooter.jsp"%>
     </footer>
-    
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
