@@ -87,10 +87,6 @@ public class PdfServlet extends HttpServlet {
                         response.sendRedirect("GuestServlet");
                         break;
                 }
-                /* Basic PDF Creation inside servlet */
-//            document.open();
-//            document.add(new Paragraph("Tutorial to Generate PDF using Servlet"));
-//            document.add(new Paragraph("PDF Created Using Servlet, iText Example Works"));
             } catch (DocumentException exc) {
                 exc.printStackTrace();
             } 

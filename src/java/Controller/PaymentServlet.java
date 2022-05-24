@@ -106,7 +106,7 @@ public class PaymentServlet extends HttpServlet {
                         createdorder.setIsPaid(false);
                         createdorder.setOrderName(request.getParameter("productname"));
                         createdorder.setOrderPrice(available.getInt(4) * wantedQuantity);
-                       createdorder.setOrderQuantity(wantedQuantity);
+                        createdorder.setOrderQuantity(wantedQuantity);
                         LocalDate dateNow = LocalDate.now();
                         createdorder.setOrderDate(dateNow);
                         createdorder.setOrderDateCompleted(null);
