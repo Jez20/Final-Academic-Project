@@ -38,23 +38,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <form action="PdfServlet" method="GET">    
-                                    <tr>
-                                        <td><input type="date" id="birthday" name="startdate"></td>
-                                        <td><input type="date" id="birthday" name="enddate"></td>
-                                        <td>
-                                            <div>
-                                                 <button type="button" class="btn btn-primary py-2 px-4" name="pdftype" value="salesreport">Generate Sales Report</button>
-<!--                                        <a href="PdfServlet?pdftype=salesreport">
-                                        <button type="button" class="btn btn-primary py-2 px-4" name="pdftype" value="salesreport">Generate Sales Report</button>
-                                        </a>-->
-<!--                                                <a href="PdfServlet?pdftype=salesreport"><button type="button" class="btn btn-primary py-2 px-4" name="pdftype" value="salesreport">Generate Sales Report</button></a>-->
-<!--                                                <button onclick="location.href = 'PdfServlet?pdftype=salesreport'" type="button" class="btn btn-primary py-2 px-4" name="pdftype" value="salesreport">Generate Sales Report</button>-->
-                                            </div>
-                                        </td>
-
-                                    </tr>
-                                </form>
                                 <tr>
                                 <center>
                                     <td> --- </td>
