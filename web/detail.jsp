@@ -36,7 +36,7 @@
                 <div class="col-12">
                     <nav class="breadcrumb bg-light mb-30">
                         <a class="breadcrumb-item text-dark" href="index.jsp">Home</a>
-                        <span class="breadcrumb-item active">Item Details</span>
+                        <span class="breadcrumb-item active">Details</span>
                     </nav>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                     <div class="h-100 bg-light p-30">
                         <h3><%=request.getParameter("productname")%></h3>
 
-                        <h3 class="font-weight-semi-bold mb-4">$150.00</h3>
+                        <h3 class="font-weight-semi-bold mb-4">₱<%=request.getParameter("productprice")%></h3>
                         <p class="mb-4"><%=request.getParameter("productdesc")%></p>
                         <form action="PaymentServlet" method="GET">
                             <div class="d-flex mb-3">
