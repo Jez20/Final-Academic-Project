@@ -34,6 +34,7 @@
                                         <th>Order Date Created</th>
                                         <th>Date Completed</th>
                                         <th>Status</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -81,6 +82,7 @@
                                 </tr>
                                 </tbody>
                                 <tbody>
+                                <form>
                                     <tr>
                                         <td>placeholder@hotgirls.com</td>
                                         <td>DLSU T-Shirt</td>
@@ -94,6 +96,12 @@
                                     <span class="badge badge-warning" id="status" name="status">Pending</span>
                                 </center>
                                 </td>
+                                <td>
+                                    <center>
+                                    <button name="action" value="update" type="Submit" class="btn btn-warning">Update</button>
+                                    </center>
+                                </td>
+                                </form>
                                 </tr>
                                 </tbody>
                             </table>
