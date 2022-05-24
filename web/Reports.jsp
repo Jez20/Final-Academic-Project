@@ -34,15 +34,12 @@
                                 <tbody>
 
                                     <tr>
-
                                         <td><input type="date" id="birthday" name="startdate"></td>
                                         <td><input type="date" id="birthday" name="enddate"></td>
                                         <td>
-                                            <div>
-                                                <form action="PdfServlet" method="GET">
-                                                    <button type="button" class="btn btn-primary py-2 px-4" name="pdftype" value="salesreport">Generate Sales Report</button>
-                                                </form>
-                                            </div>
+                                    <div>
+                                        <button onclick="location.href = 'PdfServlet?pdftype=salesreport'" type="button" class="btn btn-primary py-2 px-4" name="action" value="updateproduct">Generate Sales Report</button>
+                                    </div>
                                         </td>
 
                                     </tr>
