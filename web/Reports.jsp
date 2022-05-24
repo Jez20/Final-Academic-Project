@@ -32,7 +32,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                <form>    
                                     <tr>
                                         <td><input type="date" id="birthday" name="startdate"></td>
                                         <td><input type="date" id="birthday" name="enddate"></td>
@@ -43,7 +43,7 @@
                                         </td>
 
                                     </tr>
-
+                                </form>
                                     <tr>
                                 <center>
                                     <td> --- </td>
