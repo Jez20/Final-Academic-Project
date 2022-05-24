@@ -74,7 +74,8 @@ public class PdfServlet extends HttpServlet {
                         writer.close();
                         break;
                     case "salesreport":
-                        this.reportGenerate.salesReport(writer, document, dbQueries.returnOrderDateRange(request), out, email);
+                        this.reportGenerate.salesReport(writer, document, dbQueries.returnSalesQuery(request), out, email);
+                        dbQueries.printResultSets(dbQueries.returnSalesQuery(request));
                         document.close();
                         writer.close();
                         break;
