@@ -55,9 +55,6 @@
                         <img src="img/Gcash.jpeg" alt=""/>
                     </div>
                 </div>
-            <div class="bg-light p-30">
-            <button class="btn btn-block btn-primary font-weight-bold py-3">Print Gcash Invoice</button>
-            </div>
             </div>
             &nbsp
             &nbsp

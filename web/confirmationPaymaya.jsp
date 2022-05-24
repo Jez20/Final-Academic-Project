@@ -53,9 +53,6 @@
                             <img src="img/Paymaya.jpeg" alt="" />
                         </div>
                     </div>
-                    <div class="bg-light p-30">
-                        <button class="btn btn-block btn-primary font-weight-bold py-3">Print Paymaya Invoice</button>
-                    </div>
                 </div>
 
             </div>

@@ -46,7 +46,7 @@
                                 <div class="p-3" style="max-width: 600px;">
                                     <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Men Fashion</h1>
                                     <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Get the best clothes that you are yearning for with fashion for men here at theStore.</p>
-                                    <button class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="shop.jsp">Shop Now</button>
+                                    <button class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="<%out.print(servlet);%>?price=0-999999&action=filter&size=&gender=&university=">Shop Now</button>
                                 </div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                                 <div class="p-3" style="max-width: 600px;">
                                     <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Women Fashion</h1>
                                     <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Find the best and latest apparel you're craving for with top local and trend women's clothing on theStore!</p>
-                                    <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="">Shop Now</a>
+                                    <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="<%out.print(servlet);%>?price=0-999999&action=filter&size=&gender=&university=">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                     <div class="offer-text">
                         <h6 class="text-white ">Green, white, go, fight!</h6>
                         <h3 class="text-white mb-3">Rektikano, keena keena!</h3>
-                        <a href="shop.jsp" class="btn btn-primary">Shop Now</a>
+                        <a href="<%out.print(servlet);%>?price=0-999999&action=filter&size=&gender=&university=" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>
                 <div class="product-offer mb-30" style="height: 400px;">
@@ -77,7 +77,7 @@
                     <div class="offer-text">
                         <h6 class="text-white ">Black Gold, Black White</h6>
                         <h3 class="text-white mb-3">Go USTe! Go USTe! Go USTe!</h3>
-                        <a href="shop.jsp" class="btn btn-primary">Shop Now</a>
+                        <a href="<%out.print(servlet);%>?price=0-999999&action=filter&size=&gender=&university=" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>
             </div>
@@ -231,7 +231,7 @@
                     <div class="offer-text">
                         <h6 class="text-white ">One Big One Fight</h6>
                         <h3 class="text-white mb-3">Go Ateneo!</h3>
-                        <a href="shop.jsp" class="btn btn-primary">Shop Now</a>
+                        <a href="<%out.print(servlet);%>?price=0-999999&action=filter&size=&gender=&university=" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>
             </div>
@@ -241,7 +241,7 @@
                     <div class="offer-text">
                         <h6 class="text-white ">Go Fight Green and Gold!</h6>
                         <h3 class="text-white mb-3">Let's Go Tamaraws!</h3>
-                        <a href="shop.jsp" class="btn btn-primary">Shop Now</a>
+                        <a href="<%out.print(servlet);%>?price=0-999999&action=filter&size=&gender=&university=" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>
             </div>
