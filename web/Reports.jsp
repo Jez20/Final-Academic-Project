@@ -7,6 +7,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");%>
+<%
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+    if (session.getAttribute("userid") == null && session.getAttribute("role") == null) {
+        response.sendRedirect("GuestServlet");
+            }
+            %>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -32,19 +38,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <form>    
+                                <form action="PdfServlet" method="GET">    
                                     <tr>
                                         <td><input type="date" id="birthday" name="startdate"></td>
                                         <td><input type="date" id="birthday" name="enddate"></td>
                                         <td>
-                                    <div>
-                                        <button onclick="location.href = 'PdfServlet?pdftype=salesreport'" type="button" class="btn btn-primary py-2 px-4" name="action" value="updateproduct">Generate Sales Report</button>
-                                    </div>
+                                            <div>
+                                                <button onclick="location.href = 'PdfServlet?pdftype=salesreport'" type="button" class="btn btn-primary py-2 px-4" name="pdftype" value="salesreport">Generate Sales Report</button>
+                                            </div>
                                         </td>
 
                                     </tr>
                                 </form>
-                                    <tr>
+                                <tr>
                                 <center>
                                     <td> --- </td>
                                     <td> --- </td>
