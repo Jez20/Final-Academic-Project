@@ -57,6 +57,11 @@ public class AdminServlet extends HttpServlet {
         System.out.println(String.format("action: %s", action));
         if (session.getAttribute("email") != null && session.getAttribute("role") != null) {
             switch (action) {
+                case "orderlist":
+                    ResultSet rs4 = dbQueries.returnAllOrders();
+                    request.setAttribute("rs", rs4);
+                    request.getRequestDispatcher("AdminOrderList.jsp").forward(request, response);
+                    break;
                 case "detail":
                     ResultSet rs = dbQueries.returnProductVariation(request);
                     request.setAttribute("rs", rs);

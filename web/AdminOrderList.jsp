@@ -4,6 +4,7 @@
     Author     : Joseph
 --%>
 
+<%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -37,23 +38,51 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>nedwoots@hotgirls.com</td>
-                                        <td>DLSU T-Shirt</td>
-                                        <td>1</td>
-                                        <td>200</td>
-                                        <td>123 Cubao</td>
-                                        <td>Date Field</td>
-                                        <td><input type="date" id="birthday" name="birthday"></td>
-                                        <td>
-                                        <center>
-                                            <span class="badge badge-success" id="status" name="status">Completed</span>
-                                        </center>
-                                        </td>
-                                    </tr>
+                                        <%
+                                            ResultSet rs = (ResultSet) request.getAttribute("rs");
+                                            if (rs != null) {
+                                                while (rs.next()) {
+                                                    int orderid = rs.getInt(1);
+                                                    String orderEmail = rs.getString(2);
+                                                    String orderName = rs.getString(3);
+                                                    String orderQuantity = rs.getString(4);
+                                                    int orderPrice = rs.getInt(5);
+                                                    String orderAddress = rs.getString(6);
+                                                    String orderDate = rs.getString(7);
+                                                    String orderDateCompleted = rs.getString(8);
+                                                    boolean ispaid = rs.getBoolean(9);
+                                                    String status = "badge badge-success";
+                                                    if (orderDateCompleted == null) {
+                                                        status = "badge badge-warning";
+                                                    }
+                                                    String statusMessage = "Completed";
+                                                    if (orderDateCompleted == null){
+                                                    statusMessage = "Pending";
+                                            }
+
+                                                    {%><form action="AdminServlet" method="POST">
+                                    <td><%=orderEmail%></td>
+                                    <td><%=orderName%></td>
+                                    <td><%=orderQuantity%></td>
+                                    <td><%=orderPrice%></td>
+                                    <td><%=orderAddress%></td>
+                                    <td><%=orderDate%></td>
+                                    <td><input name="orderdatecompleted" type="date" id="birthday"></td>
+                                    <td>
+                                        <input type="hidden" name="orderid" value="<%=orderid%>">
+                                    <center>
+                                        <span class="<%=status%>" id="status" name="status"><%=status%></span>
+                                    </center>
+                                    </td>
+                                </form><%}
+                                        }
+                                    }
+                                %>
+                                </tr>
                                 </tbody>
                                 <tbody>
                                     <tr>
-                                        <td>nedwoots@hotgirls.com</td>
+                                        <td>placeholder@hotgirls.com</td>
                                         <td>DLSU T-Shirt</td>
                                         <td>1</td>
                                         <td>200</td>
@@ -61,11 +90,11 @@
                                         <td>Date Field</td>
                                         <td><input type="date" id="birthday" name="birthday"></td>
                                         <td>
-                                        <center>
-                                            <span class="badge badge-warning" id="status" name="status">Pending</span>
-                                        </center>
-                                        </td>
-                                    </tr>
+                                <center>
+                                    <span class="badge badge-warning" id="status" name="status">Pending</span>
+                                </center>
+                                </td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -77,7 +106,7 @@
     <footer>
         <%@ include file="HeaderAndFooter/footer.jsp"%>
     </footer>
-    
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 

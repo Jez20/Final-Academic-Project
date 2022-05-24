@@ -13,7 +13,21 @@ public enum Queries {
     startEnum(""),
     returnSizeCateg("SELECT * FROM PRODUCT_SIZE_TABLE"),
     returnGenderCateg("SELECT * FROM PRODUCT_GENDER_TABLE"),
-    returnallOrders("SELECT * FROM ORDER_TABLE ORDER BY ORDER_DATE DESC"),
+    returnallOrders("SELECT \n"
+            + "ORDER_TABLE.ORDER_ID,\n"
+            + "USER_TABLE.USER_EMAIL,\n"
+            + "ORDER_TABLE.ORDER_NAME,\n"
+            + "ORDER_TABLE.ORDER_QUANTITY,\n"
+            + "ORDER_TABLE.ORDER_PRICE,\n"
+            + "ORDER_TABLE.ORDER_ADDRESS,\n"
+            + "ORDER_TABLE.ORDER_DATE,\n"
+            + "ORDER_TABLE.ORDER_DATE_COMPLETED,\n"
+            + "ORDER_TABLE.ORDER_ISPAID,\n"
+            + "ORDER_TABLE.ORDER_IMG_LINK\n"
+            + "FROM ORDER_TABLE \n"
+            + "JOIN USER_TABLE ON USER_TABLE.USER_ID = ORDER_TABLE.USER_ID\n"
+            + "AND ORDER_TABLE.ORDER_DATE_COMPLETED IS NULL\n"
+            + "ORDER BY ORDER_TABLE.ORDER_DATE DESC, ORDER_DATE_COMPLETED ASC"),
     returnAllPendingOrders("SELECT * FROM ORDER_TABLE WHERE ORDER_DATE_COMPLETED IS NULL ORDER BY ORDER_DATE ASC"),
     returnOrderDateRange("SELECT * FROM ORDER_TABLE WHERE ORDER_DATE_COMPLETED BETWEEN ? AND ? \n"
             + "ORDER BY ORDER_DATE ASC"),

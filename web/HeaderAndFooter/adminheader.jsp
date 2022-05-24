@@ -166,7 +166,7 @@
                                 <a href="Reports.jsp" class="nav-item nav-link">Reports</a>
                                 <a href="AdminServlet?action=viewproducts" class="nav-item nav-link">Product List</a>
                                 <a href="AdminAddProduct.jsp" class="nav-item nav-link">Add Product</a>
-                                <a href="AdminOrderList.jsp" class="nav-item nav-link">Customer Order List</a>
+                                <a href="AdminServlet?action=orderlist" class="nav-item nav-link">Customer Order List</a>
                             </div>
                             <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
                                 <a href="" class="btn px-0 ml-3">
