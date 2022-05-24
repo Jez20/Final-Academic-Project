@@ -182,7 +182,6 @@ public class AdminServlet extends HttpServlet {
                     session.removeAttribute("role");
                     session.invalidate();
                     response.sendRedirect("GuestServlet");
-
                     break;
                 case "":
                     session.removeAttribute("email");
@@ -190,7 +189,6 @@ public class AdminServlet extends HttpServlet {
                     session.removeAttribute("role");
                     session.invalidate();
                     response.sendRedirect("GuestServlet");
-
                     break;
             }
         } else {

@@ -74,11 +74,14 @@
                             <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
                                 <%
                                     if (session.getAttribute("email") != null) {
-                                        out.print((String) session.getAttribute("email"));
-                                    } else {
-                                        out.print("My Account");
+                                        {%>
+                                <%=(String) session.getAttribute("email")%>
+                                <%}
+                                } else {
+                                    {%>
+                                My Account
+                                <%}
                                     }
-
                                 %>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">

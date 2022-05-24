@@ -51,6 +51,7 @@ public class LoggedInServlet extends HttpServlet {
             action = request.getParameter("action");
         }
         System.out.println(String.format("action: %s", action));
+        System.out.println(String.format("Url: %s", request.getRequestURI()));
         if (session.getAttribute("email") != null && session.getAttribute("role") == null) {
             switch (action) {
                 case "detail":
@@ -99,7 +100,7 @@ public class LoggedInServlet extends HttpServlet {
                     response.sendRedirect("GuestServlet");
                     break;
                 default:
-                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                    response.sendRedirect("GuestServlet");;
                     break;
             }
         } else if (session.getAttribute("email") != null && session.getAttribute("role") == null) {

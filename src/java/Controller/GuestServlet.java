@@ -6,13 +6,8 @@
 package Controller;
 
 import Model.DatabaseManager;
-import Model.Order;
-import Model.Security;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.ResultSet;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -101,7 +96,13 @@ public class GuestServlet extends HttpServlet {
                 toTheshop(request, response);
                 break;
             default:
-                response.sendRedirect("index.jsp");
+                response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+                session.removeAttribute("email");
+                session.removeAttribute("userid");
+                session.removeAttribute("cart");
+                session.removeAttribute("counter");
+                session.removeAttribute("role");
+                request.getRequestDispatcher("index.jsp").forward(request, response);
                 break;
         }
     }
