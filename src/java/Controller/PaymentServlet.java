@@ -58,6 +58,7 @@ public class PaymentServlet extends HttpServlet {
                     request.getRequestDispatcher("cart.jsp").forward(request, response);
                     break;
                 case "confirm":
+                    try {
                     if (dbQueries.insertNewOrder(request)) {
                         String payment = request.getParameter("payment");
                         switch (payment) {
@@ -75,7 +76,11 @@ public class PaymentServlet extends HttpServlet {
                     } else {
                         request.getRequestDispatcher("cart.jsp");
                     }
-                    break;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    request.getRequestDispatcher("checkout.jsp").forward(request, response);
+                }
+                break;
                 case "checkout":
                     request.getRequestDispatcher("checkout.jsp").forward(request, response);
                     break;
