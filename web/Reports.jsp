@@ -18,7 +18,7 @@
     <body>
         <form>
             <div class="container-fluid">
-                <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Administrator - Reports</span></h2>
+                <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Reports</span></h2>
                 <div class="row px-xl-5">
                     <div class="col-lg-12 mb-5">
                         <div class="contact-form bg-light p-30">
@@ -100,7 +100,7 @@
         </form>            
     </body>
     <footer>
-        <%@ include file="HeaderAndFooter/footer.jsp"%>
+        <%@ include file="HeaderAndFooter/adminfooter.jsp"%>
     </footer>
 
     <!-- Back to Top -->
