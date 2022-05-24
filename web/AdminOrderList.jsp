@@ -38,48 +38,54 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <%
-                                            ResultSet rs = (ResultSet) request.getAttribute("rs");
-                                            if (rs != null) {
-                                                while (rs.next()) {
-                                                    int orderid = rs.getInt(1);
-                                                    String orderEmail = rs.getString(2);
-                                                    String orderName = rs.getString(3);
-                                                    String orderQuantity = rs.getString(4);
-                                                    int orderPrice = rs.getInt(5);
-                                                    String orderAddress = rs.getString(6);
-                                                    String orderDate = rs.getString(7);
-                                                    String orderDateCompleted = rs.getString(8);
-                                                    boolean ispaid = rs.getBoolean(9);
-                                                    String status = "badge badge-success";
-                                                    if (orderDateCompleted == null) {
-                                                        status = "badge badge-warning";
-                                                    }
-                                                    String statusMessage = "Completed";
-                                                    if (orderDateCompleted == null){
-                                                    statusMessage = "Pending";
-                                            }
 
-                                                    {%><form action="AdminServlet" method="POST">
-                                    <td><%=orderEmail%></td>
-                                    <td><%=orderName%></td>
-                                    <td><%=orderQuantity%></td>
-                                    <td><%=orderPrice%></td>
-                                    <td><%=orderAddress%></td>
-                                    <td><%=orderDate%></td>
-                                    <td><input name="orderdatecompleted" type="date" id="birthday"></td>
-                                    <td>
-                                        <input type="hidden" name="orderid" value="<%=orderid%>">
+                                    <%
+                                        ResultSet rs = (ResultSet) request.getAttribute("rs");
+                                        if (rs != null) {
+                                            while (rs.next()) {
+                                                int orderid = rs.getInt(1);
+                                                String orderEmail = rs.getString(2);
+                                                String orderName = rs.getString(3);
+                                                String orderQuantity = rs.getString(4);
+                                                int orderPrice = rs.getInt(5);
+                                                String orderAddress = rs.getString(6);
+                                                String orderDate = rs.getString(7);
+                                                String orderDateCompleted = rs.getString(8);
+                                                boolean ispaid = rs.getBoolean(9);
+                                                String status = "badge badge-success";
+                                                if (orderDateCompleted == null) {
+                                                    status = "badge badge-warning";
+                                                    orderDateCompleted = "";
+                                                }
+                                                String statusMessage = "Completed";
+                                                if (orderDateCompleted == "") {
+                                                    statusMessage = "Pending";
+                                                }
+
+                                                {%><form action="AdminServlet" method="POST">
+                                    <tr>
+                                        <td><%=orderEmail%></td>
+                                        <td><%=orderName%></td>
+                                        <td><%=orderQuantity%></td>
+                                        <td><%=orderPrice%></td>
+                                        <td><%=orderAddress%></td>
+                                        <td><%=orderDate%></td>
+                                        <td><input value="<%=orderDateCompleted%>" name="orderdatecompleted" type="date" id="birthday"></td>
+                                        <td>
+                                            <input type="hidden" name="orderid" value="<%=orderid%>">
                                     <center>
-                                        <span class="<%=status%>" id="status" name="status"><%=status%></span>
+                                        <span class="<%=status%>" id="status" name="status"><%=statusMessage%></span>
                                     </center>
                                     </td>
+                                    <td>
+                                        <button name="action" value="updateorder" type="Submit" class="btn btn-warning">Update</button>
+                                    </td>
+                                    </tr>
                                 </form><%}
                                         }
                                     }
                                 %>
-                                </tr>
+
                                 </tbody>
                                 <tbody>
                                 <form>
@@ -92,15 +98,15 @@
                                         <td>Date Field</td>
                                         <td><input type="date" id="birthday" name="birthday"></td>
                                         <td>
-                                <center>
-                                    <span class="badge badge-warning" id="status" name="status">Pending</span>
-                                </center>
-                                </td>
-                                <td>
                                     <center>
-                                    <button name="action" value="update" type="Submit" class="btn btn-warning">Update</button>
+                                        <span class="badge badge-warning" id="status" name="status">Pending</span>
                                     </center>
-                                </td>
+                                    </td>
+                                    <td>
+                                    <center>
+                                        <button name="action" value="update" type="Submit" class="btn btn-warning">Update</button>
+                                    </center>
+                                    </td>
                                 </form>
                                 </tr>
                                 </tbody>

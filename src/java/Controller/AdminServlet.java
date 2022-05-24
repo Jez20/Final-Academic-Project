@@ -8,6 +8,8 @@ package Controller;
 import Model.DatabaseManager;
 import java.io.IOException;
 import java.sql.ResultSet;
+import java.time.LocalDate;
+import java.time.Month;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -57,6 +59,17 @@ public class AdminServlet extends HttpServlet {
         System.out.println(String.format("action: %s", action));
         if (session.getAttribute("email") != null && session.getAttribute("role") != null) {
             switch (action) {
+                case "updateorder":
+                    if (dbQueries.updateOrder(request)) {
+                        ResultSet rs4 = dbQueries.returnAllOrders();
+                        request.setAttribute("rs", rs4);
+                        request.getRequestDispatcher("AdminOrderList.jsp").forward(request, response);
+                    } else {
+                        ResultSet rs4 = dbQueries.returnAllOrders();
+                        request.setAttribute("rs", rs4);
+                        request.getRequestDispatcher("AdminOrderList.jsp").forward(request, response);
+                    }
+                    break;
                 case "orderlist":
                     ResultSet rs4 = dbQueries.returnAllOrders();
                     request.setAttribute("rs", rs4);

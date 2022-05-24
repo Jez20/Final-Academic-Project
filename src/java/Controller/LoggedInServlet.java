@@ -7,9 +7,7 @@ package Controller;
 
 import Model.DatabaseManager;
 import Model.Security;
-import Model.ConstantCateg;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.ResultSet;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;

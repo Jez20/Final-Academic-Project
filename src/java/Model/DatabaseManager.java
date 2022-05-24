@@ -277,11 +277,21 @@ public class DatabaseManager {
 
     public boolean updateOrder(HttpServletRequest request) {
         try {
+            String splitDate[] = request.getParameter("orderdatecompleted").split("-");
+            int year = Integer.parseInt(splitDate[0]);
+            int month = Integer.parseInt(splitDate[1]);
+            int day = Integer.parseInt(splitDate[2]);
+            LocalDate date = LocalDate.of(year, month, day);
+            LocalDate now = LocalDate.now();
+            if (date.isAfter(now)) {
+                return false;
+            }
+            
             query = Queries.valueOf("updateOrder");
             PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
-            stmt.setDate(1, null); //date completed
+            stmt.setDate(1, Date.valueOf(date)); //date completed
             stmt.setBoolean(2, true); //is paid
-            stmt.setInt(3, -999); //order id
+            stmt.setInt(3, Integer.parseInt(request.getParameter("orderid"))); //order id
             stmt.executeUpdate();
             return true;
         } catch (Exception e) {
