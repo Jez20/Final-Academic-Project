@@ -83,7 +83,7 @@
         </div>            
     </body>
     <footer>
-        <%@ include file="HeaderAndFooter/footer.jsp"%>
+        <%@ include file="HeaderAndFooter/adminfooter.jsp"%>
     </footer>
 
     <!-- Back to Top -->

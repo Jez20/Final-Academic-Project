@@ -106,7 +106,7 @@
                                     cartNumber = (Integer) session.getAttribute("counter");
                                 }
                             %>
-                            <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;"></span>
+                            <span class="badge text-dark border border-dark rounded-circle" style="padding-bottom: 2px;"><%=cartNumber%></span>
                         </a>
                     </div>
                 </div>

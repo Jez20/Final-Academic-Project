@@ -50,14 +50,6 @@
                                 servlet = "LoggedInServlet";
                             }
                         %>
-                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=ADAMSON">ADU</a>
-                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=ATENEO">ADMU</a>
-                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=LA SALLE">DLSU</a>
-                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=FEU">FEU</a>
-                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=NU">NU</a>
-                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=UP">UP</a>
-                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=UE">UE</a>
-                        <a class="text-body mr-3" href="<%out.print(servlet);%>?action=UST">UST</a>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
@@ -116,43 +108,6 @@
         <!-- Navbar Start -->
         <div class="container-fluid bg-dark mb-30">
             <div class="row px-xl-5">
-                <div class="col-lg-3 d-none d-lg-block">
-                    <a class="btn d-flex align-items-center justify-content-between bg-primary w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; padding: 0 30px;">
-                        <h6 class="text-dark m-0"><i class="fa fa-bars mr-2"></i>Categories</h6>
-                        <i class="fa fa-angle-down text-dark"></i>
-                    </a>
-                    <%
-
-                    %>
-                    <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 999;">
-                        <div class="navbar-nav w-100">
-                            <div class="nav-item dropdown dropright">
-                                <a href="<%out.print(servlet);%>?action=ADAMSON" class="nav-link dropdown-toggle">ADU Apparel</a>
-                            </div>
-                            <div class="nav-item dropdown dropright">
-                                <a href="<%out.print(servlet);%>?action=ATENEO" class="nav-link dropdown-toggle">ADMU Apparel</a>
-                            </div>
-                            <div class="nav-item dropdown dropright">
-                                <a href="<%out.print(servlet);%>?action=LA SALLE" class="nav-link dropdown-toggle">DLSU Apparel</a>
-                            </div>
-                            <div class="nav-item dropdown dropright">
-                                <a href="<%out.print(servlet);%>?action=FEU" class="nav-link dropdown-toggle">FEU Apparel</a>
-                            </div>
-                            <div class="nav-item dropdown dropright">
-                                <a href="<%out.print(servlet);%>?action=NU" class="nav-link dropdown-toggle">NU Apparel</a>
-                            </div>
-                            <div class="nav-item dropdown dropright">
-                                <a href="<%out.print(servlet);%>?action=UE" class="nav-link dropdown-toggle">UE Apparel</a>
-                            </div>
-                            <div class="nav-item dropdown dropright">
-                                <a href="<%out.print(servlet);%>?action=UP" class="nav-link dropdown-toggle">UP Apparel</a>
-                            </div>
-                            <div class="nav-item dropdown dropright">
-                                <a href="<%out.print(servlet);%>?action=UST" class="nav-link dropdown-toggle">UST Apparel</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
                 <div class="col-lg-9">
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
                         <a href="" class="text-decoration-none d-block d-lg-none">
@@ -168,13 +123,7 @@
                                 <a href="AdminServlet?action=viewproducts" class="nav-item nav-link">Product List</a>
                                 <a href="AdminAddProduct.jsp" class="nav-item nav-link">Add Product</a>
                                 <a href="AdminServlet?action=orderlist" class="nav-item nav-link">Customer Order List</a>
-                            </div>
-                            <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
-                                <a href="" class="btn px-0 ml-3">
-                                    <i class="fas fa-shopping-cart text-primary"></i>
-                                    <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
-                                </a>
-                            </div>   
+                            </div> 
                         </div>
                     </nav>
                 </div>
