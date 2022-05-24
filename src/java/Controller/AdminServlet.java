@@ -59,6 +59,9 @@ public class AdminServlet extends HttpServlet {
         System.out.println(String.format("action: %s", action));
         if (session.getAttribute("email") != null && session.getAttribute("role") != null) {
             switch (action) {
+                case "index":
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                    break;
                 case "updateorder":
                     if (dbQueries.updateOrder(request)) {
                         ResultSet rs4 = dbQueries.returnAllOrders();
@@ -183,7 +186,8 @@ public class AdminServlet extends HttpServlet {
                     session.invalidate();
                     response.sendRedirect("GuestServlet");
                     break;
-                case "":
+                default:
+                    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
                     session.removeAttribute("email");
                     session.removeAttribute("userid");
                     session.removeAttribute("role");

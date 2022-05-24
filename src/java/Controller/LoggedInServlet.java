@@ -54,6 +54,9 @@ public class LoggedInServlet extends HttpServlet {
         System.out.println(String.format("Url: %s", request.getRequestURI()));
         if (session.getAttribute("email") != null && session.getAttribute("role") == null) {
             switch (action) {
+                case "index":
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                    break;
                 case "detail":
                     ResultSet rs = dbQueries.returnProductVariation(request);
                     request.setAttribute("rs", rs);

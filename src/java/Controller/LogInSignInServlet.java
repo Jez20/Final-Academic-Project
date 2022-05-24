@@ -63,7 +63,7 @@ public class LogInSignInServlet extends HttpServlet {
                             response.sendRedirect("AdminServlet?action=viewproducts");
                         }
                         if (session.getAttribute("userid") != null && session.getAttribute("role") == null) {
-                            response.sendRedirect("LoggedInServlet");
+                            response.sendRedirect("LoggedInServlet?action=index");
                         } 
                     } else {
                         response.sendRedirect("login.jsp");
