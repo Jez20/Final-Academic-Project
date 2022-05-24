@@ -64,9 +64,7 @@ public class LogInSignInServlet extends HttpServlet {
                         }
                         if (session.getAttribute("userid") != null && session.getAttribute("role") == null) {
                             response.sendRedirect("LoggedInServlet");
-                        } else {
-                            response.sendRedirect("GuestServlet");
-                        }
+                        } 
                     } else {
                         response.sendRedirect("login.jsp");
                     }
