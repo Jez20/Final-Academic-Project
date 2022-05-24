@@ -9,6 +9,7 @@
 <%@page import="Model.Order"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");%>
 <%
     String servlet2 = "";
     if (session.getAttribute("email") == null && session.getAttribute("role") == null) {

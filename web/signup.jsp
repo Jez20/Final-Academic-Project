@@ -7,6 +7,14 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
+<%response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+                    session.removeAttribute("email");
+                    session.removeAttribute("userid");
+                    session.removeAttribute("cart");
+                    session.removeAttribute("counter");
+                    session.removeAttribute("role");
+                    session.invalidate();
+%>
 <html>
     <head>
         <% //template
