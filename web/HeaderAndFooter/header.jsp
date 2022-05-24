@@ -307,7 +307,7 @@
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
                                 <a href="index.jsp" class="nav-item nav-link">Home</a>
-                                <a href="shop.jsp" class="nav-item nav-link">Shop</a>
+                                <a href="<%out.print(servlet);%>?price=0-999999&action=filter&size=&gender=&university=" class="nav-item nav-link">Shop</a>
                                 <a href="cart.jsp" class="nav-item nav-link">Cart</a>
                                 <!--                                <div class="nav-item dropdown">
                                                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop <i class="fa fa-angle-down mt-1"></i></a>

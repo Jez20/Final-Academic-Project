@@ -49,7 +49,7 @@
     <div class="container-fluid">
         <div class="row px-xl-5">
             <div class="col-lg-2.5">
-                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Gcash</span></h5>
+                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">You will be notified by email if payment is already processed</span></h5>
                 <div class="bg-light p-30 mb-5">
                     <div class="row">
                         <img src="img/Gcash.jpeg" alt=""/>
