@@ -66,7 +66,7 @@
         <servlet-class>Controller.GuestServlet</servlet-class>
         <init-param>
             <param-name>key</param-name>
-            <param-value>NTubJRFb5SAgIWPi</param-value>
+            <param-value>HkydND9SmuvhEas4</param-value>
         </init-param>
         <init-param>
             <param-name>displaykey</param-name>
