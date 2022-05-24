@@ -97,7 +97,7 @@ public class PaymentServlet extends HttpServlet {
                         int stock = available.getInt(5);
                         int wantedQuantity = Integer.parseInt(request.getParameter("productquantity"));
                         if (wantedQuantity < stock) {
-                            createdorder.setOrderQuantity(available.getInt(5));
+                            createdorder.setOrderQuantity(wantedQuantity);
                         } else {
                             String induceException = "1x";
                             createdorder.setOrderQuantity(Integer.parseInt(induceException));
@@ -106,6 +106,7 @@ public class PaymentServlet extends HttpServlet {
                         createdorder.setIsPaid(false);
                         createdorder.setOrderName(request.getParameter("productname"));
                         createdorder.setOrderPrice(available.getInt(4) * wantedQuantity);
+                       createdorder.setOrderQuantity(wantedQuantity);
                         LocalDate dateNow = LocalDate.now();
                         createdorder.setOrderDate(dateNow);
                         createdorder.setOrderDateCompleted(null);
