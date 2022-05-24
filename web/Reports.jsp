@@ -44,7 +44,11 @@
                                         <td><input type="date" id="birthday" name="enddate"></td>
                                         <td>
                                             <div>
-                                                <button onclick="location.href = 'PdfServlet?pdftype=salesreport'" type="button" class="btn btn-primary py-2 px-4" name="pdftype" value="salesreport">Generate Sales Report</button>
+                                        <a href="PdfServlet?pdftype=salesreport">
+                                        <button type="button" class="btn btn-primary py-2 px-4" name="pdftype" value="salesreport">Generate Sales Report</button>
+                                        </a>
+<!--                                                <a href="PdfServlet?pdftype=salesreport"><button type="button" class="btn btn-primary py-2 px-4" name="pdftype" value="salesreport">Generate Sales Report</button></a>-->
+<!--                                                <button onclick="location.href = 'PdfServlet?pdftype=salesreport'" type="button" class="btn btn-primary py-2 px-4" name="pdftype" value="salesreport">Generate Sales Report</button>-->
                                             </div>
                                         </td>
 
