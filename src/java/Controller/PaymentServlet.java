@@ -88,7 +88,6 @@ public class PaymentServlet extends HttpServlet {
                                 try {
                     ArrayList<Order> cart = new ArrayList<>();
                     ResultSet available = dbQueries.checkAvailability(request);
-                    dbQueries.printResultSets(available);
                     if (session.getAttribute("cart") != null) {
                         cart = (ArrayList<Order>) session.getAttribute("cart");
                     }

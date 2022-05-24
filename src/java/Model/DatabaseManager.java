@@ -15,6 +15,7 @@ import java.sql.Statement;
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
 import javax.servlet.http.HttpSession;
 
@@ -286,7 +287,7 @@ public class DatabaseManager {
             if (date.isAfter(now)) {
                 return false;
             }
-            
+
             query = Queries.valueOf("updateOrder");
             PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
             stmt.setDate(1, Date.valueOf(date)); //date completed
@@ -377,7 +378,41 @@ public class DatabaseManager {
     public ResultSet returnallUsers() {
         query = Queries.valueOf("returnallUsers");
         try {
-            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery(), ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = stmt.executeQuery();
+            return rs;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public ResultSet returnSalesQuery(HttpServletRequest request) {
+        try {
+            query = Queries.valueOf("returnSalesQuery");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery(), ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            LocalDate now = LocalDate.now();
+
+            String splitDate[] = request.getParameter("startdate").split("-");
+            int year = Integer.parseInt(splitDate[0]);
+            int month = Integer.parseInt(splitDate[1]);
+            int day = Integer.parseInt(splitDate[2]);
+            LocalDate start = LocalDate.of(year, month, day);
+
+            String splitDate2[] = request.getParameter("enddate").split("-");
+            int year2 = Integer.parseInt(splitDate[0]);
+            int month2 = Integer.parseInt(splitDate[1]);
+            int day2 = Integer.parseInt(splitDate[2]);
+            LocalDate endate = LocalDate.of(year2, month2, day2);
+
+            if (start.isBefore(now)) {
+                return null;
+            }
+            if (endate.isBefore(now) || endate.isBefore(start)) {
+                return null;
+            }
+            stmt.setDate(1, Date.valueOf(start));
+            stmt.setDate(2, Date.valueOf(endate));
             ResultSet rs = stmt.executeQuery();
             return rs;
         } catch (Exception e) {
@@ -389,7 +424,31 @@ public class DatabaseManager {
     public ResultSet returnAllOrders() {
         try {
             query = Queries.valueOf("returnallOrders");
-            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery(), ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = stmt.executeQuery();
+            return rs;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public ResultSet returnInventory() {
+        try {
+            query = Queries.valueOf("returnInventory");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery(), ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = stmt.executeQuery();
+            return rs;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public ResultSet returnAllCompleted() {
+        try {
+            query = Queries.valueOf("returnAllCompleted");
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery(), ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet rs = stmt.executeQuery();
             return rs;
         } catch (Exception e) {
@@ -401,7 +460,7 @@ public class DatabaseManager {
     public ResultSet returnAllPendingOrders() {
         try {
             query = Queries.valueOf("returnAllPendingOrders");
-            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery(), ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             ResultSet rs = stmt.executeQuery();
             return rs;
         } catch (Exception e) {
@@ -413,7 +472,7 @@ public class DatabaseManager {
     public ResultSet returnOrderDateRange(HttpServletRequest request) {
         try {
             query = Queries.valueOf("returnOrderDateRange");
-            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery());
+            PreparedStatement stmt = this.conn.prepareStatement(query.getQuery(), ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             stmt.setDate(1, Date.valueOf(LocalDate.MAX)); //start date constraint by now
             stmt.setDate(2, Date.valueOf(LocalDate.MAX)); // end date contraint by the start date and now
             ResultSet rs = stmt.executeQuery();
