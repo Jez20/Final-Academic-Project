@@ -59,28 +59,28 @@ public class PdfServlet extends HttpServlet {
                 String email = (String) session.getAttribute("email");
                 switch (pdfType) {
                     case "userreport":
-                        this.reportGenerate.generateUserReport(writer, document, dbQueries.returnallUsers(), out, email);
+                        this.reportGenerate.generateUserReport(writer, document, dbQueries.returnallUsers(), out, email,response);
                         document.close();
                         writer.close();
                         break;
                     case "pendingorders":
-                        this.reportGenerate.pendingOrderReport(writer, document, dbQueries.returnAllPendingOrders(), out, email);
+                        this.reportGenerate.pendingOrderReport(writer, document, dbQueries.returnAllPendingOrders(), out, email,response);
                         document.close();
                         writer.close();
                         break;
                     case "inventoryreport":
-                        this.reportGenerate.generateInventoryReport(writer, document, dbQueries.returnInventory(), out, email);
+                        this.reportGenerate.generateInventoryReport(writer, document, dbQueries.returnInventory(), out, email,response);
                         document.close();
                         writer.close();
                         break;
                     case "salesreport":
-                        this.reportGenerate.salesReport(writer, document, dbQueries.returnSalesQuery(request), out, email);
+                        this.reportGenerate.salesReport(writer, document, dbQueries.returnSalesQuery(request), out, email,response);
                         dbQueries.printResultSets(dbQueries.returnSalesQuery(request));
                         document.close();
                         writer.close();
                         break;
                     case "completedorders":
-                        this.reportGenerate.completedOrdersReport(writer, document, dbQueries.returnAllCompleted(), out, email);
+                        this.reportGenerate.completedOrdersReport(writer, document, dbQueries.returnAllCompleted(), out, email,response);
                         document.close();
                         writer.close();
                         break;
