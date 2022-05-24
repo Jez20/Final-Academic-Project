@@ -235,7 +235,7 @@ public class pdfGenerator {
             addEmptyLine(desc, 1);
             document.add(desc);
 
-            createTable(document, data);
+            createTableWithcalculation(document, data);
         } catch (Exception e) {
             e.printStackTrace();
         }
